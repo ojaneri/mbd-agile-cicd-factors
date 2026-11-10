@@ -1,0 +1,12 @@
+{
+  "note": "Stable identities for the people on this project. Never contains passwords, API tokens, private keys or cloud access keys — those belong in a secret manager, and only a reference to one belongs here.",
+  "users": [
+    {
+      "user_id": "osvaldo",
+      "display_name": "Osvaldo Janeri Filho",
+      "role": "Owner",
+      "added_on": "2026-11-10",
+      "email": "osvaldo.janerifilho@alunos.utfpr.edu.br"
+    }
+  ]
+}

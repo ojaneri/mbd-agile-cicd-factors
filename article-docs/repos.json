@@ -1,0 +1,15 @@
+[
+  {
+    "id": "cicd-mbd-agile",
+    "path": ".",
+    "type": "app",
+    "vcs": "none",
+    "hosting": "not under version control",
+    "remotes": [],
+    "default_branch": null,
+    "artdocs_in_subdirectory_of_repo": false,
+    "owner": "TODO",
+    "artdocs": "article-docs",
+    "sections": []
+  }
+]

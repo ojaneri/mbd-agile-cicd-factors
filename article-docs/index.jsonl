@@ -1,0 +1,77 @@
+{"type":"section","id":"abstract","file":"sections/abstract.md","title":"Abstract — draft v0 (viability only)"}
+{"type":"todo","id":"t-0009","file":"sections/abstract.md","title":"Rewrite the abstract only after C1 has measured numbers. Until then, keep it as a framing paragraph with no results.","status":"open","author":"osvaldo"}
+{"type":"section","id":"c1-integration-gain","file":"claims/c1-integration-gain.md","title":"C1 — Integrating MBD, Agile and CI/CD shortens the feature-to-release cycle"}
+{"type":"decision","id":"d-0002","file":"claims/c1-integration-gain.md","title":"Frame C1 as a measured comparison, not a general claim. Why: the sources are qualitative; a reviewer","status":"proposed","author":"osvaldo","date":"2026-11-10"}
+{"type":"todo","id":"t-0006","file":"claims/c1-integration-gain.md","title":"Choose the case study (ECU/ADAS model, or a non-automotive proxy) and confirm it can be run in the time left.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0007","file":"claims/c1-integration-gain.md","title":"Define how lead time and defect escape are measured before any run.","status":"open","author":"osvaldo"}
+{"type":"section","id":"c2-standards-traceability","file":"claims/c2-standards-traceability.md","title":"C2 — The integrated pipeline keeps ISO 26262 / ISO 21434 traceability"}
+{"type":"todo","id":"t-0008","file":"claims/c2-standards-traceability.md","title":"Build the standards mapping table (stage to work product) from ISO 26262 and ISO 21434 text, not from memory. Mark each entry as unverified until checked against the standard.","status":"open","author":"osvaldo"}
+{"type":"section","id":"c3-stage-detection","file":"claims/c3-stage-detection.md","title":"C3 — Each MBD verification stage detects defect classes the others miss"}
+{"type":"todo","id":"t-0024","file":"claims/c3-stage-detection.md","title":"After E1, state C3 at the strength the CIs support; do not round \"most\" to \"all\".","status":"open","author":"osvaldo"}
+{"type":"section","id":"isie-2027","file":"venue/isie-2027.md","title":"Venue: IEEE ISIE 2027"}
+{"type":"decision","id":"d-0001","file":"venue/isie-2027.md","title":"Target Track 06 (Industrial Cyber-Physical Systems), with Track 24 as the fallback.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
+{"type":"todo","id":"t-0001","file":"venue/isie-2027.md","title":"Confirm the four track names and numbers on the official technical tracks page.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0002","file":"venue/isie-2027.md","title":"Resolve the conference date conflict (June 2027) on the official dates page.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0003","file":"venue/isie-2027.md","title":"Find the submission portal link; it was not open when checked.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0004","file":"venue/isie-2027.md","title":"Check the extra-page fee amount.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0005","file":"venue/isie-2027.md","title":"Schedule: about 5 weeks to the 2026-12-15 deadline. Decide whether a measured case study is feasible in that time, or submit a qualitative version.","status":"open","author":"osvaldo"}
+{"type":"section","id":"e0-testbed-and-protocol","file":"experiments/e0-testbed-and-protocol.md","title":"E0 — Shared testbed, factorial design and protocol"}
+{"type":"decision","id":"d-0003","file":"experiments/e0-testbed-and-protocol.md","title":"Operationalise \"Agile\" as integration cadence / change batch size, not as team practice.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
+{"type":"decision","id":"d-0004","file":"experiments/e0-testbed-and-protocol.md","title":"Open toolchain (OpenModelica + FMI + gcc + FIT IoT-LAB) instead of MATLAB/Simulink.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
+{"type":"decision","id":"d-0005","file":"experiments/e0-testbed-and-protocol.md","title":"Ground truth by mutation injection, with classes and equivalent-mutant screening.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
+{"type":"decision","id":"d-0006","file":"experiments/e0-testbed-and-protocol.md","title":"The real-MCU stage is named PIL, never HIL; VIL is out of scope.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
+{"type":"todo","id":"t-0010","file":"experiments/e0-testbed-and-protocol.md","title":"Dated literature search (OpenAlex / IEEE Xplore / Scopus) on CI/CD + MBD + Agile + ISO 26262 for automotive; record queries and date here; list the 3–5 closest predecessors for a comparison table (K03, R05).","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0011","file":"experiments/e0-testbed-and-protocol.md","title":"Record provenance, licence and citation of the LG HG2 and Opel Corsa datasets used in genai-mbd-exp.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0012","file":"experiments/e0-testbed-and-protocol.md","title":"Install toolchain in WSL: OpenModelica, FMPy, numpy/scipy/pandas, gcc, arm-none-eabi-gcc; confirm FIT IoT-LAB account still works.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0013","file":"experiments/e0-testbed-and-protocol.md","title":"Check whether UTFPR provides a MATLAB/Simulink campus licence (optional second toolchain).","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0014","file":"experiments/e0-testbed-and-protocol.md","title":"git init the project and commit this protocol before any experimental run (pre-registration evidence, M05).","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0015","file":"experiments/e0-testbed-and-protocol.md","title":"Decide how this paper differs from the genai-mbd-exp paper (\"Generative-AI and ML-based MBD for agile development of automotive systems\"); same data reused as subjects must be disclosed, and no text or results reused (V09, P06).","status":"open","author":"osvaldo"}
+{"type":"section","id":"e1-defect-detection-by-stage","file":"experiments/e1-defect-detection-by-stage.md","title":"E1 — Which stage catches which defect (MBD axis, RQ1)"}
+{"type":"todo","id":"t-0016","file":"experiments/e1-defect-detection-by-stage.md","title":"Write the mutation operators and state the number of mutants per class before running.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0017","file":"experiments/e1-defect-detection-by-stage.md","title":"Fix the SIL and PIL back-to-back tolerances in advance and justify them.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0018","file":"experiments/e1-defect-detection-by-stage.md","title":"Port both models to Modelica and confirm FMU export runs under FMPy.","status":"open","author":"osvaldo"}
+{"type":"section","id":"e2-integration-cadence","file":"experiments/e2-integration-cadence.md","title":"E2 — Integration cadence and automation (Agile + CI axis, RQ2)"}
+{"type":"todo","id":"t-0019","file":"experiments/e2-integration-cadence.md","title":"Write the backlog of increments (at least 10 per subject) and the defect seeding plan; commit before runs.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0020","file":"experiments/e2-integration-cadence.md","title":"Choose sprint batch size k and the manual-release delay range, with a reason recorded as a decision.","status":"open","author":"osvaldo"}
+{"type":"section","id":"e3-traceability-evidence","file":"experiments/e3-traceability-evidence.md","title":"E3 — Standards evidence produced by the pipeline (RQ3)"}
+{"type":"todo","id":"t-0021","file":"experiments/e3-traceability-evidence.md","title":"Get access to the ISO 26262 and ISO 21434 texts (UTFPR library or standards portal); without them E3 cannot cite clauses.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0022","file":"experiments/e3-traceability-evidence.md","title":"Decide whether E3 stays a measured table or is cut to fit 6 pages.","status":"open","author":"osvaldo"}
+{"type":"section","id":"e4-ota-canary","file":"experiments/e4-ota-canary.md","title":"E4 — Canary OTA rollout on a replayed fleet (optional, RQ4)"}
+{"type":"todo","id":"t-0023","file":"experiments/e4-ota-canary.md","title":"Decide by 2026-12-01 whether E4 runs or is listed as future work.","status":"open","author":"osvaldo"}
+{"type":"skill","id":"lit-search-openalex","file":"skills/skills.jsonl","title":"Search the literature on OpenAlex","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"lit-search-semantic-scholar","file":"skills/skills.jsonl","title":"Follow the citation graph on Semantic Scholar","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"lit-search-arxiv","file":"skills/skills.jsonl","title":"Search arXiv for preprints","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"lit-search-crossref","file":"skills/skills.jsonl","title":"Look a work up on Crossref","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"lit-search-paywalled-db","file":"skills/skills.jsonl","title":"Search a paywalled database in a browser session","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"bib-verify-entries","file":"skills/skills.jsonl","title":"Verify every bibliography entry against its DOI","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"overleaf-git-sync","file":"skills/skills.jsonl","title":"Sync with Overleaf over the Git bridge","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"overleaf-browser-sync","file":"skills/skills.jsonl","title":"Work with Overleaf without the Git bridge","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"latex-build","file":"skills/skills.jsonl","title":"Build the manuscript PDF","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"figures-export-vector","file":"skills/skills.jsonl","title":"Export figures as vector art","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"submission-package","file":"skills/skills.jsonl","title":"Assemble the submission package","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"lit-search-dblp","file":"skills/skills.jsonl","title":"Look up a venue or an author on DBLP","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"lit-search-pubmed","file":"skills/skills.jsonl","title":"Search PubMed and Europe PMC","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"lit-search-preprint-servers","file":"skills/skills.jsonl","title":"Search the domain's preprint server","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"lit-fulltext-openaccess","file":"skills/skills.jsonl","title":"Find a legal full text for a paywalled paper","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"lit-search-systematic","file":"skills/skills.jsonl","title":"Run and log a systematic search","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"claim-evidence-audit","file":"skills/skills.jsonl","title":"Audit every claim against its evidence","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"numbers-traceability","file":"skills/skills.jsonl","title":"Trace every number in the text back to the data","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"stats-sanity-check","file":"skills/skills.jsonl","title":"Recompute the reported statistics","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"citation-context-check","file":"skills/skills.jsonl","title":"Check each citation supports the sentence it is attached to","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"validity-threats-sweep","file":"skills/skills.jsonl","title":"Sweep the threats to validity","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"adversarial-review","file":"skills/skills.jsonl","title":"Review the draft as a hostile reviewer","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"repo-create-private","file":"skills/skills.jsonl","title":"Create the article's repository","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"repo-anonymize-for-review","file":"skills/skills.jsonl","title":"Publish an anonymised copy of the artifact","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"submission-snapshot-tag","file":"skills/skills.jsonl","title":"Tag the exact version that was submitted","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"latexdiff-for-revision","file":"skills/skills.jsonl","title":"Produce the marked-up revision","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"doi-mint-zenodo","file":"skills/skills.jsonl","title":"Deposit the artifact on Zenodo and mint a DOI","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"preprint-post","file":"skills/skills.jsonl","title":"Post the preprint","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"page-budget-check","file":"skills/skills.jsonl","title":"Check the length against the venue's limit","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"language-pass","file":"skills/skills.jsonl","title":"Run a language pass over the manuscript","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"rebuttal-assemble","file":"skills/skills.jsonl","title":"Assemble the response to reviewers","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"citation-retraction-check","file":"skills/skills.jsonl","title":"Check every citation for retraction or correction","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"tortured-phrase-screen","file":"skills/skills.jsonl","title":"Screen for tortured-phrase substitutions","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"second-model-citation-spotcheck","file":"skills/skills.jsonl","title":"Have a second model re-verify a sample of citations","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"ai-use-disclosure","file":"skills/skills.jsonl","title":"Draft the AI-tool-use disclosure statement","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"citation-format-convert","file":"skills/skills.jsonl","title":"Convert citation style when retargeting a venue","status":"unverified","owner":"TODO"}
+{"type":"skill","id":"virtual-review","file":"skills/skills.jsonl","title":"Run the virtual-reviewer panel before submitting","status":"unverified","owner":"TODO"}
