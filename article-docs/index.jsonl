@@ -34,9 +34,12 @@
 {"type":"todo","id":"t-0025","file":"experiments/e0-testbed-and-protocol.md","title":"Create a private GitHub repo for this paper and push, so the pre-registration commit has an external timestamp.","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0015","file":"experiments/e0-testbed-and-protocol.md","title":"Decide how this paper differs from the genai-mbd-exp paper (\"Generative-AI and ML-based MBD for agile development of automotive systems\"); same data reused as subjects must be disclosed, and no text or results reused (V09, P06).","status":"open","author":"osvaldo"}
 {"type":"section","id":"e1-defect-detection-by-stage","file":"experiments/e1-defect-detection-by-stage.md","title":"E1 — Which stage catches which defect (MBD axis, RQ1)"}
-{"type":"todo","id":"t-0016","file":"experiments/e1-defect-detection-by-stage.md","title":"Write the mutation operators and state the number of mutants per class before running.","status":"open","author":"osvaldo"}
-{"type":"todo","id":"t-0017","file":"experiments/e1-defect-detection-by-stage.md","title":"Fix the SIL and PIL back-to-back tolerances in advance and justify them.","status":"open","author":"osvaldo"}
-{"type":"todo","id":"t-0018","file":"experiments/e1-defect-detection-by-stage.md","title":"Port both models to Modelica and confirm FMU export runs under FMPy.","status":"open","author":"osvaldo"}
+{"type":"decision","id":"d-0009","file":"experiments/e1-defect-detection-by-stage.md","title":"MIL = native OpenModelica simulation of the generated model in a CombiTimeTable testbench.","status":"proposed","author":"osvaldo","date":"2026-11-11"}
+{"type":"decision","id":"d-0010","file":"experiments/e1-defect-detection-by-stage.md","title":"Run E1 first with QEMU as the PIL target, then repeat PIL on NUCLEO-L476RG (and st-iotnode).","status":"proposed","author":"osvaldo","date":"2026-11-11"}
+{"type":"todo","id":"t-0016","file":"experiments/e1-defect-detection-by-stage.md","title":"Operators and counts fixed in testbed/soc/mutate.py and protocol/mutants.json (130 mutants).","status":"done","author":"osvaldo"}
+{"type":"todo","id":"t-0017","file":"experiments/e1-defect-detection-by-stage.md","title":"Tolerances fixed by rule from the baseline in protocol/calibration.json (1e-5 both).","status":"done","author":"osvaldo"}
+{"type":"todo","id":"t-0018","file":"experiments/e1-defect-detection-by-stage.md","title":"Subject 1 done (native MIL instead of FMU, d-0009). Subject 2 (fuel-flow sensor) still to model.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0041","file":"experiments/e1-defect-detection-by-stage.md","title":"Real-target PIL harness for NUCLEO-L476RG (register-level startup, UART, DWT cycles) and IoT-LAB st-iotnode; rerun the PIL column of E1 on it.","status":"open","author":"osvaldo"}
 {"type":"section","id":"e2-integration-cadence","file":"experiments/e2-integration-cadence.md","title":"E2 — Integration cadence and automation (Agile + CI axis, RQ2)"}
 {"type":"todo","id":"t-0019","file":"experiments/e2-integration-cadence.md","title":"Write the backlog of increments (at least 10 per subject) and the defect seeding plan; commit before runs.","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0020","file":"experiments/e2-integration-cadence.md","title":"Choose sprint batch size k and the manual-release delay range, with a reason recorded as a decision.","status":"open","author":"osvaldo"}
@@ -45,6 +48,11 @@
 {"type":"todo","id":"t-0022","file":"experiments/e3-traceability-evidence.md","title":"Decide whether E3 stays a measured table or is cut to fit 6 pages.","status":"open","author":"osvaldo"}
 {"type":"section","id":"e4-ota-canary","file":"experiments/e4-ota-canary.md","title":"E4 — Canary OTA rollout on a replayed fleet (optional, RQ4)"}
 {"type":"todo","id":"t-0023","file":"experiments/e4-ota-canary.md","title":"Decide by 2026-12-01 whether E4 runs or is listed as future work.","status":"open","author":"osvaldo"}
+{"type":"section","id":"labs-access","file":"experiments/labs-access.md","title":"Labs and hardware for this paper — access, where secrets live, lessons learned"}
+{"type":"decision","id":"d-0008","file":"experiments/labs-access.md","title":"PIL target: NUCLEO-L476RG (local) as primary, FIT IoT-LAB st-iotnode as replication; QEMU for develo","status":"proposed","author":"osvaldo","date":"2026-11-11"}
+{"type":"todo","id":"t-0038","file":"experiments/labs-access.md","title":"Plug the NUCLEO-L476RG with a data cable; confirm COM port and drive letter.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0039","file":"experiments/labs-access.md","title":"Verify against NXP's datasheet that S32K14x uses a Cortex-M4F before writing it in the paper.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0040","file":"experiments/labs-access.md","title":"Decide whether docs/labs-from-server/ (contains login names and an e-mail) stays out of any anonymised artifact.","status":"open","author":"osvaldo"}
 {"type":"section","id":"predecessors","file":"references/predecessors.md","title":"Predecessors — closest works and positioning (K03, R05)"}
 {"type":"todo","id":"t-0026","file":"references/predecessors.md","title":"ETFA 2026 (P3) and ISIE 2025 (P8) read in full on 2026-11-11; neither covers the E1/E2 measurement.","status":"done","author":"osvaldo"}
 {"type":"todo","id":"t-0027","file":"references/predecessors.md","title":"IV 2025, ICCUBEA 2023, ICSA-C 2018 read on IEEE; KSAE 2026 and Artshop abstracts read on Scopus.","status":"done","author":"osvaldo"}

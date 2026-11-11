@@ -2,3 +2,6 @@
 testbed/**/build/
 *.fmu
 __pycache__/
+
+# Python caches
+__pycache__/
