@@ -1,43 +1,61 @@
 # Predecessors — closest works and positioning (K03, R05)
 
-Source: [[references/search-log-2026-11]] (2026-11-11). Metadata read from IEEE Xplore pages or OpenAlex,
-as marked. **Nothing here is in the bibliography yet**: every entry still needs `bib-verify-entries`
-against Crossref before it is cited (R01).
+Source: [[references/search-log-2026-11]]. Read 2026-11-11 by hand through CAFe (IEEE Xplore pages,
+Scopus records) and OpenAlex, paced, no bulk download. **Nothing here is in the bibliography yet**:
+every entry still needs `bib-verify-entries` against Crossref before it is cited (R01).
 
-## Closest predecessors (abstract read)
+Reading depth: **F** = full text read (sections and conclusions), **A** = abstract only.
 
-| # | Work | What it does | Evaluation | Difference from this paper |
-|---|---|---|---|---|
-| P1 | Mörtstrand, Bucaioni, Ciccozzi, "Bringing a Continuous Integration and Delivery Pipeline into MoVES", ICECET 2023, doi 10.1109/ICECET58911.2023.10389472 (IEEE page) | CI/CD pipeline (GitHub Actions) added to a model-based timing-analysis methodology for automotive software | Use case: brake-by-wire and wiper motor | Builds a pipeline; abstract reports no defect-detection or cadence measurement |
-| P2 | Dmitriev et al., "A Lean and Highly-automated Model-Based Software Development Process Based on DO-178C/DO-331", DASC 2020, doi 10.1109/DASC50938.2020.9256576 (IEEE page) | Automated MBD workflow derived from a subset of avionics certification objectives | Process and artefacts for research aircraft | Avionics, standards-driven; closest analogue for our ISO 26262 evidence angle (E3); no comparison of configurations in the abstract |
-| P3 | Mills, Turin, Mangas, Ranville, "Innovation Welcome: An Agile Approach to Model-Based Development of Safety-Critical Embedded Systems", ICSA-C 2018, doi 10.1109/ICSA-C.2018.00045 (IEEE page) | Argues for combining agile freedom with disciplined MBD integration in automotive | Abstract truncated at retrieval; evaluation not seen | Position/approach; must read full text before stating what it lacks |
-| P4 | Beheshtian, Bavand, Rigby, "Software Batch Testing to Save Build Test Resources and to Reduce Feedback Time", IEEE TSE (vol 48 no 8, 2022; online 2021), doi 10.1109/TSE.2021.3070269 (OpenAlex) | Evaluates six batching/bisection strategies on open-source projects (Travis CI) | Large-scale empirical | Same mechanism as our factor B (batch size vs feedback and bisection cost) but for general software, not MBD/embedded pipelines with MIL/SIL/PIL stages. **Our E2 should cite and position against it.** |
-| P5 | Fu, Eldh, Wiklund, Ermedahl, Artho, "Prevalence of continuous integration failures in industrial systems with hardware-in-the-loop testing", ISSREW 2022, doi 10.1109/ISSREW55968.2022.00040 (OpenAlex) | 11,731 builds from four industrial HIL CI projects; failure distribution | Industrial mining study | Observational; measures pipeline failures, not injected defects per stage |
-| P6 | Mathews et al., "Simulink DevOps Evolution", SAE 2026-01-0080 (OpenAlex) | Interview-based study of interactive DevOps for Simulink users | Interviews | Qualitative practitioner study; complementary |
+## Comparison table (draft for the paper's Related Work)
 
-## Candidates still to read (title-level only — do not characterise in the paper yet)
-- "A Scalable Software-in-the-Loop Test Methodology for Early Integration Testing Using Virtual ECUs", ETFA 2026 (IEEE 11724816). **IES conference; possibly the closest work. Read first.**
-- "Model-Based Fault Injection and Diagnostic Validation for AUTOSAR Software Components in Safety-Critical Automotive Systems", **ISIE 2025** (IEEE 11124734). Venue exemplar (P08) and possibly close to E1.
-- "Enabling Credibility for Virtual Testing of Autonomous Vehicles by Adapting DevOps to Hardware-in-the-Loop Simulations", IV 2025 (IEEE 11097544).
-- "A study on parallel virtual ECU build and SILS automation for SDV validation", Trans. KSAE 34(10) 2026 (open access, Korean).
-- "CI-CD Workflow For Embedded System Design", ICCUBEA 2023 (IEEE 10392168).
-- "Artshop: A continuous integration and quality assessment framework for model-based software artifacts", MBEES 2016.
-- Simulink mutation tooling, for E1 method: SIMULTATE (ICSTW 2016, IEEE 7528959), MUT4SLX (ASE 2023, IEEE 10298490), timed mutation operators (ICSTW 2024, IEEE 10675884), fault injection for Simulink CPS (ASE 2025, IEEE 11334475).
+| # | Work | Depth | Pipeline / process | Stages | Ground-truth defects? | Measures cadence / lead time? | Evaluation |
+|---|---|---|---|---|---|---|---|
+| P1 | Mörtstrand, Bucaioni, Ciccozzi, ICECET 2023, doi 10.1109/ICECET58911.2023.10389472 | A | CI/CD (GitHub Actions) added to MoVES model-based timing analysis | model-level timing analysis | no (abstract) | no (abstract) | use case: brake-by-wire, wiper motor |
+| P2 | Dmitriev et al., DASC 2020, doi 10.1109/DASC50938.2020.9256576 | A | lean, automated MBD process from DO-178C/DO-331 objectives | MBD artefacts and verification | no (abstract) | no (abstract) | process applied to research aircraft |
+| P3 | Kavgic, Ecin (Porsche), Jesser, ETFA 2026, doi 10.1109/ETFA68377.2026.11724816 | F | multi-V-ECU SiL (6 Level-2 V-ECUs, dSPACE VEOS) with CI and test automation | SiL vs HiL | **no**: transferability of 200 existing HiL tests to SiL (~30 %); earlier defect detection is argued, not measured | no | one industrial project; authors state no scalability benchmark |
+| P4 | Kim, Park, Kim, Oh, Jung (HL Mando), Trans. KSAE 34(10):1129–1137, 2026, doi 10.7467/KSAE.2026.34.10.1129 (Korean, open access) | A (Scopus) | Jenkins dual-build: real ECU and Level-3 V-ECU (virtual MCAL) in parallel, automated SILS | SILS vs real ECU | no: functional equivalence on ASW change scenarios | claims reduced verification time (method not seen) | representative ASW change scenarios |
+| P5 | Schlatzer, Schade, Pannek, IEEE IV 2025, doi 10.1109/IV64158.2025.11097544 | F | DevOps platform for developing HiL simulations themselves | HiL | no | **no — the authors write that a KPI-based assessment "such as lead time, is still forthcoming"** | platform description |
+| P6 | Beheshtian, Bavand, Rigby, IEEE TSE 48(8), 2022, doi 10.1109/TSE.2021.3070269 | A | batching and bisection strategies in CI | general software tests | real build failures | **yes, batch size vs test executions and feedback** | large open-source projects (Travis CI) |
+| P7 | Fu, Eldh, Wiklund, Ermedahl, Artho, ISSREW 2022, doi 10.1109/ISSREW55968.2022.00040 | A | industrial CI with HIL | HIL | real failures (observational) | no | 11,731 builds, four projects |
+| P8 | Manuel, Franco, Silva, Santos, dos Santos, **Dias Santos (UTFPR-PG)**, **ISIE 2025**, doi 10.1109/ISIE62713.2025.11124734 | F | model-based fault injection with AUTOSAR Dem blocks in Simulink | MIL only | injected sensor faults (stuck high/low) | no | one throttle-sensor model; coverage before/after (visual) |
+| P9 | Gerlitz, Hansen, Dernehl, Kowalewski, MBEES 2016 (Artshop) | A (Scopus) | CI of static quality checks for Simulink, DOORS, pure::variants artefacts | static analysis only | no | no | framework description |
 
-## Provisional positioning (not yet a claim)
-From the abstracts read, the closest works either **build** an MBD + CI/CD pipeline and demonstrate it on a
-use case (P1, P2), **measure** CI behaviour without injected ground truth (P5) or outside embedded MBD (P4),
-or **argue** for agile MBD (P3, P6). None of the abstracts read reports a paired comparison of
-verification stages × integration cadence with known injected defects. That is the gap E1/E2 target.
+Background only (no evaluation, or position): Mills et al., ICSA-C 2018 (1-page presentation abstract,
+p. 152); Talekar & Harpale, ICCUBEA 2023 (descriptive CI/CD workflow, no evaluation; low weight, R08);
+Mathews et al., SAE 2026-01-0080 (interviews with Simulink users on interactive DevOps);
+Haghighatkhah et al., IEEE Software 2017.
 
-This is **not** yet a "no prior work" claim (R05, K08): the ETFA 2026 and ISIE 2025 papers have not been
-read and may already do part of it.
+Method references for E1 (mutation of Simulink/model artefacts), title-level only: SIMULTATE (ICSTW 2016),
+MUT4SLX (ASE 2023; SANER-C 2024), timed mutation operators for Simulink (ICSTW 2024), fault injection for
+Simulink CPS models (ASE 2025).
+
+## Positioning (provisional, for K03)
+Across the nine works above, pipelines that combine model-based artefacts with CI/CD are **built and
+demonstrated** (P1, P2, P4, P5, P9), and stage shifting from HiL to SiL is assessed by **test
+transferability** (P3) or **functional equivalence** (P4). Batch size vs feedback is measured only for
+general software (P6). Injected defects appear only at a single MIL stage (P8). None of the works read
+reports a **paired measurement of defect detection per stage (MIL/SIL/PIL) × integration cadence with
+known injected defects** in an embedded MBD pipeline, and P5 explicitly lists lead-time assessment as open.
+
+Allowed wording (K08, R05): "In a dated search of IEEE Xplore and Scopus (November 2026) we did not find…".
+Not allowed: "first", "no prior work". The search is not exhaustive (see search log limits).
+
+## Consequences for the experiments
+- E1 must report **detection**, not transferability or equivalence, to differ from P3/P4. Back-to-back
+  SIL/PIL equivalence (as in P4) is a precondition check, not a result.
+- E2 must cite P6 and explain what differs: MBD stages with different costs per stage (MIL cheap, PIL
+  expensive), embedded target, injected ground truth.
+- P8 is from UTFPR-PG; it is the venue exemplar and a natural citation for model-based fault injection
+  at ISIE. Self-citation rules apply if any author overlaps (R09).
 
 ## Decisions
 
 ## Todos
-- **[#t-0026]** status: open · author: osvaldo — Read the ETFA 2026 (11724816) and ISIE 2025 (11124734) papers in full via CAFe, by hand, and update P-table; they decide whether the gap statement holds.
-- **[#t-0027]** status: open · author: osvaldo — Read the remaining title-level candidates' abstracts (IV 2025, KSAE 2026, ICCUBEA 2023, Artshop 2016) by hand; no scripted retrieval (IEEE returned 420).
-- **[#t-0028]** status: open · author: osvaldo — Dissect the ISIE 2025 AUTOSAR fault-injection paper as the venue exemplar (`venue/exemplar.md`: structure, length, references, figures), check P08.
+- **[#t-0026]** status: done · author: osvaldo — ETFA 2026 (P3) and ISIE 2025 (P8) read in full on 2026-11-11; neither covers the E1/E2 measurement.
+- **[#t-0027]** status: done · author: osvaldo — IV 2025, ICCUBEA 2023, ICSA-C 2018 read on IEEE; KSAE 2026 and Artshop abstracts read on Scopus.
 - **[#t-0029]** status: open · author: osvaldo — Run Q2–Q5 on Scopus and Q1/Q3 on ACM DL and SAE Mobilus to close coverage; rerun Q2 without "SAFe".
 - **[#t-0030]** status: open · author: osvaldo — Verify every entry above against Crossref (`bib-verify-entries`) before it enters the .bib.
+- **[#t-0031]** status: open · author: osvaldo — Find Schwarzl et al. (Daimler test-distribution algorithm that shifts tests to earlier platforms), cited by P3 [8]; possibly the closest predecessor for E1. P3's reference list was not available on IEEE.
+- **[#t-0032]** status: open · author: osvaldo — Find Moradi et al., virtual fault injection framework with model-based tools (cited by P8 [8]); relevant to E1 method.
+- **[#t-0033]** status: open · author: osvaldo — Check SAE 2026-26-0683 "Virtual ECU: Development & Validation Platform" (vECU + CI/CD with Gerrit/Jenkins), found on the open web on 2026-11-11, title-level only.
+- **[#t-0034]** status: open · author: osvaldo — Read P1 and P2 in full (only abstracts read) to confirm they report no defect-detection measurement.

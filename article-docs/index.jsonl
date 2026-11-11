@@ -9,6 +9,9 @@
 {"type":"todo","id":"t-0008","file":"claims/c2-standards-traceability.md","title":"Build the standards mapping table (stage to work product) from ISO 26262 and ISO 21434 text, not from memory. Mark each entry as unverified until checked against the standard.","status":"open","author":"osvaldo"}
 {"type":"section","id":"c3-stage-detection","file":"claims/c3-stage-detection.md","title":"C3 — Each MBD verification stage detects defect classes the others miss"}
 {"type":"todo","id":"t-0024","file":"claims/c3-stage-detection.md","title":"After E1, state C3 at the strength the CIs support; do not round \"most\" to \"all\".","status":"open","author":"osvaldo"}
+{"type":"section","id":"exemplar","file":"venue/exemplar.md","title":"Venue exemplar — ISIE 2025 (P08)"}
+{"type":"todo","id":"t-0028","file":"venue/exemplar.md","title":"Exemplar dissected from the IEEE HTML on 2026-11-11.","status":"done","author":"osvaldo"}
+{"type":"todo","id":"t-0035","file":"venue/exemplar.md","title":"Open the PDF to count references and real figures, and note the template details (abstract length, keywords, figure style).","status":"open","author":"osvaldo"}
 {"type":"section","id":"isie-2027","file":"venue/isie-2027.md","title":"Venue: IEEE ISIE 2027"}
 {"type":"decision","id":"d-0001","file":"venue/isie-2027.md","title":"Target Track 06 (Industrial Cyber-Physical Systems), with Track 24 as the fallback.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
 {"type":"todo","id":"t-0001","file":"venue/isie-2027.md","title":"Confirm the four track names and numbers on the official technical tracks page.","status":"open","author":"osvaldo"}
@@ -41,11 +44,14 @@
 {"type":"section","id":"e4-ota-canary","file":"experiments/e4-ota-canary.md","title":"E4 — Canary OTA rollout on a replayed fleet (optional, RQ4)"}
 {"type":"todo","id":"t-0023","file":"experiments/e4-ota-canary.md","title":"Decide by 2026-12-01 whether E4 runs or is listed as future work.","status":"open","author":"osvaldo"}
 {"type":"section","id":"predecessors","file":"references/predecessors.md","title":"Predecessors — closest works and positioning (K03, R05)"}
-{"type":"todo","id":"t-0026","file":"references/predecessors.md","title":"Read the ETFA 2026 (11724816) and ISIE 2025 (11124734) papers in full via CAFe, by hand, and update P-table; they decide whether the gap statement holds.","status":"open","author":"osvaldo"}
-{"type":"todo","id":"t-0027","file":"references/predecessors.md","title":"Read the remaining title-level candidates' abstracts (IV 2025, KSAE 2026, ICCUBEA 2023, Artshop 2016) by hand; no scripted retrieval (IEEE returned 420).","status":"open","author":"osvaldo"}
-{"type":"todo","id":"t-0028","file":"references/predecessors.md","title":"Dissect the ISIE 2025 AUTOSAR fault-injection paper as the venue exemplar (venue/exemplar.md: structure, length, references, figures), check P08.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0026","file":"references/predecessors.md","title":"ETFA 2026 (P3) and ISIE 2025 (P8) read in full on 2026-11-11; neither covers the E1/E2 measurement.","status":"done","author":"osvaldo"}
+{"type":"todo","id":"t-0027","file":"references/predecessors.md","title":"IV 2025, ICCUBEA 2023, ICSA-C 2018 read on IEEE; KSAE 2026 and Artshop abstracts read on Scopus.","status":"done","author":"osvaldo"}
 {"type":"todo","id":"t-0029","file":"references/predecessors.md","title":"Run Q2–Q5 on Scopus and Q1/Q3 on ACM DL and SAE Mobilus to close coverage; rerun Q2 without \"SAFe\".","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0030","file":"references/predecessors.md","title":"Verify every entry above against Crossref (bib-verify-entries) before it enters the .bib.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0031","file":"references/predecessors.md","title":"Find Schwarzl et al. (Daimler test-distribution algorithm that shifts tests to earlier platforms), cited by P3 [8]; possibly the closest predecessor for E1. P3's reference list was not available on IEEE.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0032","file":"references/predecessors.md","title":"Find Moradi et al., virtual fault injection framework with model-based tools (cited by P8 [8]); relevant to E1 method.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0033","file":"references/predecessors.md","title":"Check SAE 2026-26-0683 \"Virtual ECU: Development & Validation Platform\" (vECU + CI/CD with Gerrit/Jenkins), found on the open web on 2026-11-11, title-level only.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0034","file":"references/predecessors.md","title":"Read P1 and P2 in full (only abstracts read) to confirm they report no defect-detection measurement.","status":"open","author":"osvaldo"}
 {"type":"section","id":"search-log-2026-11","file":"references/search-log-2026-11.md","title":"Search log — closest predecessors (t-0010)"}
 {"type":"skill","id":"lit-search-openalex","file":"skills/skills.jsonl","title":"Search the literature on OpenAlex","status":"unverified","owner":"TODO"}
 {"type":"skill","id":"lit-search-semantic-scholar","file":"skills/skills.jsonl","title":"Follow the citation graph on Semantic Scholar","status":"unverified","owner":"TODO"}
