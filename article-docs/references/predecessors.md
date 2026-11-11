@@ -1,8 +1,10 @@
 # Predecessors — closest works and positioning (K03, R05)
 
 Source: [[references/search-log-2026-11]]. Read 2026-11-11 by hand through CAFe (IEEE Xplore pages,
-Scopus records) and OpenAlex, paced, no bulk download. **Nothing here is in the bibliography yet**:
-every entry still needs `bib-verify-entries` against Crossref before it is cited (R01).
+Scopus records) and OpenAlex, paced, no bulk download. **P1–P8 are in `manuscript/refs.bib`**, each fetched from Crossref by DOI on 2026-11-11 (titles, authors, pages
+matched). P9 (Artshop, no DOI seen) is not cited. Also in refs.bib, Crossref/DataCite-checked: FIT IoT-LAB
+(Adjih et al., WF-IoT 2015), Valgrind (PLDI 2007), MemorySanitizer (CGO 2015), Just et al. (FSE 2014), LG HG2 and
+BESS datasets; the Kaggle OBD-II entry is unverified (t-0049).
 
 Reading depth: **F** = full text read (sections and conclusions), **A** = abstract only.
 
@@ -57,7 +59,7 @@ Not allowed: "first", "no prior work". The search is not exhaustive (see search 
 - **[#t-0026]** status: done · author: osvaldo — ETFA 2026 (P3) and ISIE 2025 (P8) read in full on 2026-11-11; neither covers the E1/E2 measurement.
 - **[#t-0027]** status: done · author: osvaldo — IV 2025, ICCUBEA 2023, ICSA-C 2018 read on IEEE; KSAE 2026 and Artshop abstracts read on Scopus.
 - **[#t-0029]** status: open · author: osvaldo — Run Q2–Q5 on Scopus and Q1/Q3 on ACM DL and SAE Mobilus to close coverage; rerun Q2 without "SAFe".
-- **[#t-0030]** status: open · author: osvaldo — Verify every entry above against Crossref (`bib-verify-entries`) before it enters the .bib.
+- **[#t-0030]** status: done · author: osvaldo — P1–P8 verified against Crossref by DOI on 2026-11-11 and entered in `manuscript/refs.bib`; P9 left out.
 - **[#t-0031]** status: open · author: osvaldo — Find Schwarzl et al. (Daimler test-distribution algorithm that shifts tests to earlier platforms), cited by P3 [8]; possibly the closest predecessor for E1. P3's reference list was not available on IEEE.
 - **[#t-0032]** status: open · author: osvaldo — Find Moradi et al., virtual fault injection framework with model-based tools (cited by P8 [8]); relevant to E1 method.
 - **[#t-0033]** status: open · author: osvaldo — Check SAE 2026-26-0683 "Virtual ECU: Development & Validation Platform" (vECU + CI/CD with Gerrit/Jenkins), found on the open web on 2026-11-11, title-level only.

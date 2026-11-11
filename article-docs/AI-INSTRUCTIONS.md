@@ -62,8 +62,8 @@ section will bear.
 
 ## Project specifics
 - Article: comparative MBD / Agile / CI/CD paper for automotive SDV, target IEEE ISIE 2027.
-- Current stage: viability and outline. No LaTeX/Word source exists yet. The manuscript source
-  location and build command are TODO; do not invent them.
+- Current stage: draft v1 of the manuscript (2026-11-11). Source `manuscript/main.tex` + `refs.bib`;
+  build `wsl -- bash /mnt/d/artigos/CICD/manuscript/build.sh` (d-0012, proposed). State in `sections/manuscript.md`.
 - Venue rules are in `article-docs/venue/isie-2027.md`. Read them before writing anything.
   Regular deadline 2026-12-15; 6 pages, IEEE two-column, PDF.
 - Evidence sources are other local folders (`D:\artigos\genai-mbd-exp`, `D:\artigos\xai-sdv-artifact`).

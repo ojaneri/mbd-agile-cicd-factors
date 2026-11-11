@@ -5,3 +5,12 @@ __pycache__/
 
 # Python caches
 __pycache__/
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.fls
+manuscript/*.fdb_latexmk
+manuscript/*.out
+manuscript/build.out
+manuscript/main.pdf
