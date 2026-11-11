@@ -45,8 +45,11 @@ Not allowed: "first", "no prior work". The search is not exhaustive (see search 
   SIL/PIL equivalence (as in P4) is a precondition check, not a result.
 - E2 must cite P6 and explain what differs: MBD stages with different costs per stage (MIL cheap, PIL
   expensive), embedded target, injected ground truth.
-- P8 is from UTFPR-PG; it is the venue exemplar and a natural citation for model-based fault injection
-  at ISIE. Self-citation rules apply if any author overlaps (R09).
+- P8 is **self-citation**: Max Mauro Dias Santos, co-author and advisor of this paper, is its last author
+  (confirmed by Osvaldo on 2026-11-11). Cite it because it is pertinent (closest MBD fault-injection work
+  at this venue), not more than once per point, and in the third person if ISIE review is
+  double-anonymous (R09, E02). Keep the comparison factual: it is MIL-only and demonstration-level, and
+  the text should say so in neutral terms.
 
 ## Decisions
 

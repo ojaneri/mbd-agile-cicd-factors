@@ -19,6 +19,8 @@
 {"type":"todo","id":"t-0003","file":"venue/isie-2027.md","title":"Find the submission portal link; it was not open when checked.","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0004","file":"venue/isie-2027.md","title":"Check the extra-page fee amount.","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0005","file":"venue/isie-2027.md","title":"Schedule: about 5 weeks to the 2026-12-15 deadline. Decide whether a measured case study is feasible in that time, or submit a qualitative version.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0036","file":"venue/isie-2027.md","title":"Find ISIE 2027's review regime (single- or double-anonymous) in the official author instructions (P02). It decides how the self-citation of the advisor's ISIE 2025 paper and the genai-mbd-exp / xai-sdv-artifact work is written.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0037","file":"venue/isie-2027.md","title":"Agree author order and corresponding author with Max Mauro Dias Santos.","status":"open","author":"osvaldo"}
 {"type":"section","id":"e0-testbed-and-protocol","file":"experiments/e0-testbed-and-protocol.md","title":"E0 — Shared testbed, factorial design and protocol"}
 {"type":"decision","id":"d-0003","file":"experiments/e0-testbed-and-protocol.md","title":"Operationalise \"Agile\" as integration cadence / change batch size, not as team practice.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
 {"type":"decision","id":"d-0004","file":"experiments/e0-testbed-and-protocol.md","title":"Open toolchain (OpenModelica + FMI + gcc + FIT IoT-LAB) instead of MATLAB/Simulink.","status":"proposed","author":"osvaldo","date":"2026-11-10"}

@@ -18,14 +18,15 @@ State: **sketch / viability stage**. No manuscript source yet, no measurements y
 | Bibliography | `references/` |
 | Reviewer reports and rebuttals | `reviews/` |
 | Procedures (build, figures, analysis) | `skills/skills.jsonl` |
-| Authors & ownership | `identity/ownership.md` (not yet written) |
+| Authors & ownership | `identity/ownership.md` |
 | Sessions | `sessions/` |
 | Machine index | `index.jsonl` |
 
 ## Quick facts
 - Title (accepted, d-0007): *MBD, Agile, or CI/CD? A Comparative Analysis and Integrated Pipeline for Automotive Embedded Systems*
 - Venue: IEEE ISIE 2027. Regular paper deadline 2026-12-15. Track candidate: 06 (Industrial CPS), see `venue/isie-2027.md`.
-- Authors: **not set**. Ask the human before writing any author list or `whoami`.
+- Authors: Osvaldo Janeri Filho (UTFPR) and Max Mauro Dias Santos (UTFPR-PG, advisor). Order and corresponding author not decided; see `identity/ownership.md`.
+- Trap: the ISIE 2025 venue exemplar (doi 10.1109/ISIE62713.2025.11124734) is co-authored by the advisor. Citing it is self-citation; under double-anonymous review it must be cited in the third person.
 - Source material from earlier work (not yet linked into this memory): `D:\artigos\genai-mbd-exp` (MBD/BESS data) and `D:\artigos\xai-sdv-artifact` (CAN intrusion XAI, OTA drift). Candidates for a case study, not decided.
 - Framework source: `D:\artigos\article-docs-framework` (cloned from github.com/ojaneri/article-docs).
 - Legacy hand-written notes kept at `D:\artigos\CICD\article-docs-legacy\` and folded into this structure. Delete only after the human agrees.
