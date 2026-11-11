@@ -32,8 +32,16 @@ injected defects, so comparisons are **paired**.
 
 ## Subjects (two, for external validity)
 1. **Battery SoC estimator / cell model** driven by the LG HG2 drive-cycle data already in
-   `D:\artigos\genai-mbd-exp\data_lghg2_raw` (provenance and licence to record, t-0011).
-2. **Fuel-flow virtual sensor** (Opel Corsa 2012 data, CC BY 4.0, in `genai-mbd-exp`).
+   `D:\artigos\genai-mbd-exp\data_lghg2_raw`. Source: Kollmeyer, Vidal, Naguib, Skells (McMaster
+   University), "LG 18650HG2 Li-ion Battery Data and Example Deep Neural Network xEV SOC Estimator
+   Script", Mendeley Data v3, doi 10.17632/cp3473x7xv.3, published 2020-03-05, **CC BY 4.0**
+   (checked against the Mendeley public API on 2026-11-11).
+2. **Fuel-flow virtual sensor**: real OBD-II telemetry from a 2012 Opel Corsa 1.2 (A12XER) with
+   refuelling history, Kaggle `pedro2025/obd2-panel-opel-2012`, **CC BY 4.0** (checked against the
+   Kaggle API on 2026-11-11). Kaggle datasets change: pin the file hashes already recorded in
+   `genai-mbd-exp/code/DESKTOP.md` (dataset.csv sha256 27e6b070…eee8b3).
+   Other sets used in genai-mbd-exp, not planned here: BESS field data (Zenodo 10.5281/zenodo.20094787,
+   CC BY 4.0) and Itabira OBD-II (Kaggle brunops2, CC0).
 Both have real recorded data, which serves as the "field" oracle for escaped defects.
 
 ## Toolchain (open, so a reviewer can rerun it)
@@ -101,8 +109,8 @@ submit a qualitative version as a regular paper; move to the WIP deadline (2027-
   (MIL/SIL/HIL/VIL) from the infographics cannot be reproduced as is.
 
 ## Todos
-- **[#t-0010]** status: open · author: osvaldo — Dated literature search (OpenAlex / IEEE Xplore / Scopus) on CI/CD + MBD + Agile + ISO 26262 for automotive; record queries and date here; list the 3–5 closest predecessors for a comparison table (K03, R05).
-- **[#t-0011]** status: open · author: osvaldo — Record provenance, licence and citation of the LG HG2 and Opel Corsa datasets used in genai-mbd-exp.
+- **[#t-0010]** status: done · author: osvaldo — First dated search run 2026-11-11 (IEEE Xplore + Scopus via CAFe); log in `references/search-log-2026-11.md`, candidates in `references/predecessors.md`. Follow-ups are t-0026 to t-0030.
+- **[#t-0011]** status: done · author: osvaldo — Provenance and licences recorded above (both CC BY 4.0, verified at source 2026-11-11). Still to do at writing time: exact citation format for each dataset.
 - **[#t-0012]** status: open · author: osvaldo — Toolchain installed and smoke-tested 2026-11-10 (skill `testbed-toolchain-smoke`). Remaining: confirm the FIT IoT-LAB account still works and flash one test firmware.
 - **[#t-0013]** status: open · author: osvaldo — Check whether UTFPR provides a MATLAB/Simulink campus licence (optional second toolchain).
 - **[#t-0014]** status: done · author: osvaldo — Protocol committed before any run: commit e397dba, 2026-11-10 20:59 -0300. A local commit is weak proof on its own; push to a private remote (or deposit a hash) to make the timestamp verifiable by a third party (t-0025).
