@@ -23,10 +23,11 @@ State: **sketch / viability stage**. No manuscript source yet, no measurements y
 | Machine index | `index.jsonl` |
 
 ## Quick facts
-- Working title: *Integrating Model-Based Design, Agile, and CI/CD for Safe Software-Defined Vehicle Development: A Comparative Framework*
+- Title (accepted, d-0007): *MBD, Agile, or CI/CD? A Comparative Analysis and Integrated Pipeline for Automotive Embedded Systems*
 - Venue: IEEE ISIE 2027. Regular paper deadline 2026-12-15. Track candidate: 06 (Industrial CPS), see `venue/isie-2027.md`.
 - Authors: **not set**. Ask the human before writing any author list or `whoami`.
 - Source material from earlier work (not yet linked into this memory): `D:\artigos\genai-mbd-exp` (MBD/BESS data) and `D:\artigos\xai-sdv-artifact` (CAN intrusion XAI, OTA drift). Candidates for a case study, not decided.
 - Framework source: `D:\artigos\article-docs-framework` (cloned from github.com/ojaneri/article-docs).
 - Legacy hand-written notes kept at `D:\artigos\CICD\article-docs-legacy\` and folded into this structure. Delete only after the human agrees.
-- Not under git yet. `git drift` cannot run until `git init`.
+- Under git since 2026-11-10 (local only, no remote yet). Protocol pre-registered in commit e397dba.
+- Testbed runs in WSL Ubuntu (default user root): see skill `testbed-toolchain-smoke`.

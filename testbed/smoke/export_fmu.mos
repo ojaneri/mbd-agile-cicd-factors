@@ -1,0 +1,3 @@
+// Run with: omc export_fmu.mos  (from testbed/smoke)
+loadFile("SmokeRC.mo"); getErrorString();
+buildModelFMU(SmokeRC, version = "2.0", fmuType = "me_cs", platforms = {"static"}); getErrorString();

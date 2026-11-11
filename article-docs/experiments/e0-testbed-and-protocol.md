@@ -44,8 +44,10 @@ Both have real recorded data, which serves as the "field" oracle for escaped def
   `iotlab_run.sh`).
 - CI: GitHub Actions (private repo) or a local runner in WSL. Pipeline as code, versioned.
 - Mutation: model-level and code-level mutation operators (E1).
-- Local machine today has **none** of these installed (no OpenModelica, gcc, Docker, numpy).
-  Setup is week 1 work (t-0012). MATLAB/Simulink is optional if a UTFPR licence exists (t-0013).
+- Installed and verified in WSL Ubuntu 26.04 on 2026-11-10: OpenModelica 1.27.2, FMPy 0.3.32,
+  numpy/scipy/pandas, gcc, arm-none-eabi-gcc 14.2.1, cmake 4.2.3. Procedure and versions in skill
+  `testbed-toolchain-smoke`. Not yet checked: FIT IoT-LAB access. MATLAB/Simulink is optional if a
+  UTFPR licence exists (t-0013).
 
 ## Protocol rules (to pass M04, M05, M06, M11)
 1. Commit this protocol, the mutation operators and the analysis script **before** any run, with a
@@ -101,7 +103,8 @@ submit a qualitative version as a regular paper; move to the WIP deadline (2027-
 ## Todos
 - **[#t-0010]** status: open · author: osvaldo — Dated literature search (OpenAlex / IEEE Xplore / Scopus) on CI/CD + MBD + Agile + ISO 26262 for automotive; record queries and date here; list the 3–5 closest predecessors for a comparison table (K03, R05).
 - **[#t-0011]** status: open · author: osvaldo — Record provenance, licence and citation of the LG HG2 and Opel Corsa datasets used in genai-mbd-exp.
-- **[#t-0012]** status: open · author: osvaldo — Install toolchain in WSL: OpenModelica, FMPy, numpy/scipy/pandas, gcc, arm-none-eabi-gcc; confirm FIT IoT-LAB account still works.
+- **[#t-0012]** status: open · author: osvaldo — Toolchain installed and smoke-tested 2026-11-10 (skill `testbed-toolchain-smoke`). Remaining: confirm the FIT IoT-LAB account still works and flash one test firmware.
 - **[#t-0013]** status: open · author: osvaldo — Check whether UTFPR provides a MATLAB/Simulink campus licence (optional second toolchain).
-- **[#t-0014]** status: open · author: osvaldo — `git init` the project and commit this protocol before any experimental run (pre-registration evidence, M05).
+- **[#t-0014]** status: done · author: osvaldo — Protocol committed before any run: commit e397dba, 2026-11-10 20:59 -0300. A local commit is weak proof on its own; push to a private remote (or deposit a hash) to make the timestamp verifiable by a third party (t-0025).
+- **[#t-0025]** status: open · author: osvaldo — Create a private GitHub repo for this paper and push, so the pre-registration commit has an external timestamp.
 - **[#t-0015]** status: open · author: osvaldo — Decide how this paper differs from the genai-mbd-exp paper ("Generative-AI and ML-based MBD for agile development of automotive systems"); same data reused as subjects must be disclosed, and no text or results reused (V09, P06).
