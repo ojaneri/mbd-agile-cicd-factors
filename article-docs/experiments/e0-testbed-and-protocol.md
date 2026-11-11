@@ -19,7 +19,8 @@ was only partly supported (M04). RQ1 and RQ2 are the pre-registered questions, u
   feedback latency, localisation effort, lead time and compute? → E2, claim [[claims/c1-integration-gain]]
 - **RQ3 (where it must run, platform; new):** under what conditions does the execution platform (host,
   emulator, real MCU) change the verdict, and what is the cheapest placement of stages that keeps the
-  detection? → E1 real-target re-run (exploratory), E5 (confirmatory), claim [[claims/c4-platform-tiering]]
+  detection? → E1 real-target re-run (exploratory), E5 (confirmatory, run 2026-11-11: H1, H2 supported;
+  H3 only with the secondary tool; H4 partly), claim [[claims/c4-platform-tiering]]
 
 Out of the main line (6 pages): the original RQ3 (ISO 26262 / ISO 21434 evidence, E3, blocked on access
 to the standards) and RQ4 (canary OTA, E4). Both become future work unless E3 unblocks by week 3.

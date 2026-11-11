@@ -1,6 +1,43 @@
 # E5 — Platform sensitivity and the tiered pipeline (RQ3, confirmatory)
 
-Status: **built and frozen 2026-11-11; not run.** 75 E5 mutants + subject 3's control set (after its E1 run). Design, mutants and analysis are frozen in the commit
+Status: **run 2026-11-11 (frozen in df154a4, run 12:36–14:43 UTC, IoT-LAB exp 458337).** 75 E5 mutants +
+84 control mutants; all 552 records valid (no invalid stream, no retry needed).
+
+## Results (`testbed/e5/results/e5_analysis.json`, `e5_bess_tiered.json`)
+Sets: 28 INIT/LUD mutants, 26 observable (U), 19 of them unseen; unobserved (no effect on any arm):
+E5-BESS-INIT-05, E5-FUEL-INIT-02.
+
+| Arm | Detected / U (26) | Wilson 95 % | Unseen (19) | Median wall per mutant |
+|---|---|---|---|---|
+| host SIL | 22 | 66–94 % | 18 | 0.29 s |
+| host SIL + state poison | 25 | 81–99 % | 18 | 1.12 s |
+| host Valgrind memcheck | 25 | 81–99 % | 18 | 3.13 s |
+| host MemorySanitizer (secondary) | 26 | 87–100 % | 19 | 0.34 s |
+| QEMU, same ELF, 5 passes | 26 | 87–100 % | 19 | 1.91 s |
+| board, 5 passes × 2 resets | 26 | 87–100 % | 19 | 135 s |
+
+- **H1 supported:** subject 3 control mutants, QEMU vs board pass-0 verdict agree 84/84 (Wilson 95.6–100 %).
+- **H2 supported:** 0 counterexamples (19 unseen, 26 in all); also 0 mutants caught only by QEMU. Pass 0
+  alone: 25/26 on both platforms; the paint passes added the last one on both. With the same ELF the
+  E1 platform disagreement does not reappear.
+- **H3 not supported for Valgrind** (pre-registered tool): it missed E5-SOC-LUD-04 (`float lo;` in the OCV
+  inverse) and was slower than QEMU (3.13 vs 1.91 s). Cause of the miss not investigated.
+  **MemorySanitizer (secondary) met both conditions:** 26/26 at 0.34 s, about 400× cheaper than the board
+  run. Being secondary, it may be reported as such, not promoted to the primary result.
+- host poison: predicted "INIT, not LUD" — **wrong**: 9/9 INIT and 16/17 LUD, the LUD ones because their
+  garbage already fails the requirements (plain SIL catches 22/26).
+- **H4 partly supported:** DIV ladder differs as predicted (board flags +1.1, +1.5, +3.0 × baseline in all
+  subjects and also +0.9 in subject 2; QEMU flags none — 28 vdiv cost ~400 cycles but count as 28
+  instructions). **ALU ladder not equal, against the prediction:** QEMU also flags +0.9 in all three
+  subjects. Post-hoc explanation (exploratory): the budget is 2× each platform's own baseline, and the
+  baseline step has a CPI of about 1.6 (107 cycles, 68 instructions in subject 1), so 1-cycle instructions
+  weigh more in QEMU's instruction count than in board cycles. The emulator's proxy mis-scales in both
+  directions whenever the regression's cycles per instruction differ from the baseline's.
+- Tiered replay (subject 3, 84 control mutants; costs UNIT 0.29, MIL 2.49, SIL 0.28, QEMU 0.86, board 30.0 s):
+  no control mutant was caught by the board alone, so AT, A3q and A3b all have 0 escapes; compute per sprint
+  A2 36.8 s, A3q 47.1 s, **AT 77.1 s, A3b 396.7 s** (Cliff's delta AT vs A3b −1.0); latency AT = A3q (4 s),
+  A3b 33 s. With this pool the per-sprint board run adds cost only; its value is the timing class above
+  (no DIV-like regression was in the control pool). Design, mutants and analysis are frozen in the commit
 that adds `testbed/e5/` and `testbed/bess/` (protocol: `testbed/e5/protocol/README.md`, normative rules in
 `testbed/e5/analyze_e5.py`). Tests [[claims/c4-platform-tiering]], which is exploratory until this runs.
 
@@ -51,4 +88,10 @@ frame); mutants as proxies, as in E1.
 - **[#t-0044]** status: done · author: osvaldo — E5 generator, RAM-paint firmware, host arms, runner and analysis written (`testbed/e5/`).
 - **[#t-0045]** status: done · author: osvaldo — Subject 3 built in `testbed/bess/`; licence CC BY 4.0 checked at the Zenodo API on 2026-11-11.
 - **[#t-0046]** status: open · author: osvaldo — Check whether a NUCLEO-L476RG run can be added as a second real board (see t-0038).
-- **[#t-0047]** status: open · author: osvaldo — Run E5 after the freeze: subject 3 E1 campaign, board calibration of subject 3, then all arms (one IoT-LAB reservation of about 3 h).
+- **[#t-0047]** status: done · author: osvaldo — E5 run 2026-11-11 (subject 3 E1 campaign, all arms, board in exp 458337).
+- **[#t-0048]** status: open · author: osvaldo — Find why Valgrind missed E5-SOC-LUD-04 (inspect the -O2 code) before the paper names the tool's limit.
+
+## Deviations (M10)
+- Host and board runs went in parallel; the first host attempt shared build directories with the board
+  process and was stopped before any overlap (records checked valid); directories were then split per arm group.
+- Subject 3's E1 baseline stays the mps2 QEMU harness (E1 protocol); only E5 uses the shared ELF.

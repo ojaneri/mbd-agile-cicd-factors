@@ -1,0 +1,547 @@
+{
+ "subject": "bess",
+ "mutants": [
+  {
+   "id": "MP-tau-x0.5",
+   "op": "MP",
+   "level": "model",
+   "desc": "tau x0.5"
+  },
+  {
+   "id": "MP-tau-x2.0",
+   "op": "MP",
+   "level": "model",
+   "desc": "tau x2.0"
+  },
+  {
+   "id": "MP-k_h-x0.5",
+   "op": "MP",
+   "level": "model",
+   "desc": "k_h x0.5"
+  },
+  {
+   "id": "MP-k_h-x2.0",
+   "op": "MP",
+   "level": "model",
+   "desc": "k_h x2.0"
+  },
+  {
+   "id": "MP-c0-x0.5",
+   "op": "MP",
+   "level": "model",
+   "desc": "c0 x0.5"
+  },
+  {
+   "id": "MP-c0-x2.0",
+   "op": "MP",
+   "level": "model",
+   "desc": "c0 x2.0"
+  },
+  {
+   "id": "MP-tau_f-x0.5",
+   "op": "MP",
+   "level": "model",
+   "desc": "tau_f x0.5"
+  },
+  {
+   "id": "MP-tau_f-x2.0",
+   "op": "MP",
+   "level": "model",
+   "desc": "tau_f x2.0"
+  },
+  {
+   "id": "MP-dwell_s-x0.5",
+   "op": "MP",
+   "level": "model",
+   "desc": "dwell_s x0.5"
+  },
+  {
+   "id": "MP-dwell_s-x2.0",
+   "op": "MP",
+   "level": "model",
+   "desc": "dwell_s x2.0"
+  },
+  {
+   "id": "MP-d_lim-x0.5",
+   "op": "MP",
+   "level": "model",
+   "desc": "d_lim x0.5"
+  },
+  {
+   "id": "MP-d_lim-x2.0",
+   "op": "MP",
+   "level": "model",
+   "desc": "d_lim x2.0"
+  },
+  {
+   "id": "MP-ramp-x0.5",
+   "op": "MP",
+   "level": "model",
+   "desc": "ramp x0.5"
+  },
+  {
+   "id": "MP-ramp-x2.0",
+   "op": "MP",
+   "level": "model",
+   "desc": "ramp x2.0"
+  },
+  {
+   "id": "MS-s_heat",
+   "op": "MS",
+   "level": "model",
+   "desc": "sign flip s_heat"
+  },
+  {
+   "id": "MS-s_c0",
+   "op": "MS",
+   "level": "model",
+   "desc": "sign flip s_c0"
+  },
+  {
+   "id": "MK-t_hi-+",
+   "op": "MK",
+   "level": "model",
+   "desc": "t_hi +1"
+  },
+  {
+   "id": "MK-t_hi--",
+   "op": "MK",
+   "level": "model",
+   "desc": "t_hi -1"
+  },
+  {
+   "id": "MK-t_lo-+",
+   "op": "MK",
+   "level": "model",
+   "desc": "t_lo +1"
+  },
+  {
+   "id": "MK-t_lo--",
+   "op": "MK",
+   "level": "model",
+   "desc": "t_lo -1"
+  },
+  {
+   "id": "MSAT-sat",
+   "op": "MSAT",
+   "level": "model",
+   "desc": "sat removed"
+  },
+  {
+   "id": "MSAT-iclamp",
+   "op": "MSAT",
+   "level": "model",
+   "desc": "iclamp removed"
+  },
+  {
+   "id": "MSAT-ramp",
+   "op": "MSAT",
+   "level": "model",
+   "desc": "ramp removed"
+  },
+  {
+   "id": "MSAT-hyst",
+   "op": "MSAT",
+   "level": "model",
+   "desc": "hyst removed"
+  },
+  {
+   "id": "MDT-x10.0",
+   "op": "MDT",
+   "level": "model",
+   "desc": "dt_scale x10.0"
+  },
+  {
+   "id": "MDT-x0.1",
+   "op": "MDT",
+   "level": "model",
+   "desc": "dt_scale x0.1"
+  },
+  {
+   "id": "MRST-temp",
+   "op": "MRST",
+   "level": "model",
+   "desc": "latch release on temp only"
+  },
+  {
+   "id": "MRST-dwell",
+   "op": "MRST",
+   "level": "model",
+   "desc": "latch release on dwell only"
+  },
+  {
+   "id": "AOR-001",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L22 bess_init: '+' -> '-'"
+  },
+  {
+   "id": "AOR-002",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L22 bess_init: '*' -> '/'"
+  },
+  {
+   "id": "ROR-001",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L34 bess_therm: '>' -> '>=' (boundary)"
+  },
+  {
+   "id": "ROR-002",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L34 bess_therm: '>' -> '<=' (negation)"
+  },
+  {
+   "id": "SDL-007",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L35 bess_therm: delete 'ic = I_MAX;'"
+  },
+  {
+   "id": "ROR-003",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L37 bess_therm: '<' -> '<=' (boundary)"
+  },
+  {
+   "id": "ROR-004",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L37 bess_therm: '<' -> '>=' (negation)"
+  },
+  {
+   "id": "SDL-008",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L38 bess_therm: delete 'ic = -I_MAX;'"
+  },
+  {
+   "id": "ROR-005",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L41 bess_therm: '<' -> '<=' (boundary)"
+  },
+  {
+   "id": "ROR-006",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L41 bess_therm: '<' -> '>=' (negation)"
+  },
+  {
+   "id": "TW-001",
+   "op": "TW",
+   "level": "code",
+   "desc": "L41 bess_therm: 'int' -> 'unsigned'"
+  },
+  {
+   "id": "AOR-003",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '+' -> '-'"
+  },
+  {
+   "id": "AOR-004",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '/' -> '*'"
+  },
+  {
+   "id": "AOR-005",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '*' -> '/'"
+  },
+  {
+   "id": "AOR-006",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '+' -> '-'"
+  },
+  {
+   "id": "AOR-007",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '*' -> '/'"
+  },
+  {
+   "id": "AOR-008",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '+' -> '-'"
+  },
+  {
+   "id": "AOR-009",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '*' -> '/'"
+  },
+  {
+   "id": "AOR-010",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '*' -> '/'"
+  },
+  {
+   "id": "AOR-011",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '*' -> '/'"
+  },
+  {
+   "id": "AOR-012",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L42 bess_therm: '-' -> '+'"
+  },
+  {
+   "id": "SDL-010",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L42 bess_therm: delete 'acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);'"
+  },
+  {
+   "id": "FPP-001",
+   "op": "FPP",
+   "level": "code",
+   "desc": "L42 bess_therm: literal 1.0f -> 1.0"
+  },
+  {
+   "id": "FPP-002",
+   "op": "FPP",
+   "level": "code",
+   "desc": "L42 bess_therm: literal 1.0f -> 1.0"
+  },
+  {
+   "id": "ROR-007",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L44 bess_therm: '>' -> '>=' (boundary)"
+  },
+  {
+   "id": "ROR-008",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L44 bess_therm: '>' -> '<=' (negation)"
+  },
+  {
+   "id": "SDL-011",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L45 bess_therm: delete 'acc = T_MAX;'"
+  },
+  {
+   "id": "ROR-009",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L47 bess_therm: '<' -> '<=' (boundary)"
+  },
+  {
+   "id": "ROR-010",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L47 bess_therm: '<' -> '>=' (negation)"
+  },
+  {
+   "id": "SDL-012",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L48 bess_therm: delete 'acc = T_MIN;'"
+  },
+  {
+   "id": "AOR-013",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L56 bess_derate: '+' -> '-'"
+  },
+  {
+   "id": "AOR-014",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L56 bess_derate: '*' -> '/'"
+  },
+  {
+   "id": "AOR-015",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L56 bess_derate: '-' -> '+'"
+  },
+  {
+   "id": "SDL-013",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L56 bess_derate: delete 'o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);'"
+  },
+  {
+   "id": "ROR-011",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L58 bess_derate: '>' -> '>=' (boundary)"
+  },
+  {
+   "id": "ROR-012",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L58 bess_derate: '>' -> '<=' (negation)"
+  },
+  {
+   "id": "SDL-014",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L59 bess_derate: delete 'o->latch = 1;'"
+  },
+  {
+   "id": "SDL-015",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L60 bess_derate: delete 'o->dwell_ms = 0u;'"
+  },
+  {
+   "id": "AOR-016",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L63 bess_derate: '+' -> '-'"
+  },
+  {
+   "id": "SDL-016",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L63 bess_derate: delete 'o->dwell_ms = o->dwell_ms + DT_MS;'"
+  },
+  {
+   "id": "ROR-013",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L64 bess_derate: '<' -> '<=' (boundary)"
+  },
+  {
+   "id": "ROR-014",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L64 bess_derate: '<' -> '>=' (negation)"
+  },
+  {
+   "id": "ROR-015",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L64 bess_derate: '>=' -> '>' (boundary)"
+  },
+  {
+   "id": "ROR-016",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L64 bess_derate: '>=' -> '<' (negation)"
+  },
+  {
+   "id": "SDL-017",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L65 bess_derate: delete 'o->latch = 0;'"
+  },
+  {
+   "id": "FPP-003",
+   "op": "FPP",
+   "level": "code",
+   "desc": "L68 bess_derate: literal 1.0f -> 1.0"
+  },
+  {
+   "id": "SDL-019",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L70 bess_derate: delete 'tgt = D_LIM;'"
+  },
+  {
+   "id": "ROR-017",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L72 bess_derate: '<' -> '<=' (boundary)"
+  },
+  {
+   "id": "ROR-018",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L72 bess_derate: '<' -> '>=' (negation)"
+  },
+  {
+   "id": "SDL-020",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L73 bess_derate: delete 'o->der = tgt;'"
+  },
+  {
+   "id": "AOR-017",
+   "op": "AOR",
+   "level": "code",
+   "desc": "L75 bess_derate: '+' -> '-'"
+  },
+  {
+   "id": "SDL-021",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L75 bess_derate: delete 'o->der = o->der + RAMP_STEP;'"
+  },
+  {
+   "id": "ROR-019",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L76 bess_derate: '>' -> '>=' (boundary)"
+  },
+  {
+   "id": "ROR-020",
+   "op": "ROR",
+   "level": "code",
+   "desc": "L76 bess_derate: '>' -> '<=' (negation)"
+  },
+  {
+   "id": "SDL-022",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L77 bess_derate: delete 'o->der = tgt;'"
+  },
+  {
+   "id": "SDL-024",
+   "op": "SDL",
+   "level": "code",
+   "desc": "L86 bess_step: delete 'o->t_est = te;'"
+  }
+ ],
+ "dropped": [
+  [
+   "SDL-001",
+   "init deletion"
+  ],
+  [
+   "SDL-002",
+   "init deletion"
+  ],
+  [
+   "SDL-003",
+   "init deletion"
+  ],
+  [
+   "SDL-004",
+   "init deletion"
+  ],
+  [
+   "SDL-005",
+   "init deletion"
+  ],
+  [
+   "SDL-006",
+   "same as an E5 mutant"
+  ],
+  [
+   "SDL-009",
+   "same as an E5 mutant"
+  ],
+  [
+   "SDL-018",
+   "same as an E5 mutant"
+  ],
+  [
+   "SDL-023",
+   "same as an E5 mutant"
+  ]
+ ]
+}

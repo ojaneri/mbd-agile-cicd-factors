@@ -10,7 +10,7 @@
 {"type":"todo","id":"t-0008","file":"claims/c2-standards-traceability.md","title":"Build the standards mapping table (stage to work product) from ISO 26262 and ISO 21434 text, not from memory. Mark each entry as unverified until checked against the standard.","status":"open","author":"osvaldo"}
 {"type":"section","id":"c3-stage-detection","file":"claims/c3-stage-detection.md","title":"C3 — Functional detection saturates before the target; each stage changes when, not whether"}
 {"type":"todo","id":"t-0024","file":"claims/c3-stage-detection.md","title":"After E1, state C3 at the strength the CIs support; do not round \"most\" to \"all\".","status":"open","author":"osvaldo"}
-{"type":"section","id":"c4-platform-tiering","file":"claims/c4-platform-tiering.md","title":"C4 — An emulator can carry per-commit PIL; the real board is needed only for memory state and exact timing"}
+{"type":"section","id":"c4-platform-tiering","file":"claims/c4-platform-tiering.md","title":"C4 — With the same binary, an emulator gives the board's functional verdicts; the board is needed for cycle-accurate timing"}
 {"type":"section","id":"exemplar","file":"venue/exemplar.md","title":"Venue exemplar — ISIE 2025 (P08)"}
 {"type":"todo","id":"t-0028","file":"venue/exemplar.md","title":"Exemplar dissected from the IEEE HTML on 2026-11-11.","status":"done","author":"osvaldo"}
 {"type":"todo","id":"t-0035","file":"venue/exemplar.md","title":"Open the PDF to count references and real figures, and note the template details (abstract length, keywords, figure style).","status":"open","author":"osvaldo"}
@@ -56,7 +56,8 @@
 {"type":"todo","id":"t-0044","file":"experiments/e5-platform-sensitivity.md","title":"E5 generator, RAM-paint firmware, host arms, runner and analysis written (testbed/e5/).","status":"done","author":"osvaldo"}
 {"type":"todo","id":"t-0045","file":"experiments/e5-platform-sensitivity.md","title":"Subject 3 built in testbed/bess/; licence CC BY 4.0 checked at the Zenodo API on 2026-11-11.","status":"done","author":"osvaldo"}
 {"type":"todo","id":"t-0046","file":"experiments/e5-platform-sensitivity.md","title":"Check whether a NUCLEO-L476RG run can be added as a second real board (see t-0038).","status":"open","author":"osvaldo"}
-{"type":"todo","id":"t-0047","file":"experiments/e5-platform-sensitivity.md","title":"Run E5 after the freeze: subject 3 E1 campaign, board calibration of subject 3, then all arms (one IoT-LAB reservation of about 3 h).","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0047","file":"experiments/e5-platform-sensitivity.md","title":"E5 run 2026-11-11 (subject 3 E1 campaign, all arms, board in exp 458337).","status":"done","author":"osvaldo"}
+{"type":"todo","id":"t-0048","file":"experiments/e5-platform-sensitivity.md","title":"Find why Valgrind missed E5-SOC-LUD-04 (inspect the -O2 code) before the paper names the tool's limit.","status":"open","author":"osvaldo"}
 {"type":"section","id":"labs-access","file":"experiments/labs-access.md","title":"Labs and hardware for this paper — access, where secrets live, lessons learned"}
 {"type":"decision","id":"d-0008","file":"experiments/labs-access.md","title":"PIL target: NUCLEO-L476RG (local) as primary, FIT IoT-LAB st-iotnode as replication; QEMU for develo","status":"proposed","author":"osvaldo","date":"2026-11-11"}
 {"type":"todo","id":"t-0038","file":"experiments/labs-access.md","title":"Plug the NUCLEO-L476RG with a data cable; confirm COM port and drive letter.","status":"open","author":"osvaldo"}

@@ -1,0 +1,502 @@
+{
+ "subjects": [
+  "soc",
+  "fuel",
+  "bess"
+ ],
+ "excluded_arms": {
+  "soc": [],
+  "fuel": [],
+  "bess": []
+ },
+ "sets": {
+  "F": 28,
+  "F_unseen": 20,
+  "U": 26,
+  "U_unseen": 19,
+  "equivalent_or_unobserved": [
+   "E5-BESS-INIT-05",
+   "E5-FUEL-INIT-02"
+  ],
+  "missing_arms": {}
+ },
+ "arms": {
+  "host_sil": {
+   "U": {
+    "detected": 22,
+    "of": 26,
+    "wilson95": [
+     0.6647,
+     0.9385
+    ]
+   },
+   "U_unseen": {
+    "detected": 18,
+    "of": 19,
+    "wilson95": [
+     0.7536,
+     0.9906
+    ]
+   },
+   "median_wall_s": 0.28898569699993004
+  },
+  "host_poison": {
+   "U": {
+    "detected": 25,
+    "of": 26,
+    "wilson95": [
+     0.8111,
+     0.9932
+    ]
+   },
+   "U_unseen": {
+    "detected": 18,
+    "of": 19,
+    "wilson95": [
+     0.7536,
+     0.9906
+    ]
+   },
+   "median_wall_s": 1.1177775284999143,
+   "by_family": {
+    "INIT": {
+     "detected": 9,
+     "of": 9
+    },
+    "LUD": {
+     "detected": 16,
+     "of": 17
+    }
+   }
+  },
+  "host_valgrind": {
+   "U": {
+    "detected": 25,
+    "of": 26,
+    "wilson95": [
+     0.8111,
+     0.9932
+    ]
+   },
+   "U_unseen": {
+    "detected": 18,
+    "of": 19,
+    "wilson95": [
+     0.7536,
+     0.9906
+    ]
+   },
+   "median_wall_s": 3.12797847850004
+  },
+  "host_msan": {
+   "U": {
+    "detected": 26,
+    "of": 26,
+    "wilson95": [
+     0.8713,
+     1.0
+    ]
+   },
+   "U_unseen": {
+    "detected": 19,
+    "of": 19,
+    "wilson95": [
+     0.8318,
+     1.0
+    ]
+   },
+   "median_wall_s": 0.34193738599992685
+  },
+  "qemu": {
+   "U": {
+    "detected": 26,
+    "of": 26,
+    "wilson95": [
+     0.8713,
+     1.0
+    ]
+   },
+   "U_unseen": {
+    "detected": 19,
+    "of": 19,
+    "wilson95": [
+     0.8318,
+     1.0
+    ]
+   },
+   "median_wall_s": 1.9128005339999845,
+   "detect_p0": 25,
+   "detect_paint": 26,
+   "differential_paint": 9,
+   "differential_any": 11
+  },
+  "board": {
+   "U": {
+    "detected": 26,
+    "of": 26,
+    "wilson95": [
+     0.8713,
+     1.0
+    ]
+   },
+   "U_unseen": {
+    "detected": 19,
+    "of": 19,
+    "wilson95": [
+     0.8318,
+     1.0
+    ]
+   },
+   "median_wall_s": 135.46943816399994,
+   "detect_p0": 25,
+   "detect_paint": 26,
+   "differential_paint": 9,
+   "differential_any": 11
+  }
+ },
+ "H1": {
+  "n": 84,
+  "agree": 84,
+  "rate": 1.0,
+  "wilson95": [
+   0.9563,
+   1.0
+  ],
+  "disagreements": [],
+  "supported": true
+ },
+ "H2": {
+  "F_unseen": {
+   "n": 19,
+   "counterexamples": [],
+   "qemu_only": [],
+   "supported": true
+  },
+  "F": {
+   "n": 26,
+   "counterexamples": [],
+   "qemu_only": [],
+   "supported": true
+  }
+ },
+ "H3": {
+  "host_valgrind": {
+   "F_unseen": {
+    "n": 19,
+    "counterexamples": [
+     "E5-SOC-LUD-04"
+    ]
+   },
+   "F": {
+    "n": 26,
+    "counterexamples": [
+     "E5-SOC-LUD-04"
+    ]
+   },
+   "cost": {
+    "median_wall_s": 3.12797847850004,
+    "qemu_median_wall_s": 1.9128005339999845,
+    "cheaper": false
+   },
+   "supported": false
+  },
+  "host_msan": {
+   "F_unseen": {
+    "n": 19,
+    "counterexamples": []
+   },
+   "F": {
+    "n": 26,
+    "counterexamples": []
+   },
+   "cost": {
+    "median_wall_s": 0.34193738599992685,
+    "qemu_median_wall_s": 1.9128005339999845,
+    "cheaper": true
+   },
+   "supported": true
+  }
+ },
+ "H4": {
+  "soc:ALU": {
+   "levels": [
+    0.25,
+    0.5,
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "ran": 6,
+   "qemu_flags": [
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "board_flags": [
+    1.1,
+    1.5,
+    3.0
+   ],
+   "equal": false,
+   "st_max": {
+    "E5-SOC-ALU-01": {
+     "qemu": 96,
+     "board": 134
+    },
+    "E5-SOC-ALU-02": {
+     "qemu": 123,
+     "board": 163
+    },
+    "E5-SOC-ALU-03": {
+     "qemu": 166,
+     "board": 204
+    },
+    "E5-SOC-ALU-04": {
+     "qemu": 189,
+     "board": 226
+    },
+    "E5-SOC-ALU-05": {
+     "qemu": 232,
+     "board": 269
+    },
+    "E5-SOC-ALU-06": {
+     "qemu": 397,
+     "board": 428
+    }
+   }
+  },
+  "soc:DIV": {
+   "levels": [
+    0.25,
+    0.5,
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "ran": 6,
+   "qemu_flags": [],
+   "board_flags": [
+    1.1,
+    1.5,
+    3.0
+   ],
+   "equal": false,
+   "st_max": {
+    "E5-SOC-DIV-01": {
+     "qemu": 72,
+     "board": 140
+    },
+    "E5-SOC-DIV-02": {
+     "qemu": 74,
+     "board": 170
+    },
+    "E5-SOC-DIV-03": {
+     "qemu": 77,
+     "board": 213
+    },
+    "E5-SOC-DIV-04": {
+     "qemu": 78,
+     "board": 229
+    },
+    "E5-SOC-DIV-05": {
+     "qemu": 81,
+     "board": 273
+    },
+    "E5-SOC-DIV-06": {
+     "qemu": 94,
+     "board": 453
+    }
+   }
+  },
+  "fuel:ALU": {
+   "levels": [
+    0.25,
+    0.5,
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "ran": 6,
+   "qemu_flags": [
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "board_flags": [
+    1.1,
+    1.5,
+    3.0
+   ],
+   "equal": false,
+   "st_max": {
+    "E5-FUEL-ALU-01": {
+     "qemu": 95,
+     "board": 149
+    },
+    "E5-FUEL-ALU-02": {
+     "qemu": 125,
+     "board": 183
+    },
+    "E5-FUEL-ALU-03": {
+     "qemu": 174,
+     "board": 229
+    },
+    "E5-FUEL-ALU-04": {
+     "qemu": 198,
+     "board": 252
+    },
+    "E5-FUEL-ALU-05": {
+     "qemu": 246,
+     "board": 301
+    },
+    "E5-FUEL-ALU-06": {
+     "qemu": 430,
+     "board": 479
+    }
+   }
+  },
+  "fuel:DIV": {
+   "levels": [
+    0.25,
+    0.5,
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "ran": 6,
+   "qemu_flags": [],
+   "board_flags": [
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "equal": false,
+   "st_max": {
+    "E5-FUEL-DIV-01": {
+     "qemu": 68,
+     "board": 150
+    },
+    "E5-FUEL-DIV-02": {
+     "qemu": 70,
+     "board": 180
+    },
+    "E5-FUEL-DIV-03": {
+     "qemu": 74,
+     "board": 240
+    },
+    "E5-FUEL-DIV-04": {
+     "qemu": 75,
+     "board": 255
+    },
+    "E5-FUEL-DIV-05": {
+     "qemu": 79,
+     "board": 315
+    },
+    "E5-FUEL-DIV-06": {
+     "qemu": 93,
+     "board": 510
+    }
+   }
+  },
+  "bess:ALU": {
+   "levels": [
+    0.25,
+    0.5,
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "ran": 6,
+   "qemu_flags": [
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "board_flags": [
+    1.1,
+    1.5,
+    3.0
+   ],
+   "equal": false,
+   "st_max": {
+    "E5-BESS-ALU-01": {
+     "qemu": 126,
+     "board": 166
+    },
+    "E5-BESS-ALU-02": {
+     "qemu": 160,
+     "board": 199
+    },
+    "E5-BESS-ALU-03": {
+     "qemu": 213,
+     "board": 252
+    },
+    "E5-BESS-ALU-04": {
+     "qemu": 240,
+     "board": 278
+    },
+    "E5-BESS-ALU-05": {
+     "qemu": 293,
+     "board": 330
+    },
+    "E5-BESS-ALU-06": {
+     "qemu": 495,
+     "board": 529
+    }
+   }
+  },
+  "bess:DIV": {
+   "levels": [
+    0.25,
+    0.5,
+    0.9,
+    1.1,
+    1.5,
+    3.0
+   ],
+   "ran": 6,
+   "qemu_flags": [],
+   "board_flags": [
+    1.1,
+    1.5,
+    3.0
+   ],
+   "equal": false,
+   "st_max": {
+    "E5-BESS-DIV-01": {
+     "qemu": 96,
+     "board": 164
+    },
+    "E5-BESS-DIV-02": {
+     "qemu": 99,
+     "board": 209
+    },
+    "E5-BESS-DIV-03": {
+     "qemu": 103,
+     "board": 254
+    },
+    "E5-BESS-DIV-04": {
+     "qemu": 104,
+     "board": 284
+    },
+    "E5-BESS-DIV-05": {
+     "qemu": 109,
+     "board": 344
+    },
+    "E5-BESS-DIV-06": {
+     "qemu": 123,
+     "board": 554
+    }
+   }
+  }
+ }
+}

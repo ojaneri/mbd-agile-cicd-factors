@@ -1,0 +1,144 @@
+{
+ "n_total": 93,
+ "n_stillborn": 0,
+ "n_live": 93,
+ "n_field_relevant": 46,
+ "configs": {
+  "A0": {
+   "stages": [
+    "unit"
+   ],
+   "detected": 36,
+   "n": 46,
+   "rate": 0.782608695652174,
+   "ci95": [
+    0.6442631250888652,
+    0.8773909473154443
+   ],
+   "escapes": 10,
+   "cost_s": 0.28581486400003087
+  },
+  "A1": {
+   "stages": [
+    "unit",
+    "mil"
+   ],
+   "detected": 44,
+   "n": 46,
+   "rate": 0.9565217391304348,
+   "ci95": [
+    0.8546774086050316,
+    0.9879945545096221
+   ],
+   "escapes": 2,
+   "cost_s": 2.780270186500019
+  },
+  "A2": {
+   "stages": [
+    "unit",
+    "mil",
+    "sil"
+   ],
+   "detected": 46,
+   "n": 46,
+   "rate": 1.0,
+   "ci95": [
+    0.92292643579224,
+    1.0
+   ],
+   "escapes": 0,
+   "cost_s": 3.062483853499998
+  },
+  "A3": {
+   "stages": [
+    "unit",
+    "mil",
+    "sil",
+    "pil"
+   ],
+   "detected": 46,
+   "n": 46,
+   "rate": 1.0,
+   "ci95": [
+    0.92292643579224,
+    1.0
+   ],
+   "escapes": 0,
+   "cost_s": 3.8356740220000063
+  }
+ },
+ "mcnemar": {
+  "A0->A1": {
+   "gained": 8,
+   "lost": 0,
+   "p_exact": 0.0078125
+  },
+  "A1->A2": {
+   "gained": 2,
+   "lost": 0,
+   "p_exact": 0.5
+  },
+  "A2->A3": {
+   "gained": 0,
+   "lost": 0,
+   "p_exact": 1.0
+  }
+ },
+ "by_op": {
+  "MP": {
+   "mil": 4
+  },
+  "MS": {
+   "mil": 1
+  },
+  "MK": {
+   "mil": 1
+  },
+  "MDT": {
+   "mil": 2
+  },
+  "AOR": {
+   "unit": 14
+  },
+  "SDL": {
+   "unit": 14,
+   "sil": 2
+  },
+  "ROR": {
+   "unit": 8
+  }
+ },
+ "unique": {
+  "unit": [],
+  "mil": [],
+  "sil": [],
+  "pil": []
+ },
+ "non_field_relevant": {
+  "n": 47,
+  "flagged": 32,
+  "unflagged": [
+   "FPP-003",
+   "MP-dwell_s-x0.5",
+   "MP-dwell_s-x2.0",
+   "MRST-temp",
+   "MSAT-iclamp",
+   "ROR-001",
+   "ROR-003",
+   "ROR-007",
+   "ROR-009",
+   "ROR-011",
+   "ROR-013",
+   "ROR-017",
+   "ROR-019",
+   "SDL-015",
+   "TW-001"
+  ]
+ },
+ "escaped_all": [],
+ "timing_only": [
+  "FPP-001",
+  "FPP-002"
+ ],
+ "stillborn_ids": []
+}

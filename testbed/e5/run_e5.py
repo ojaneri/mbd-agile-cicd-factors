@@ -85,8 +85,9 @@ def tests_and_refs():
     return tests, refs, names
 
 
-def prepare(vid, c_text):
-    vdir = OUTD / vid
+def prepare(vid, c_text, tag="host"):
+    # one directory per arm group, so a board process and a host/QEMU process never share a build dir
+    vdir = OUTD / tag / vid
     if vdir.exists():
         shutil.rmtree(vdir)
     vdir.mkdir(parents=True)
@@ -350,7 +351,7 @@ def run(family, arms):
         todo = [a for a in arms if (mid, a) not in done and a not in cal["excluded_arms"]]
         if not todo:
             continue
-        vdir = prepare(mid, c_text)
+        vdir = prepare(mid, c_text, "board" if "board" in todo else "host")
         for arm in todo:
             if arm in HOST_ARMS:
                 rep = host_arm(arm, vdir, tests, refs)
