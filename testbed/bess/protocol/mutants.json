@@ -1,0 +1,1653 @@
+{
+ "model": [
+  {
+   "id": "MP-tau-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "tau x0.5",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-tau-x0.5",
+    "params": {
+     "tau": 100.7484850172522,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-tau-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "tau x2.0",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-tau-x2.0",
+    "params": {
+     "tau": 402.9939400690088,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-k_h-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "k_h x0.5",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-k_h-x0.5",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 1.282665560711031e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-k_h-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "k_h x2.0",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-k_h-x2.0",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 5.130662242844124e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-c0-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "c0 x0.5",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-c0-x0.5",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.04050161607429047,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-c0-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "c0 x2.0",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-c0-x2.0",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.16200646429716187,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-tau_f-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "tau_f x0.5",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-tau_f-x0.5",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 30.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-tau_f-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "tau_f x2.0",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-tau_f-x2.0",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 120.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-dwell_s-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "dwell_s x0.5",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-dwell_s-x0.5",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 150.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-dwell_s-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "dwell_s x2.0",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-dwell_s-x2.0",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 600.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-d_lim-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "d_lim x0.5",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-d_lim-x0.5",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.25,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-d_lim-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "d_lim x2.0",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-d_lim-x2.0",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 1.0,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-ramp-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "ramp x0.5",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-ramp-x0.5",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.001
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MP-ramp-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "ramp x2.0",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MP-ramp-x2.0",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.004
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MS-s_heat",
+   "level": "model",
+   "op": "MS",
+   "desc": "sign flip s_heat",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MS-s_heat",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": -1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MS-s_c0",
+   "level": "model",
+   "op": "MS",
+   "desc": "sign flip s_c0",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MS-s_c0",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": -1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MK-t_hi-+",
+   "level": "model",
+   "op": "MK",
+   "desc": "t_hi +1",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MK-t_hi-+",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 32.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MK-t_hi--",
+   "level": "model",
+   "op": "MK",
+   "desc": "t_hi -1",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MK-t_hi--",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 30.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MK-t_lo-+",
+   "level": "model",
+   "op": "MK",
+   "desc": "t_lo +1",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MK-t_lo-+",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 30.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MK-t_lo--",
+   "level": "model",
+   "op": "MK",
+   "desc": "t_lo -1",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MK-t_lo--",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 28.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MSAT-sat",
+   "level": "model",
+   "op": "MSAT",
+   "desc": "sat removed",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MSAT-sat",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": false,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MSAT-iclamp",
+   "level": "model",
+   "op": "MSAT",
+   "desc": "iclamp removed",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MSAT-iclamp",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": false,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MSAT-ramp",
+   "level": "model",
+   "op": "MSAT",
+   "desc": "ramp removed",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MSAT-ramp",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": false,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MSAT-hyst",
+   "level": "model",
+   "op": "MSAT",
+   "desc": "hyst removed",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MSAT-hyst",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": false,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MDT-x10.0",
+   "level": "model",
+   "op": "MDT",
+   "desc": "dt_scale x10.0",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MDT-x10.0",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 10.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MDT-x0.1",
+   "level": "model",
+   "op": "MDT",
+   "desc": "dt_scale x0.1",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MDT-x0.1",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 0.1,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "both"
+    }
+   }
+  },
+  {
+   "id": "MRST-temp",
+   "level": "model",
+   "op": "MRST",
+   "desc": "latch release on temp only",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MRST-temp",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "temp"
+    }
+   }
+  },
+  {
+   "id": "MRST-dwell",
+   "level": "model",
+   "op": "MRST",
+   "desc": "latch release on dwell only",
+   "spec": {
+    "name": "bess_therm",
+    "version": "MRST-dwell",
+    "params": {
+     "tau": 201.4969700345044,
+     "k_h": 2.565331121422062e-05,
+     "c0": 0.08100323214858093,
+     "n_sub": 4,
+     "i_max": 400.0,
+     "t_min": -40.0,
+     "t_max": 90.0,
+     "tau_f": 60.0,
+     "t_hi": 31.0,
+     "t_lo": 29.0,
+     "dwell_s": 300.0,
+     "d_lim": 0.5,
+     "ramp": 0.002
+    },
+    "eq": {
+     "s_heat": 1.0,
+     "s_c0": 1.0,
+     "dt_scale": 1.0,
+     "sat": true,
+     "iclamp": true,
+     "ramp": true,
+     "hyst": true,
+     "rel_rule": "dwell"
+    }
+   }
+  }
+ ],
+ "code": [
+  {
+   "id": "AOR-001",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L22 bess_init: '+' -> '-'",
+   "line": 22,
+   "before": "o->t_est = tref + (1.0f) * C0;",
+   "after": "o->t_est = tref - (1.0f) * C0;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref - (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-002",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L22 bess_init: '*' -> '/'",
+   "line": 22,
+   "before": "o->t_est = tref + (1.0f) * C0;",
+   "after": "o->t_est = tref + (1.0f) / C0;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) / C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-001",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L22 bess_init: delete 'o->t_est = tref + (1.0f) * C0;'",
+   "line": 22,
+   "before": "o->t_est = tref + (1.0f) * C0;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    ;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-002",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L23 bess_init: delete 'o->t_filt = o->t_est;'",
+   "line": 23,
+   "before": "o->t_filt = o->t_est;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    ;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-003",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L24 bess_init: delete 'o->der = 1.0f;'",
+   "line": 24,
+   "before": "o->der = 1.0f;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    ;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-004",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L25 bess_init: delete 'o->latch = 0;'",
+   "line": 25,
+   "before": "o->latch = 0;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    ;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-005",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L26 bess_init: delete 'o->dwell_ms = 0u;'",
+   "line": 26,
+   "before": "o->dwell_ms = 0u;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    ;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-006",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L33 bess_therm: delete 'ic = cur;'",
+   "line": 33,
+   "before": "ic = cur;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-001",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L34 bess_therm: '>' -> '>=' (boundary)",
+   "line": 34,
+   "before": "if (ic > I_MAX) {",
+   "after": "if (ic >= I_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic >= I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-002",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L34 bess_therm: '>' -> '<=' (negation)",
+   "line": 34,
+   "before": "if (ic > I_MAX) {",
+   "after": "if (ic <= I_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic <= I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-007",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L35 bess_therm: delete 'ic = I_MAX;'",
+   "line": 35,
+   "before": "ic = I_MAX;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-003",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L37 bess_therm: '<' -> '<=' (boundary)",
+   "line": 37,
+   "before": "if (ic < -I_MAX) {",
+   "after": "if (ic <= -I_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic <= -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-004",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L37 bess_therm: '<' -> '>=' (negation)",
+   "line": 37,
+   "before": "if (ic < -I_MAX) {",
+   "after": "if (ic >= -I_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic >= -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-008",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L38 bess_therm: delete 'ic = -I_MAX;'",
+   "line": 38,
+   "before": "ic = -I_MAX;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-009",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L40 bess_therm: delete 'acc = te0;'",
+   "line": 40,
+   "before": "acc = te0;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    ;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-005",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L41 bess_therm: '<' -> '<=' (boundary)",
+   "line": 41,
+   "before": "for (int k = 0; k < N_SUB; k++) {",
+   "after": "for (int k = 0; k <= N_SUB; k++) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k <= N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-006",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L41 bess_therm: '<' -> '>=' (negation)",
+   "line": 41,
+   "before": "for (int k = 0; k < N_SUB; k++) {",
+   "after": "for (int k = 0; k >= N_SUB; k++) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k >= N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "TW-001",
+   "level": "code",
+   "op": "TW",
+   "desc": "L41 bess_therm: 'int' -> 'unsigned'",
+   "line": 41,
+   "before": "for (int k = 0; k < N_SUB; k++) {",
+   "after": "for (unsigned k = 0; k < N_SUB; k++) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (unsigned k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-003",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '+' -> '-'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc - H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc - H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-004",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '/' -> '*'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB * TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB * TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-005",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '*' -> '/'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU / (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU / (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-006",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '+' -> '-'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU * (tref - (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref - (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-007",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '*' -> '/'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU * (tref + (1.0f) / C0 + (1.0f) * K_H * ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) / C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-008",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '+' -> '-'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 - (1.0f) * K_H * ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 - (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-009",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '*' -> '/'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) / K_H * ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) / K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-010",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '*' -> '/'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H / ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H / ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-011",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '*' -> '/'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic / ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic / ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-012",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L42 bess_therm: '-' -> '+'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic + acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic + acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-010",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L42 bess_therm: delete 'acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);'",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        ;\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "FPP-001",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L42 bess_therm: literal 1.0f -> 1.0",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU * (tref + (1.0) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "FPP-002",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L42 bess_therm: literal 1.0f -> 1.0",
+   "line": 42,
+   "before": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);",
+   "after": "acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0) * K_H * ic * ic - acc);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-007",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L44 bess_therm: '>' -> '>=' (boundary)",
+   "line": 44,
+   "before": "if (acc > T_MAX) {",
+   "after": "if (acc >= T_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc >= T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-008",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L44 bess_therm: '>' -> '<=' (negation)",
+   "line": 44,
+   "before": "if (acc > T_MAX) {",
+   "after": "if (acc <= T_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc <= T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-011",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L45 bess_therm: delete 'acc = T_MAX;'",
+   "line": 45,
+   "before": "acc = T_MAX;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        ;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-009",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L47 bess_therm: '<' -> '<=' (boundary)",
+   "line": 47,
+   "before": "if (acc < T_MIN) {",
+   "after": "if (acc <= T_MIN) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc <= T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-010",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L47 bess_therm: '<' -> '>=' (negation)",
+   "line": 47,
+   "before": "if (acc < T_MIN) {",
+   "after": "if (acc >= T_MIN) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc >= T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-012",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L48 bess_therm: delete 'acc = T_MIN;'",
+   "line": 48,
+   "before": "acc = T_MIN;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        ;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-013",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L56 bess_derate: '+' -> '-'",
+   "line": 56,
+   "before": "o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);",
+   "after": "o->t_filt = o->t_filt - ALPHA * (te - o->t_filt);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt - ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-014",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L56 bess_derate: '*' -> '/'",
+   "line": 56,
+   "before": "o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);",
+   "after": "o->t_filt = o->t_filt + ALPHA / (te - o->t_filt);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA / (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-015",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L56 bess_derate: '-' -> '+'",
+   "line": 56,
+   "before": "o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);",
+   "after": "o->t_filt = o->t_filt + ALPHA * (te + o->t_filt);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te + o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-013",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L56 bess_derate: delete 'o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);'",
+   "line": 56,
+   "before": "o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    ;\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-011",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L58 bess_derate: '>' -> '>=' (boundary)",
+   "line": 58,
+   "before": "if (o->t_filt > T_HI) {",
+   "after": "if (o->t_filt >= T_HI) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt >= T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-012",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L58 bess_derate: '>' -> '<=' (negation)",
+   "line": 58,
+   "before": "if (o->t_filt > T_HI) {",
+   "after": "if (o->t_filt <= T_HI) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt <= T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-014",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L59 bess_derate: delete 'o->latch = 1;'",
+   "line": 59,
+   "before": "o->latch = 1;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            ;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-015",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L60 bess_derate: delete 'o->dwell_ms = 0u;'",
+   "line": 60,
+   "before": "o->dwell_ms = 0u;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            ;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-016",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L63 bess_derate: '+' -> '-'",
+   "line": 63,
+   "before": "o->dwell_ms = o->dwell_ms + DT_MS;",
+   "after": "o->dwell_ms = o->dwell_ms - DT_MS;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms - DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-016",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L63 bess_derate: delete 'o->dwell_ms = o->dwell_ms + DT_MS;'",
+   "line": 63,
+   "before": "o->dwell_ms = o->dwell_ms + DT_MS;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        ;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-013",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L64 bess_derate: '<' -> '<=' (boundary)",
+   "line": 64,
+   "before": "if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {",
+   "after": "if (o->t_filt <= T_LO && o->dwell_ms >= DWELL_MS) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt <= T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-014",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L64 bess_derate: '<' -> '>=' (negation)",
+   "line": 64,
+   "before": "if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {",
+   "after": "if (o->t_filt >= T_LO && o->dwell_ms >= DWELL_MS) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt >= T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-015",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L64 bess_derate: '>=' -> '>' (boundary)",
+   "line": 64,
+   "before": "if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {",
+   "after": "if (o->t_filt < T_LO && o->dwell_ms > DWELL_MS) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms > DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-016",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L64 bess_derate: '>=' -> '<' (negation)",
+   "line": 64,
+   "before": "if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {",
+   "after": "if (o->t_filt < T_LO && o->dwell_ms < DWELL_MS) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms < DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-017",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L65 bess_derate: delete 'o->latch = 0;'",
+   "line": 65,
+   "before": "o->latch = 0;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            ;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-018",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L68 bess_derate: delete 'tgt = 1.0f;'",
+   "line": 68,
+   "before": "tgt = 1.0f;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    ;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "FPP-003",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L68 bess_derate: literal 1.0f -> 1.0",
+   "line": 68,
+   "before": "tgt = 1.0f;",
+   "after": "tgt = 1.0;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-019",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L70 bess_derate: delete 'tgt = D_LIM;'",
+   "line": 70,
+   "before": "tgt = D_LIM;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        ;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-017",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L72 bess_derate: '<' -> '<=' (boundary)",
+   "line": 72,
+   "before": "if (tgt < o->der) {",
+   "after": "if (tgt <= o->der) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt <= o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-018",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L72 bess_derate: '<' -> '>=' (negation)",
+   "line": 72,
+   "before": "if (tgt < o->der) {",
+   "after": "if (tgt >= o->der) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt >= o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-020",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L73 bess_derate: delete 'o->der = tgt;'",
+   "line": 73,
+   "before": "o->der = tgt;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        ;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "AOR-017",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L75 bess_derate: '+' -> '-'",
+   "line": 75,
+   "before": "o->der = o->der + RAMP_STEP;",
+   "after": "o->der = o->der - RAMP_STEP;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der - RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-021",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L75 bess_derate: delete 'o->der = o->der + RAMP_STEP;'",
+   "line": 75,
+   "before": "o->der = o->der + RAMP_STEP;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        ;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-019",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L76 bess_derate: '>' -> '>=' (boundary)",
+   "line": 76,
+   "before": "if (o->der > tgt) {",
+   "after": "if (o->der >= tgt) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der >= tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "ROR-020",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L76 bess_derate: '>' -> '<=' (negation)",
+   "line": 76,
+   "before": "if (o->der > tgt) {",
+   "after": "if (o->der <= tgt) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der <= tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-022",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L77 bess_derate: delete 'o->der = tgt;'",
+   "line": 77,
+   "before": "o->der = tgt;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            ;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-023",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L85 bess_step: delete 'te = bess_therm(o->t_est, cur, tref);'",
+   "line": 85,
+   "before": "te = bess_therm(o->t_est, cur, tref);",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    ;\n    o->t_est = te;\n    bess_derate(o, te);\n    return te;\n}\n"
+  },
+  {
+   "id": "SDL-024",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L86 bess_step: delete 'o->t_est = te;'",
+   "line": 86,
+   "before": "o->t_est = te;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"bess.h\"\n\n#define TAU 201.49697f\n#define K_H 2.56533112e-05f\n#define C0 0.0810032321f\n#define N_SUB 4\n#define H_SUB 1.25f\n#define I_MAX 400.0f\n#define T_MIN -40.0f\n#define T_MAX 90.0f\n#define ALPHA 0.0769230769f\n#define T_HI 31.0f\n#define T_LO 29.0f\n#define DT_MS 5000u\n#define DWELL_MS 300000u\n#define D_LIM 0.5f\n#define RAMP_STEP 0.01f\n\nvoid bess_init(bess_t *o, float tref)\n{\n    o->t_est = tref + (1.0f) * C0;\n    o->t_filt = o->t_est;\n    o->der = 1.0f;\n    o->latch = 0;\n    o->dwell_ms = 0u;\n}\n\nfloat bess_therm(float te0, float cur, float tref)\n{\n    float ic;\n    float acc;\n    ic = cur;\n    if (ic > I_MAX) {\n        ic = I_MAX;\n    }\n    if (ic < -I_MAX) {\n        ic = -I_MAX;\n    }\n    acc = te0;\n    for (int k = 0; k < N_SUB; k++) {\n        acc = acc + H_SUB / TAU * (tref + (1.0f) * C0 + (1.0f) * K_H * ic * ic - acc);\n    }\n    if (acc > T_MAX) {\n        acc = T_MAX;\n    }\n    if (acc < T_MIN) {\n        acc = T_MIN;\n    }\n    return acc;\n}\n\nvoid bess_derate(bess_t *o, float te)\n{\n    float tgt;\n    o->t_filt = o->t_filt + ALPHA * (te - o->t_filt);\n    if (o->latch == 0) {\n        if (o->t_filt > T_HI) {\n            o->latch = 1;\n            o->dwell_ms = 0u;\n        }\n    } else {\n        o->dwell_ms = o->dwell_ms + DT_MS;\n        if (o->t_filt < T_LO && o->dwell_ms >= DWELL_MS) {\n            o->latch = 0;\n        }\n    }\n    tgt = 1.0f;\n    if (o->latch != 0) {\n        tgt = D_LIM;\n    }\n    if (tgt < o->der) {\n        o->der = tgt;\n    } else {\n        o->der = o->der + RAMP_STEP;\n        if (o->der > tgt) {\n            o->der = tgt;\n        }\n    }\n}\n\nfloat bess_step(bess_t *o, float cur, float tref)\n{\n    float te;\n    te = bess_therm(o->t_est, cur, tref);\n    ;\n    bess_derate(o, te);\n    return te;\n}\n"
+  }
+ ],
+ "counts": {
+  "model": 28,
+  "code": 65,
+  "by_op": {
+   "MP": 14,
+   "MS": 2,
+   "MK": 4,
+   "MSAT": 4,
+   "MDT": 2,
+   "MRST": 2,
+   "AOR": 17,
+   "ROR": 20,
+   "SDL": 24,
+   "FPP": 3,
+   "TW": 1
+  }
+ }
+}

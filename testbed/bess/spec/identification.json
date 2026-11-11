@@ -1,0 +1,37 @@
+{
+ "data_sha256": "7249bace12866f6f460e5553a229c9e18f061d15ca87e680cd709b613573b38e",
+ "train_months": [
+  "202410",
+  "202411",
+  "202412",
+  "202501"
+ ],
+ "field_months": [
+  "202502",
+  "202503",
+  "202504",
+  "202505"
+ ],
+ "field_rack": "5",
+ "n_train_segments": 705,
+ "n_train_rows": 1091521,
+ "n_field_segments": 209,
+ "n_field_rows": 390859,
+ "optimizer": {
+  "success": true,
+  "nit": 157,
+  "message": "Optimization terminated successfully."
+ },
+ "tau_s": 201.4969700345044,
+ "k_h_degC_per_A2": 2.565331121422062e-05,
+ "c0_degC": 0.08100323214858093,
+ "train_rmse_degC": 0.6252545018441982,
+ "field_rmse_degC": 0.4578412815308029,
+ "naive_tref_rmse_train_degC": 0.701816777103311,
+ "naive_tref_rmse_field_degC": 0.4489910632598168,
+ "x0": [
+  600.0,
+  0.0001,
+  0.3
+ ]
+}

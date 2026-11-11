@@ -1,0 +1,29 @@
+{
+ "name": "bess_therm",
+ "version": "baseline",
+ "params": {
+  "tau": 201.4969700345044,
+  "k_h": 2.565331121422062e-05,
+  "c0": 0.08100323214858093,
+  "n_sub": 4,
+  "i_max": 400.0,
+  "t_min": -40.0,
+  "t_max": 90.0,
+  "tau_f": 60.0,
+  "t_hi": 31.0,
+  "t_lo": 29.0,
+  "dwell_s": 300.0,
+  "d_lim": 0.5,
+  "ramp": 0.002
+ },
+ "eq": {
+  "s_heat": 1.0,
+  "s_c0": 1.0,
+  "dt_scale": 1.0,
+  "sat": true,
+  "iclamp": true,
+  "ramp": true,
+  "hyst": true,
+  "rel_rule": "both"
+ }
+}
