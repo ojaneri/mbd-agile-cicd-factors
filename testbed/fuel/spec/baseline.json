@@ -1,0 +1,22 @@
+{
+ "name": "fuel_flow",
+ "version": "baseline",
+ "params": {
+  "k_cal": 1.0179971288160587,
+  "AFR": 14.7,
+  "rho": 0.745,
+  "dt_max": 5.0,
+  "trim_lim": 25.0,
+  "rate_max": 400.0,
+  "thr_dfco": 21.0,
+  "rpm_dfco": 1600.0
+ },
+ "eq": {
+  "s_trim": 1.0,
+  "s_int": 1.0,
+  "dt_scale": 1.0,
+  "dfco": true,
+  "sat": true,
+  "trim_clamp": true
+ }
+}

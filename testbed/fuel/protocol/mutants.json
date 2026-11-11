@@ -1,0 +1,1186 @@
+{
+ "model": [
+  {
+   "id": "MP-k_cal-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "k_cal x0.5",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-k_cal-x0.5",
+    "params": {
+     "k_cal": 0.5089985644080294,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-k_cal-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "k_cal x2.0",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-k_cal-x2.0",
+    "params": {
+     "k_cal": 2.0359942576321175,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-AFR-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "AFR x0.5",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-AFR-x0.5",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 7.35,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-AFR-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "AFR x2.0",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-AFR-x2.0",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 29.4,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-rho-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "rho x0.5",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-rho-x0.5",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.3725,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-rho-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "rho x2.0",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-rho-x2.0",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 1.49,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-dt_max-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "dt_max x0.5",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-dt_max-x0.5",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 2.5,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-dt_max-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "dt_max x2.0",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-dt_max-x2.0",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 10.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-trim_lim-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "trim_lim x0.5",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-trim_lim-x0.5",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 12.5,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-trim_lim-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "trim_lim x2.0",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-trim_lim-x2.0",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 50.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-rate_max-x0.5",
+   "level": "model",
+   "op": "MP",
+   "desc": "rate_max x0.5",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-rate_max-x0.5",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 200.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MP-rate_max-x2.0",
+   "level": "model",
+   "op": "MP",
+   "desc": "rate_max x2.0",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MP-rate_max-x2.0",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 800.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MS-s_trim",
+   "level": "model",
+   "op": "MS",
+   "desc": "sign flip s_trim",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MS-s_trim",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": -1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MS-s_int",
+   "level": "model",
+   "op": "MS",
+   "desc": "sign flip s_int",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MS-s_int",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": -1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MK-thr_dfco-+",
+   "level": "model",
+   "op": "MK",
+   "desc": "thr_dfco +2",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MK-thr_dfco-+",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 23.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MK-thr_dfco--",
+   "level": "model",
+   "op": "MK",
+   "desc": "thr_dfco -2",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MK-thr_dfco--",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 19.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MK-rpm_dfco-+",
+   "level": "model",
+   "op": "MK",
+   "desc": "rpm_dfco +400",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MK-rpm_dfco-+",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 2000.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MK-rpm_dfco--",
+   "level": "model",
+   "op": "MK",
+   "desc": "rpm_dfco -400",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MK-rpm_dfco--",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1200.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MSAT-sat",
+   "level": "model",
+   "op": "MSAT",
+   "desc": "sat removed",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MSAT-sat",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": false,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MSAT-trim_clamp",
+   "level": "model",
+   "op": "MSAT",
+   "desc": "trim_clamp removed",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MSAT-trim_clamp",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": false
+    }
+   }
+  },
+  {
+   "id": "MSAT-dfco",
+   "level": "model",
+   "op": "MSAT",
+   "desc": "dfco removed",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MSAT-dfco",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 1.0,
+     "dfco": false,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MDT-x10.0",
+   "level": "model",
+   "op": "MDT",
+   "desc": "dt_scale x10.0",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MDT-x10.0",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 10.0,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  },
+  {
+   "id": "MDT-x0.1",
+   "level": "model",
+   "op": "MDT",
+   "desc": "dt_scale x0.1",
+   "spec": {
+    "name": "fuel_flow",
+    "version": "MDT-x0.1",
+    "params": {
+     "k_cal": 1.0179971288160587,
+     "AFR": 14.7,
+     "rho": 0.745,
+     "dt_max": 5.0,
+     "trim_lim": 25.0,
+     "rate_max": 400.0,
+     "thr_dfco": 21.0,
+     "rpm_dfco": 1600.0
+    },
+    "eq": {
+     "s_trim": 1.0,
+     "s_int": 1.0,
+     "dt_scale": 0.1,
+     "dfco": true,
+     "sat": true,
+     "trim_clamp": true
+    }
+   }
+  }
+ ],
+ "code": [
+  {
+   "id": "SDL-001",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L16 fuel_init: delete 'f->vol = 0.0f;'",
+   "line": 16,
+   "before": "f->vol = 0.0f;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    ;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-002",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L17 fuel_init: delete 'f->rate = 0.0f;'",
+   "line": 17,
+   "before": "f->rate = 0.0f;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    ;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-001",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L22 fuel_rate_of: '+' -> '-'",
+   "line": 22,
+   "before": "float trim = stft + ltft;",
+   "after": "float trim = stft - ltft;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft - ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-001",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L23 fuel_rate_of: '>' -> '>=' (boundary)",
+   "line": 23,
+   "before": "if (trim > TRIM_LIM) {",
+   "after": "if (trim >= TRIM_LIM) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim >= TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-002",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L23 fuel_rate_of: '>' -> '<=' (negation)",
+   "line": 23,
+   "before": "if (trim > TRIM_LIM) {",
+   "after": "if (trim <= TRIM_LIM) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim <= TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-003",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L24 fuel_rate_of: delete 'trim = TRIM_LIM;'",
+   "line": 24,
+   "before": "trim = TRIM_LIM;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        ;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-003",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L26 fuel_rate_of: '<' -> '<=' (boundary)",
+   "line": 26,
+   "before": "if (trim < -TRIM_LIM) {",
+   "after": "if (trim <= -TRIM_LIM) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim <= -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-004",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L26 fuel_rate_of: '<' -> '>=' (negation)",
+   "line": 26,
+   "before": "if (trim < -TRIM_LIM) {",
+   "after": "if (trim >= -TRIM_LIM) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim >= -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-004",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L27 fuel_rate_of: delete 'trim = -TRIM_LIM;'",
+   "line": 27,
+   "before": "trim = -TRIM_LIM;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        ;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-002",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L29 fuel_rate_of: '*' -> '/'",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL / maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL / maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-003",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L29 fuel_rate_of: '*' -> '/'",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf / 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf / 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-004",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L29 fuel_rate_of: '/' -> '*'",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0f * (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f * (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-005",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L29 fuel_rate_of: '*' -> '/'",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0f / (AFR / RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR / RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-006",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L29 fuel_rate_of: '*' -> '/'",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) / (1.0f + (1.0f) * trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) / (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-007",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L29 fuel_rate_of: '+' -> '-'",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f - (1.0f) * trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f - (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-008",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L29 fuel_rate_of: '*' -> '/'",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) / trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) / trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-009",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L29 fuel_rate_of: '/' -> '*'",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim * 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim * 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-001",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L29 fuel_rate_of: literal 60.0f -> 60.0",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0 / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0 / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-002",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L29 fuel_rate_of: literal 1.0f -> 1.0",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0 + (1.0f) * trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0 + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-003",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L29 fuel_rate_of: literal 1.0f -> 1.0",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0) * trim / 100.0f);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-004",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L29 fuel_rate_of: literal 100.0f -> 100.0",
+   "line": 29,
+   "before": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);",
+   "after": "float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0);",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-005",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L30 fuel_rate_of: '<=' -> '<' (boundary)",
+   "line": 30,
+   "before": "if (thr <= THR_DFCO && rpm > RPM_DFCO) {",
+   "after": "if (thr < THR_DFCO && rpm > RPM_DFCO) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr < THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-006",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L30 fuel_rate_of: '<=' -> '>' (negation)",
+   "line": 30,
+   "before": "if (thr <= THR_DFCO && rpm > RPM_DFCO) {",
+   "after": "if (thr > THR_DFCO && rpm > RPM_DFCO) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr > THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-007",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L30 fuel_rate_of: '>' -> '>=' (boundary)",
+   "line": 30,
+   "before": "if (thr <= THR_DFCO && rpm > RPM_DFCO) {",
+   "after": "if (thr <= THR_DFCO && rpm >= RPM_DFCO) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm >= RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-008",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L30 fuel_rate_of: '>' -> '<=' (negation)",
+   "line": 30,
+   "before": "if (thr <= THR_DFCO && rpm > RPM_DFCO) {",
+   "after": "if (thr <= THR_DFCO && rpm <= RPM_DFCO) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm <= RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-005",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L31 fuel_rate_of: delete 'rate = 0.0f;'",
+   "line": 31,
+   "before": "rate = 0.0f;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        ;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-005",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L31 fuel_rate_of: literal 0.0f -> 0.0",
+   "line": 31,
+   "before": "rate = 0.0f;",
+   "after": "rate = 0.0;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-009",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L33 fuel_rate_of: '>' -> '>=' (boundary)",
+   "line": 33,
+   "before": "if (rate > RATE_MAX) {",
+   "after": "if (rate >= RATE_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate >= RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-010",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L33 fuel_rate_of: '>' -> '<=' (negation)",
+   "line": 33,
+   "before": "if (rate > RATE_MAX) {",
+   "after": "if (rate <= RATE_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate <= RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-006",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L34 fuel_rate_of: delete 'rate = RATE_MAX;'",
+   "line": 34,
+   "before": "rate = RATE_MAX;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        ;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-011",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L36 fuel_rate_of: '<' -> '<=' (boundary)",
+   "line": 36,
+   "before": "if (rate < 0.0f) {",
+   "after": "if (rate <= 0.0f) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate <= 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-012",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L36 fuel_rate_of: '<' -> '>=' (negation)",
+   "line": 36,
+   "before": "if (rate < 0.0f) {",
+   "after": "if (rate >= 0.0f) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate >= 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-006",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L36 fuel_rate_of: literal 0.0f -> 0.0",
+   "line": 36,
+   "before": "if (rate < 0.0f) {",
+   "after": "if (rate < 0.0) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-007",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L37 fuel_rate_of: delete 'rate = 0.0f;'",
+   "line": 37,
+   "before": "rate = 0.0f;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        ;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-007",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L37 fuel_rate_of: literal 0.0f -> 0.0",
+   "line": 37,
+   "before": "rate = 0.0f;",
+   "after": "rate = 0.0;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-013",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L46 fuel_step: '>' -> '>=' (boundary)",
+   "line": 46,
+   "before": "if (dtc > DT_MAX) {",
+   "after": "if (dtc >= DT_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc >= DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-014",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L46 fuel_step: '>' -> '<=' (negation)",
+   "line": 46,
+   "before": "if (dtc > DT_MAX) {",
+   "after": "if (dtc <= DT_MAX) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc <= DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-008",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L47 fuel_step: delete 'dtc = DT_MAX;'",
+   "line": 47,
+   "before": "dtc = DT_MAX;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        ;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-015",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L49 fuel_step: '<' -> '<=' (boundary)",
+   "line": 49,
+   "before": "if (dtc < 0.0f) {",
+   "after": "if (dtc <= 0.0f) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc <= 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "ROR-016",
+   "level": "code",
+   "op": "ROR",
+   "desc": "L49 fuel_step: '<' -> '>=' (negation)",
+   "line": 49,
+   "before": "if (dtc < 0.0f) {",
+   "after": "if (dtc >= 0.0f) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc >= 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-008",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L49 fuel_step: literal 0.0f -> 0.0",
+   "line": 49,
+   "before": "if (dtc < 0.0f) {",
+   "after": "if (dtc < 0.0) {",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-009",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L50 fuel_step: delete 'dtc = 0.0f;'",
+   "line": 50,
+   "before": "dtc = 0.0f;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        ;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-009",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L50 fuel_step: literal 0.0f -> 0.0",
+   "line": 50,
+   "before": "dtc = 0.0f;",
+   "after": "dtc = 0.0;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-010",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L52 fuel_step: '+' -> '-'",
+   "line": 52,
+   "before": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;",
+   "after": "f->vol = f->vol - (1.0f) * rate * dtc * DT_SCALE / 60.0f;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol - (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-011",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L52 fuel_step: '*' -> '/'",
+   "line": 52,
+   "before": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;",
+   "after": "f->vol = f->vol + (1.0f) / rate * dtc * DT_SCALE / 60.0f;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) / rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-012",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L52 fuel_step: '*' -> '/'",
+   "line": 52,
+   "before": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;",
+   "after": "f->vol = f->vol + (1.0f) * rate / dtc * DT_SCALE / 60.0f;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate / dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-013",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L52 fuel_step: '*' -> '/'",
+   "line": 52,
+   "before": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;",
+   "after": "f->vol = f->vol + (1.0f) * rate * dtc / DT_SCALE / 60.0f;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc / DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "AOR-014",
+   "level": "code",
+   "op": "AOR",
+   "desc": "L52 fuel_step: '/' -> '*'",
+   "line": 52,
+   "before": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;",
+   "after": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE * 60.0f;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE * 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-010",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L52 fuel_step: delete 'f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;'",
+   "line": 52,
+   "before": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    ;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-010",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L52 fuel_step: literal 1.0f -> 1.0",
+   "line": 52,
+   "before": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;",
+   "after": "f->vol = f->vol + (1.0) * rate * dtc * DT_SCALE / 60.0f;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0) * rate * dtc * DT_SCALE / 60.0f;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "FPP-011",
+   "level": "code",
+   "op": "FPP",
+   "desc": "L52 fuel_step: literal 60.0f -> 60.0",
+   "line": 52,
+   "before": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;",
+   "after": "f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0;",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0;\n    f->rate = rate;\n    return f->vol;\n}\n"
+  },
+  {
+   "id": "SDL-011",
+   "level": "code",
+   "op": "SDL",
+   "desc": "L53 fuel_step: delete 'f->rate = rate;'",
+   "line": 53,
+   "before": "f->rate = rate;",
+   "after": ";",
+   "c_text": "/* Generated by gen.py from spec version 'baseline'. Do not edit. */\n#include \"fuel.h\"\n\n#define K_CAL 1.01799713f\n#define AFR 14.7f\n#define RHO 0.745f\n#define DT_MAX 5.0f\n#define TRIM_LIM 25.0f\n#define RATE_MAX 400.0f\n#define THR_DFCO 21.0f\n#define RPM_DFCO 1600.0f\n#define DT_SCALE 1.0f\n\nvoid fuel_init(fuel_t *f)\n{\n    f->vol = 0.0f;\n    f->rate = 0.0f;\n}\n\nfloat fuel_rate_of(float maf, float rpm, float thr, float stft, float ltft)\n{\n    float trim = stft + ltft;\n    if (trim > TRIM_LIM) {\n        trim = TRIM_LIM;\n    }\n    if (trim < -TRIM_LIM) {\n        trim = -TRIM_LIM;\n    }\n    float rate = K_CAL * maf * 60.0f / (AFR * RHO) * (1.0f + (1.0f) * trim / 100.0f);\n    if (thr <= THR_DFCO && rpm > RPM_DFCO) {\n        rate = 0.0f;\n    }\n    if (rate > RATE_MAX) {\n        rate = RATE_MAX;\n    }\n    if (rate < 0.0f) {\n        rate = 0.0f;\n    }\n    return rate;\n}\n\nfloat fuel_step(fuel_t *f, float dt, float maf, float rpm, float thr, float stft, float ltft)\n{\n    float rate = fuel_rate_of(maf, rpm, thr, stft, ltft);\n    float dtc = dt;\n    if (dtc > DT_MAX) {\n        dtc = DT_MAX;\n    }\n    if (dtc < 0.0f) {\n        dtc = 0.0f;\n    }\n    f->vol = f->vol + (1.0f) * rate * dtc * DT_SCALE / 60.0f;\n    ;\n    return f->vol;\n}\n"
+  }
+ ],
+ "counts": {
+  "model": 23,
+  "code": 52,
+  "by_op": {
+   "MP": 12,
+   "MS": 2,
+   "MK": 4,
+   "MSAT": 3,
+   "MDT": 2,
+   "AOR": 14,
+   "ROR": 16,
+   "SDL": 11,
+   "FPP": 11,
+   "TW": 0
+  }
+ }
+}
