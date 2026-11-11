@@ -1,0 +1,103 @@
+{
+ "board": "iotnode",
+ "live": 130,
+ "compared": 130,
+ "missing": [],
+ "invalid": [],
+ "pil_verdict_agreement": "128/130",
+ "disagreements": [
+  {
+   "id": "SDL-006",
+   "qemu_fail": false,
+   "real_fail": true,
+   "qemu_fails": [],
+   "real_fails": [
+    "B2B-SIL T1_1C_discharge: 0.00677",
+    "T2_pulses: |err| max 0.0524 > 0.03",
+    "B2B-SIL T2_pulses: 0.0516"
+   ]
+  },
+  {
+   "id": "SDL-007",
+   "qemu_fail": true,
+   "real_fail": false,
+   "qemu_fails": [
+    "B2B-SIL T4_rest_correction: back-to-back max 0.000635 > 1e-05"
+   ],
+   "real_fails": []
+  }
+ ],
+ "field_verdict_disagreements": [],
+ "field_relevant": 68,
+ "configs": {
+  "A0": {
+   "detected": 26,
+   "of": 68,
+   "rate": 0.382,
+   "wilson95": [
+    0.276,
+    0.501
+   ]
+  },
+  "A1": {
+   "detected": 52,
+   "of": 68,
+   "rate": 0.765,
+   "wilson95": [
+    0.651,
+    0.85
+   ]
+  },
+  "A2": {
+   "detected": 68,
+   "of": 68,
+   "rate": 1.0,
+   "wilson95": [
+    0.947,
+    1.0
+   ]
+  },
+  "A3_qemu": {
+   "detected": 68,
+   "of": 68,
+   "rate": 1.0,
+   "wilson95": [
+    0.947,
+    1.0
+   ]
+  },
+  "A3_real": {
+   "detected": 68,
+   "of": 68,
+   "rate": 1.0,
+   "wilson95": [
+    0.947,
+    1.0
+   ]
+  }
+ },
+ "mcnemar_A2_to_A3real": {
+  "gained": 0,
+  "lost": 0,
+  "p": 1.0
+ },
+ "pil_only_real": [
+  "SDL-006",
+  "FPP-003",
+  "FPP-004",
+  "FPP-005",
+  "FPP-007",
+  "FPP-009"
+ ],
+ "timing_only_real": [
+  "FPP-003",
+  "FPP-004",
+  "FPP-005",
+  "FPP-007",
+  "FPP-009"
+ ],
+ "max_cycles_range": [
+  64,
+  883
+ ]
+}

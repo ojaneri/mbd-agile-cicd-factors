@@ -1,0 +1,59 @@
+{
+ "board": "iotnode",
+ "baseline_max_cycles": 123,
+ "cycle_budget": 246,
+ "session": {
+  "exp": 458317,
+  "node": 1
+ },
+ "reps": [
+  {
+   "build_s": 0.4599950519987033,
+   "ok": true,
+   "seconds_run": 9.001925706863403,
+   "bytes": 110195,
+   "error": null,
+   "attempts": 1,
+   "stale_nc_after": "",
+   "seconds_flash": 10.072715759277344,
+   "eval": {
+    "valid": true,
+    "passed": true,
+    "fails": [],
+    "max_cycles": 123
+   }
+  },
+  {
+   "build_s": 0.4405298989986477,
+   "ok": true,
+   "seconds_run": 9.001967906951904,
+   "bytes": 97840,
+   "error": "no @END",
+   "attempts": 5,
+   "stale_nc_after": "",
+   "seconds_flash": 8.866945028305054,
+   "eval": {
+    "valid": true,
+    "passed": true,
+    "fails": [],
+    "max_cycles": 123
+   }
+  },
+  {
+   "build_s": 0.6120399989995349,
+   "ok": true,
+   "seconds_run": 9.002220869064331,
+   "bytes": 111277,
+   "error": null,
+   "attempts": 1,
+   "stale_nc_after": "",
+   "seconds_flash": 8.93265151977539,
+   "eval": {
+    "valid": true,
+    "passed": true,
+    "fails": [],
+    "max_cycles": 123
+   }
+  }
+ ]
+}

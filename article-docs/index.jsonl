@@ -1,14 +1,16 @@
-{"type":"section","id":"abstract","file":"sections/abstract.md","title":"Abstract — draft v0 (viability only)"}
+{"type":"section","id":"abstract","file":"sections/abstract.md","title":"Abstract"}
 {"type":"decision","id":"d-0007","file":"sections/abstract.md","title":"Title: \"MBD, Agile, or CI/CD? A Comparative Analysis and Integrated Pipeline for Automotive Embedded","status":"accepted","author":"osvaldo","date":"2026-11-10"}
-{"type":"todo","id":"t-0009","file":"sections/abstract.md","title":"Rewrite the abstract only after C1 has measured numbers. Until then, keep it as a framing paragraph with no results.","status":"open","author":"osvaldo"}
-{"type":"section","id":"c1-integration-gain","file":"claims/c1-integration-gain.md","title":"C1 — Integrating MBD, Agile and CI/CD shortens the feature-to-release cycle"}
+{"type":"todo","id":"t-0009","file":"sections/abstract.md","title":"Draft v1 written with measured numbers; the tiered-pipeline sentence stays a placeholder until E5.","status":"done","author":"osvaldo"}
+{"type":"section","id":"c1-integration-gain","file":"claims/c1-integration-gain.md","title":"C1 — Cadence and trigger set when a defect is found; the stage set sets what is found"}
 {"type":"decision","id":"d-0002","file":"claims/c1-integration-gain.md","title":"Frame C1 as a measured comparison, not a general claim. Why: the sources are qualitative; a reviewer","status":"proposed","author":"osvaldo","date":"2026-11-10"}
+{"type":"todo","id":"t-0043","file":"claims/c1-integration-gain.md","title":"Add a sensitivity sweep on DT_COMMIT and P_DEFECT to e2.py, labelled as added after run 1.","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0006","file":"claims/c1-integration-gain.md","title":"Choose the case study (ECU/ADAS model, or a non-automotive proxy) and confirm it can be run in the time left.","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0007","file":"claims/c1-integration-gain.md","title":"Define how lead time and defect escape are measured before any run.","status":"open","author":"osvaldo"}
 {"type":"section","id":"c2-standards-traceability","file":"claims/c2-standards-traceability.md","title":"C2 — The integrated pipeline keeps ISO 26262 / ISO 21434 traceability"}
 {"type":"todo","id":"t-0008","file":"claims/c2-standards-traceability.md","title":"Build the standards mapping table (stage to work product) from ISO 26262 and ISO 21434 text, not from memory. Mark each entry as unverified until checked against the standard.","status":"open","author":"osvaldo"}
-{"type":"section","id":"c3-stage-detection","file":"claims/c3-stage-detection.md","title":"C3 — Each MBD verification stage detects defect classes the others miss"}
+{"type":"section","id":"c3-stage-detection","file":"claims/c3-stage-detection.md","title":"C3 — Functional detection saturates before the target; each stage changes when, not whether"}
 {"type":"todo","id":"t-0024","file":"claims/c3-stage-detection.md","title":"After E1, state C3 at the strength the CIs support; do not round \"most\" to \"all\".","status":"open","author":"osvaldo"}
+{"type":"section","id":"c4-platform-tiering","file":"claims/c4-platform-tiering.md","title":"C4 — An emulator can carry per-commit PIL; the real board is needed only for memory state and exact timing"}
 {"type":"section","id":"exemplar","file":"venue/exemplar.md","title":"Venue exemplar — ISIE 2025 (P08)"}
 {"type":"todo","id":"t-0028","file":"venue/exemplar.md","title":"Exemplar dissected from the IEEE HTML on 2026-11-11.","status":"done","author":"osvaldo"}
 {"type":"todo","id":"t-0035","file":"venue/exemplar.md","title":"Open the PDF to count references and real figures, and note the template details (abstract length, keywords, figure style).","status":"open","author":"osvaldo"}
@@ -26,6 +28,7 @@
 {"type":"decision","id":"d-0004","file":"experiments/e0-testbed-and-protocol.md","title":"Open toolchain (OpenModelica + FMI + gcc + FIT IoT-LAB) instead of MATLAB/Simulink.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
 {"type":"decision","id":"d-0005","file":"experiments/e0-testbed-and-protocol.md","title":"Ground truth by mutation injection, with classes and equivalent-mutant screening.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
 {"type":"decision","id":"d-0006","file":"experiments/e0-testbed-and-protocol.md","title":"The real-MCU stage is named PIL, never HIL; VIL is out of scope.","status":"proposed","author":"osvaldo","date":"2026-11-10"}
+{"type":"decision","id":"d-0011","file":"experiments/e0-testbed-and-protocol.md","title":"Reframe the paper from \"the integrated flow is better\" to \"the three methods control three","status":"proposed","author":"osvaldo","date":"2026-11-11"}
 {"type":"todo","id":"t-0010","file":"experiments/e0-testbed-and-protocol.md","title":"First dated search run 2026-11-11 (IEEE Xplore + Scopus via CAFe); log in references/search-log-2026-11.md, candidates in references/predecessors.md. Follow-ups are t-0026 to t-0030.","status":"done","author":"osvaldo"}
 {"type":"todo","id":"t-0011","file":"experiments/e0-testbed-and-protocol.md","title":"Provenance and licences recorded above (both CC BY 4.0, verified at source 2026-11-11). Still to do at writing time: exact citation format for each dataset.","status":"done","author":"osvaldo"}
 {"type":"todo","id":"t-0012","file":"experiments/e0-testbed-and-protocol.md","title":"Toolchain installed and smoke-tested 2026-11-10 (skill testbed-toolchain-smoke). Remaining: confirm the FIT IoT-LAB account still works and flash one test firmware.","status":"open","author":"osvaldo"}
@@ -42,12 +45,17 @@
 {"type":"todo","id":"t-0041","file":"experiments/e1-defect-detection-by-stage.md","title":"Real-target PIL harness for NUCLEO-L476RG (register-level startup, UART, DWT cycles) and IoT-LAB st-iotnode; rerun the PIL column of E1 on it.","status":"open","author":"osvaldo"}
 {"type":"section","id":"e2-integration-cadence","file":"experiments/e2-integration-cadence.md","title":"E2 — Integration cadence and automation (Agile + CI axis, RQ2)"}
 {"type":"todo","id":"t-0019","file":"experiments/e2-integration-cadence.md","title":"Write the backlog of increments (at least 10 per subject) and the defect seeding plan; commit before runs.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0042","file":"experiments/e2-integration-cadence.md","title":"Replace the percentile bootstrap of the median in e2.py for discrete outcomes (median fell outside its CI in A0|b10|auto); rerun E2 after subject 2 real PIL.","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0020","file":"experiments/e2-integration-cadence.md","title":"Choose sprint batch size k and the manual-release delay range, with a reason recorded as a decision.","status":"open","author":"osvaldo"}
 {"type":"section","id":"e3-traceability-evidence","file":"experiments/e3-traceability-evidence.md","title":"E3 — Standards evidence produced by the pipeline (RQ3)"}
 {"type":"todo","id":"t-0021","file":"experiments/e3-traceability-evidence.md","title":"Get access to the ISO 26262 and ISO 21434 texts (UTFPR library or standards portal); without them E3 cannot cite clauses.","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0022","file":"experiments/e3-traceability-evidence.md","title":"Decide whether E3 stays a measured table or is cut to fit 6 pages.","status":"open","author":"osvaldo"}
 {"type":"section","id":"e4-ota-canary","file":"experiments/e4-ota-canary.md","title":"E4 — Canary OTA rollout on a replayed fleet (optional, RQ4)"}
 {"type":"todo","id":"t-0023","file":"experiments/e4-ota-canary.md","title":"Decide by 2026-12-01 whether E4 runs or is listed as future work.","status":"open","author":"osvaldo"}
+{"type":"section","id":"e5-platform-sensitivity","file":"experiments/e5-platform-sensitivity.md","title":"E5 — Platform sensitivity and the tiered pipeline (RQ3, confirmatory)"}
+{"type":"todo","id":"t-0044","file":"experiments/e5-platform-sensitivity.md","title":"Write the E5 generator of initialisation-deletion and graded-timing mutants and the RAM-fill startup; commit before any run.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0045","file":"experiments/e5-platform-sensitivity.md","title":"Choose subject 3 and check its licence at the source.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0046","file":"experiments/e5-platform-sensitivity.md","title":"Check whether a NUCLEO-L476RG run can be added as a second real board (see t-0038).","status":"open","author":"osvaldo"}
 {"type":"section","id":"labs-access","file":"experiments/labs-access.md","title":"Labs and hardware for this paper — access, where secrets live, lessons learned"}
 {"type":"decision","id":"d-0008","file":"experiments/labs-access.md","title":"PIL target: NUCLEO-L476RG (local) as primary, FIT IoT-LAB st-iotnode as replication; QEMU for develo","status":"proposed","author":"osvaldo","date":"2026-11-11"}
 {"type":"todo","id":"t-0038","file":"experiments/labs-access.md","title":"Plug the NUCLEO-L476RG with a data cable; confirm COM port and drive letter.","status":"open","author":"osvaldo"}

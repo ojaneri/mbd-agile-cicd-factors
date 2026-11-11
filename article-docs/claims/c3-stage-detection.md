@@ -1,7 +1,16 @@
-# C3 — Each MBD verification stage detects defect classes the others miss
+# C3 — Functional detection saturates before the target; each stage changes when, not whether
 
-Statement: MIL, SIL and PIL stages are complementary: each detects at least one defect class that
-the earlier stages do not, so removing a stage raises the escape rate by a measurable amount.
+Statement (revised, d-0011, proposed): adding stages raises the detection of field-relevant defects
+significantly up to SIL (or MIL), after which it saturates; the target stage adds no functional field
+detection and contributes platform checks (timing, memory state).
+
+Original pre-registered statement, **partly refuted and to be reported as such**: MIL, SIL and PIL
+stages are complementary: each detects at least one defect class that the earlier stages do not, so
+removing a stage raises the escape rate by a measurable amount.
+
+Final E1 numbers, real-board PIL, both subjects: subject 1 A0 26/68, A1 52/68, A2 68/68, A3 68/68;
+subject 2 A0 23/34, A1 34/34, A2 34/34, A3 34/34. "Only PIL sees timing" is true by construction (no
+other stage measures cycles): report the counts (5 and 6), not as a discovery.
 
 Evidence today (subject 1 only, PIL on QEMU, 2026-11-11 — provisional): **C3 holds only in part.**
 - Cumulative stages raise detection significantly up to SIL (38 % → 76 % → 100 %, McNemar p ≤ 3e-5).
@@ -12,7 +21,11 @@ Evidence today (subject 1 only, PIL on QEMU, 2026-11-11 — provisional): **C3 h
   defect (non-field-relevant under the functional oracle).
 Suggested restatement (proposed, for the author): "each stage changes *when* a defect is caught and
 what it costs; only the target stage sees platform defects (timing, uninitialised state)".
-Pending: real-target PIL column (IoT-LAB), subject 2. Source: [[experiments/e1-defect-detection-by-stage]].
+Real target (IoT-LAB st-iotnode, subject 1, all 130 mutants): same rates, same five timing-only
+mutants; the uninitialised-state detection moved from SDL-007 (QEMU) to SDL-006 (board), so that
+part of PIL's value is platform-dependent and must be stated as such.
+Subject 2 on QEMU: same pattern (MIL raises detection, no unique functional stage, 6 timing-only).
+Subject 2 real-target column: complete, same rates, same six timing-only mutants (see E1). Source: [[experiments/e1-defect-detection-by-stage]].
 
 Would falsify it: one stage (e.g., MIL) detects every mutant the later stages detect, within the CI;
 then the later stages add cost without detection, and the paper must say so.

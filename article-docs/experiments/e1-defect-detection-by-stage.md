@@ -1,6 +1,6 @@
 # E1 — Which stage catches which defect (MBD axis, RQ1)
 
-Status: **subject 1 frozen and running on the development PIL target (QEMU)**; subject 2 not built.
+Status: **both subjects complete on QEMU and on the real board (IoT-LAB st-iotnode)**, 2026-11-11. NUCLEO-L476RG not run.
 Shared setup in [[experiments/e0-testbed-and-protocol]]. Supports [[claims/c3-stage-detection]].
 Code and frozen protocol: `testbed/soc/` (see `testbed/soc/protocol/README.md`).
 
@@ -59,10 +59,56 @@ Observation: halving or doubling Q (MP-Q) is not field-relevant — the high obs
 Caveats: one subject; PIL functional verdicts from QEMU (real-target re-run on IoT-LAB st-iotnode in
 progress, exp 458317); thresholds are our design requirements.
 
+## Results — subject 2 (fuel-flow sensor), PIL on QEMU (`testbed/fuel/results/e1_qemu*`)
+Frozen in commit d7f8239 (built by a parallel agent, reviewed before freeze). Physics model:
+k_cal·MAF·60/(AFR·rho)·(1+trim), DFCO, dt-clamped integrator; k_cal 1.018 identified on tanks 8–17
+(train mean |error| 7.63 % per tank); field oracle = held-out tanks 18–22, fail if any tank's error
+worsens by > 2 pp vs baseline (baseline −2.97, +1.14, −3.80, +10.70, −1.84 %). 75 mutants, 34 field-relevant.
+
+| Config | Detected / 34 | Wilson 95 % CI |
+|---|---|---|
+| A0 UNIT | 23 (68 %) | 51–81 % |
+| A1 +MIL | 34 (100 %) | 90–100 % |
+| A2 +SIL | 34 (100 %) | 90–100 % |
+| A3 +PIL | 34 (100 %) | 90–100 % |
+
+McNemar A0→A1 +11 (p = 0.001); later steps +0. Model mutants first caught at MIL; all field-relevant
+code mutants already at UNIT. No escapes. Timing-only (PIL): FPP-001/002/003/004/010/011.
+Deviation: the field oracle runs on the QEMU build (held-out tanks ~4.6 MB exceed 1 MB flash).
+
+Cross-subject pattern (both subjects, QEMU PIL): stages up to SIL raise detection significantly; no
+stage is unique for functional field defects; PIL is the only stage that sees timing regressions
+(5 and 6 mutants) and, in subject 1, an uninitialised-state defect.
+
 ## Real target (FIT IoT-LAB st-iotnode-1, exp 458317, STM32L475VG @ 16 MHz)
 Baseline calibration, 3 reps, all pass: max 107 DWT cycles per step (6.7 µs), budget 214 cycles;
 per run: build 0.5 s, flash 18 s, serial capture 35 s (115200 baud, 44,636 rows, CRC-checked); queue
-wait at submission 1 s. Field RMSE identical to QEMU. Mutant re-run in progress.
+wait at submission 1 s. Field RMSE identical to QEMU.
+
+### Subject 1 on the real target — complete (2026-11-11, 01:10–03:33 UTC; `testbed/soc/results/e1_pil_iotnode*.json*`)
+All 130 live mutants ran, 130 valid streams (CRC-checked, no retry needed), comparison by `compare_pil.py`.
+- PIL verdicts agree with QEMU on 128/130. Field verdicts agree on 130/130.
+- Configurations with the real PIL column: A0 26/68, A1 52/68, A2 68/68, A3_real 68/68
+  (Wilson 95–100 %); A2→A3_real +0 (McNemar p = 1). The QEMU table above stands.
+- Timing-only on the real board: the same five (FPP-003/004/005/007/009); max DWT cycles over all
+  mutants 64–883 against a 214-cycle budget.
+- **The two disagreements are both uninitialised-state mutants, and they swap:** SDL-006 is caught
+  only on the real board (back-to-back and T2 fail), SDL-007 only on QEMU. Which garbage the target
+  leaves in uninitialised state depends on the platform, so PIL detection of this class is
+  **platform-dependent, not a property of the stage**. Paper must say this (do not claim "PIL catches
+  uninitialised state" without the qualifier). Neither is field-relevant under the functional oracle.
+
+### Subject 2 on the real target — complete (2026-11-11, 03:38–04:16 UTC; `testbed/fuel/results/e1_pil_iotnode*.json*`)
+All 75 live mutants ran, 75 valid streams, no retry. Budget 246 cycles (baseline max 123); run about 18.5 s.
+- PIL verdicts agree with QEMU on 74/75; A0 23/34, A1–A3_real 34/34; A2→A3_real +0.
+- Timing-only on the board: FPP-001/002/003/004/010/011, the same six as QEMU.
+- The disagreement is SDL-001 (`fuel_init` no longer zeroes `vol`): on QEMU passes, on the board fails
+  with a volume error up to about 4700–5258 (UNIT also flags it).
+- **Threat:** subject 2's field oracle runs on QEMU only (deviation above), so SDL-001 is counted as not
+  field-relevant although the board shows a large error. Field relevance is platform-dependent for this class.
+
+Pooled across subjects: 202/205 agreement; all 3 disagreements are initialisation deletions. See
+[[claims/c4-platform-tiering]].
 
 ## Metrics
 - Detection rate per configuration A0..A3 over field-relevant mutants (Wilson 95 % CI), exact McNemar

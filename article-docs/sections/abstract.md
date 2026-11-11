@@ -1,6 +1,10 @@
-# Abstract — draft v0 (viability only)
+# Abstract
 
-Status: draft. Not a final abstract. Every claim below must stay within [[claims/c1-integration-gain]] and [[claims/c2-standards-traceability]]. Neither is measured yet, so the abstract must not state results.
+Status: draft v1 (2026-11-11, thesis per d-0011, proposed). Every number comes from E1/E2 scripts; bracketed items are placeholders. Must stay within [[claims/c1-integration-gain]], [[claims/c3-stage-detection]], [[claims/c4-platform-tiering]].
+
+> Model-based design (MBD), Agile iteration and CI/CD are usually compared qualitatively, as if they were alternatives. We treat them as factors of one controlled pipeline: verification stages (unit, MIL, SIL, PIL), integration cadence (the only Agile property measured here) and release trigger. On two automotive estimators built from public field data, we injected 205 mutants, 102 of them field-relevant, and ran each on a host, an emulator and a real STM32L4 board. Unit tests alone detected 38–68 % of the field-relevant mutants; adding MIL and SIL reached 100 % (95 % CI lower bounds 90–95 %), and PIL added no functional detection. Emulator and board verdicts agreed on 202 of 205 mutants; all three disagreements were deleted state initialisations. In a trace-driven replay, per-commit runs returned feedback in under a minute against about 9 h for ten-commit batches, while board PIL multiplied compute per sprint by 6 to 19. The methods are therefore not alternatives: stages set what is caught, cadence and trigger set when, and the platform sets where a stage must run. A tiered pipeline [E5: result on an unseen subject] keeps detection at [E5: cost].
+
+Abstract v0 argument, kept for the framing only:
 
 Title (chosen by the author on 2026-11-10, see d-0007): *MBD, Agile, or CI/CD? A Comparative Analysis and Integrated Pipeline for Automotive Embedded Systems*
 
@@ -20,4 +24,4 @@ Gap: most comparisons in the sources are qualitative; there is no quantified cas
   Chosen by the author from five candidates (option 3). Fits the factorial design better than the SDV-centred options, because the subjects are powertrain/energy estimators on embedded MCUs, not a full SDV. Cost: the question form invites an answer; if results show the methods are complementary, the abstract must say "complementary" explicitly rather than pick a winner.
 
 ## Todos
-- **[#t-0009]** status: open · author: osvaldo — Rewrite the abstract only after C1 has measured numbers. Until then, keep it as a framing paragraph with no results.
+- **[#t-0009]** status: done · author: osvaldo — Draft v1 written with measured numbers; the tiered-pipeline sentence stays a placeholder until E5.

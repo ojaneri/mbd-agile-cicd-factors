@@ -2,6 +2,8 @@
 
 Statement: Model versioning, requirement links and signed release packages let the integrated pipeline produce the evidence that functional-safety and cybersecurity standards require, without slowing the OTA cadence.
 
+Status (d-0011, proposed): **out of the main line**; future work unless the ISO texts are available by week 3. The abstract must not mention it.
+
 Evidence today: **none.** No standards mapping written yet.
 
 Would falsify it: a mandatory safety work product for each release cannot be generated automatically from the pipeline, so manual steps are needed on every release.

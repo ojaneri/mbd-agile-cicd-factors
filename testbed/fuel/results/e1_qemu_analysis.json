@@ -1,0 +1,144 @@
+{
+ "n_total": 75,
+ "n_stillborn": 0,
+ "n_live": 75,
+ "n_field_relevant": 34,
+ "configs": {
+  "A0": {
+   "stages": [
+    "unit"
+   ],
+   "detected": 23,
+   "n": 34,
+   "rate": 0.6764705882352942,
+   "ci95": [
+    0.5084289446060363,
+    0.8086835651849452
+   ],
+   "escapes": 11,
+   "cost_s": 0.3073213444999965
+  },
+  "A1": {
+   "stages": [
+    "unit",
+    "mil"
+   ],
+   "detected": 34,
+   "n": 34,
+   "rate": 1.0,
+   "ci95": [
+    0.8984854444077807,
+    0.9999999999999999
+   ],
+   "escapes": 0,
+   "cost_s": 3.29772418999994
+  },
+  "A2": {
+   "stages": [
+    "unit",
+    "mil",
+    "sil"
+   ],
+   "detected": 34,
+   "n": 34,
+   "rate": 1.0,
+   "ci95": [
+    0.8984854444077807,
+    0.9999999999999999
+   ],
+   "escapes": 0,
+   "cost_s": 3.62961398799996
+  },
+  "A3": {
+   "stages": [
+    "unit",
+    "mil",
+    "sil",
+    "pil"
+   ],
+   "detected": 34,
+   "n": 34,
+   "rate": 1.0,
+   "ci95": [
+    0.8984854444077807,
+    0.9999999999999999
+   ],
+   "escapes": 0,
+   "cost_s": 4.642878182000004
+  }
+ },
+ "mcnemar": {
+  "A0->A1": {
+   "gained": 11,
+   "lost": 0,
+   "p_exact": 0.0009765625
+  },
+  "A1->A2": {
+   "gained": 0,
+   "lost": 0,
+   "p_exact": 1.0
+  },
+  "A2->A3": {
+   "gained": 0,
+   "lost": 0,
+   "p_exact": 1.0
+  }
+ },
+ "by_op": {
+  "MP": {
+   "mil": 7
+  },
+  "MS": {
+   "mil": 2
+  },
+  "MDT": {
+   "mil": 2
+  },
+  "AOR": {
+   "unit": 13
+  },
+  "ROR": {
+   "unit": 8
+  },
+  "SDL": {
+   "unit": 2
+  }
+ },
+ "unique": {
+  "unit": [],
+  "mil": [],
+  "sil": [],
+  "pil": []
+ },
+ "non_field_relevant": {
+  "n": 41,
+  "flagged": 26,
+  "unflagged": [
+   "AOR-013",
+   "FPP-005",
+   "FPP-006",
+   "FPP-007",
+   "FPP-008",
+   "FPP-009",
+   "MP-rate_max-x0.5",
+   "ROR-001",
+   "ROR-003",
+   "ROR-005",
+   "ROR-007",
+   "ROR-009",
+   "ROR-011",
+   "ROR-013",
+   "ROR-015"
+  ]
+ },
+ "escaped_all": [],
+ "timing_only": [
+  "FPP-001",
+  "FPP-002",
+  "FPP-003",
+  "FPP-004",
+  "FPP-010",
+  "FPP-011"
+ ],
+ "stillborn_ids": []
+}

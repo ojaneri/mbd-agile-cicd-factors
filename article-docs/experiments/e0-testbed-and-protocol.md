@@ -10,15 +10,19 @@ for K03 (novelty asserted, not shown) and K05 (framework without evidence). The 
 **controlled experiment** in which each method is a factor that can be switched on and off, with
 **known ground-truth defects**, so that every claim in the abstract maps to a measured effect.
 
-## Research questions
-- **RQ1 (MBD axis):** which verification stage (MIL, SIL, PIL) detects which defect class, at what
-  cost in pipeline time? → E1, claim [[claims/c3-stage-detection]]
-- **RQ2 (Agile + CI axis):** how does integration cadence (change batch size) change feedback
-  latency, defect localisation effort and escape rate? → E2, claim [[claims/c1-integration-gain]]
-- **RQ3 (CI/CD + standards):** how much of the ISO 26262 / ISO 21434 evidence per release can the
-  pipeline produce without manual steps? → E3, claim [[claims/c2-standards-traceability]]
-- **RQ4 (CD/OTA, optional):** does a canary stage on a replayed fleet catch regressions that escaped
-  the earlier stages, and at what exposure? → E4
+## Research questions (revised 2026-11-11 after E1/E2, d-0011, proposed)
+The paper must say that RQ3 was added after E1 and that the original "complementary stages" hypothesis
+was only partly supported (M04). RQ1 and RQ2 are the pre-registered questions, unchanged in substance.
+- **RQ1 (what is caught, MBD stages):** how much does each verification stage add to the detection of
+  field-relevant defects, per defect class and at what cost? → E1, claim [[claims/c3-stage-detection]]
+- **RQ2 (when it is caught, Agile cadence and CI trigger):** how do batch size and trigger change
+  feedback latency, localisation effort, lead time and compute? → E2, claim [[claims/c1-integration-gain]]
+- **RQ3 (where it must run, platform; new):** under what conditions does the execution platform (host,
+  emulator, real MCU) change the verdict, and what is the cheapest placement of stages that keeps the
+  detection? → E1 real-target re-run (exploratory), E5 (confirmatory), claim [[claims/c4-platform-tiering]]
+
+Out of the main line (6 pages): the original RQ3 (ISO 26262 / ISO 21434 evidence, E3, blocked on access
+to the standards) and RQ4 (canary OTA, E4). Both become future work unless E3 unblocks by week 3.
 
 ## Factorial design (the core of the paper)
 | Factor | Levels | Method it operationalises |
@@ -107,6 +111,16 @@ submit a qualitative version as a regular paper; move to the WIP deadline (2027-
   **The real-MCU stage is named PIL, never HIL; VIL is out of scope.**
   Why: no plant I/O or vehicle; calling it HIL is an S1 overclaim. Cost: the four-stage figure
   (MIL/SIL/HIL/VIL) from the infographics cannot be reproduced as is.
+
+- **[#d-0011]** date: 2026-11-11 · status: proposed · author: osvaldo
+  **Reframe the paper from "the integrated flow is better" to "the three methods control three
+  different axes: stages decide what is caught, cadence and trigger decide when, the platform decides
+  where a stage must run".** The title (d-0007) stays and is answered as "none alone, they are not
+  alternatives". Why: E1 refuted "each stage is complementary" (SIL alone catches what MIL catches here);
+  a comparison with a measured, partly negative answer is more defensible than a general gain claim
+  (K03, K05), and the host/emulator/board result is the most novel measured finding. Rejected: keeping
+  C1/C3 as stated (contradicted or unmeasured). Cost: RQ3 is post-hoc until E5 runs on new mutants and a
+  new subject; ISO/OTA leave the main line, so the paper is narrower than the infographics suggested.
 
 ## Todos
 - **[#t-0010]** status: done · author: osvaldo — First dated search run 2026-11-11 (IEEE Xplore + Scopus via CAFe); log in `references/search-log-2026-11.md`, candidates in `references/predecessors.md`. Follow-ups are t-0026 to t-0030.

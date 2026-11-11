@@ -1,7 +1,38 @@
 # E2 — Integration cadence and automation (Agile + CI axis, RQ2)
 
-Status: **planned, not run.** Shared setup in [[experiments/e0-testbed-and-protocol]].
+Status: **first run done for subject 1 (2026-11-11), as a trace-driven replay — a deviation from
+the backlog plan below.** Shared setup in [[experiments/e0-testbed-and-protocol]].
 Supports [[claims/c1-integration-gain]].
+
+## Run 1 — subject 1, trace-driven replay with real-target PIL cost (`testbed/soc/e2.py`)
+Deviation (M10): no real backlog of increments yet (t-0019 still open). Instead a synthetic stream of
+N = 10 commits per sprint, one every 2 h, each defective with p = 0.3, defects drawn uniformly from E1's
+live mutants with their E1 per-stage verdicts (real-board PIL verdicts); R = 2000 replays,
+seed 20261111. Stage costs are E1 medians, PIL = **53.5 s per run on the IoT-LAB board** (flash +
+capture), against 0.29 s UNIT, 2.45 s MIL, 0.29 s SIL. Output: `results/e1_qemu_e2.json`.
+Medians per sprint (bootstrap 95 % CI of the median), automated trigger:
+
+| Config | batch | feedback latency | escapes | compute per sprint |
+|---|---|---|---|---|
+| A2 | 1 | 3 s | 0 | 36 s |
+| A2 | 10 | 9.0 h | 0 | 30 s |
+| A3 | 1 | 57 s | 0 | 678 s |
+| A3 | 5 | 4.0 h | 0 | 509 s |
+| A3 | 10 | 9.0 h | 0 | 565 s |
+
+A manual 8 h trigger adds 8 h to every cell. A0 lets 1 defect per sprint escape (median); A1 and up, 0.
+Cliff's delta (planned contrasts): A3 auto b1 vs b10 latency −0.97; compute +0.32; A3 b1 auto vs
+manual-8h lead time −1.0; b1 auto A2 vs A3 escapes 0.
+Reading: latency is set by cadence and trigger, not by stage cost; the real PIL stage multiplies
+compute by ~19× over A2 and buys no field escapes here (its gains in E1 were timing-only). Batching
+saves little compute because a failing batch is re-run during bisection.
+Caveats: synthetic commit stream; escapes inherit E1's mutant set, so 0 escapes from A1 up is
+by construction of that set; a manual delay is a parameter (sweep 1/8/24 h in the file).
+Subject 2, same replay (`testbed/fuel/e2.py`, copy of subject 1's; PIL 18.5 s per run): A2 b1 43.6 s of
+compute, A3 b1 266 s (6.1×), latency 22 s at b1 and about 9 h at b10; 0 escapes from A1 up.
+To check: in cell A0|b10|auto the reported median (8.67 h) lies outside its bootstrap CI
+(9.33–10 h), a percentile-bootstrap artefact on discrete data; use a different CI before the paper
+(t-0042).
 
 ## Setup
 - A **backlog of increments** per subject: a scripted sequence of feature changes (e.g., add
@@ -29,4 +60,5 @@ Supports [[claims/c1-integration-gain]].
 
 ## Todos
 - **[#t-0019]** status: open · author: osvaldo — Write the backlog of increments (at least 10 per subject) and the defect seeding plan; commit before runs.
+- **[#t-0042]** status: open · author: osvaldo — Replace the percentile bootstrap of the median in `e2.py` for discrete outcomes (median fell outside its CI in A0|b10|auto); rerun E2 after subject 2 real PIL.
 - **[#t-0020]** status: open · author: osvaldo — Choose sprint batch size k and the manual-release delay range, with a reason recorded as a decision.

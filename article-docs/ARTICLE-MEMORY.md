@@ -6,7 +6,8 @@ Human-readable index of this article's durable memory.
 Comparative paper on Model-Based Design (MBD), Agile and CI/CD for automotive embedded and
 Software-Defined Vehicle (SDV) development, proposing an integrated four-stage flow with
 feedback loops. Target: IEEE ISIE 2027 (regular paper, 6 pages, IEEE two-column).
-State: **sketch / viability stage**. No manuscript source yet, no measurements yet.
+State: **E1 and E2 run on two subjects (QEMU and real board); no manuscript source yet.** Thesis under
+revision (d-0011, proposed): stages set what is caught, cadence and trigger set when, the platform sets where.
 
 ## Memory map
 | Area | File |
