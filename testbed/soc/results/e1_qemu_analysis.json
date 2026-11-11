@@ -1,0 +1,178 @@
+{
+ "n_total": 130,
+ "n_stillborn": 0,
+ "n_live": 130,
+ "n_field_relevant": 68,
+ "configs": {
+  "A0": {
+   "stages": [
+    "unit"
+   ],
+   "detected": 26,
+   "n": 68,
+   "rate": 0.38235294117647056,
+   "ci95": [
+    0.2760944970720606,
+    0.5011928764146488
+   ],
+   "escapes": 42,
+   "cost_s": 0.28718765400003576
+  },
+  "A1": {
+   "stages": [
+    "unit",
+    "mil"
+   ],
+   "detected": 52,
+   "n": 68,
+   "rate": 0.7647058823529411,
+   "ci95": [
+    0.6514483193142062,
+    0.8496550903406976
+   ],
+   "escapes": 16,
+   "cost_s": 2.737477396500026
+  },
+  "A2": {
+   "stages": [
+    "unit",
+    "mil",
+    "sil"
+   ],
+   "detected": 68,
+   "n": 68,
+   "rate": 1.0,
+   "ci95": [
+    0.9465286626814852,
+    1.0000000000000002
+   ],
+   "escapes": 0,
+   "cost_s": 3.0237981010000112
+  },
+  "A3": {
+   "stages": [
+    "unit",
+    "mil",
+    "sil",
+    "pil"
+   ],
+   "detected": 68,
+   "n": 68,
+   "rate": 1.0,
+   "ci95": [
+    0.9465286626814852,
+    1.0000000000000002
+   ],
+   "escapes": 0,
+   "cost_s": 3.8122143255000083
+  }
+ },
+ "mcnemar": {
+  "A0->A1": {
+   "gained": 26,
+   "lost": 0,
+   "p_exact": 2.9802322387695312e-08
+  },
+  "A1->A2": {
+   "gained": 16,
+   "lost": 0,
+   "p_exact": 3.0517578125e-05
+  },
+  "A2->A3": {
+   "gained": 0,
+   "lost": 0,
+   "p_exact": 1.0
+  }
+ },
+ "by_op": {
+  "MP": {
+   "mil": 5
+  },
+  "MS": {
+   "mil": 4
+  },
+  "MK": {
+   "mil": 15
+  },
+  "MSAT": {
+   "mil": 1
+  },
+  "MDT": {
+   "mil": 1
+  },
+  "AOR": {
+   "unit": 19,
+   "sil": 11
+  },
+  "ROR": {
+   "unit": 6,
+   "sil": 1
+  },
+  "SDL": {
+   "unit": 1,
+   "sil": 4
+  }
+ },
+ "unique": {
+  "unit": [],
+  "mil": [],
+  "sil": [],
+  "pil": []
+ },
+ "non_field_relevant": {
+  "n": 62,
+  "flagged": 21,
+  "unflagged": [
+   "AOR-023",
+   "FPP-001",
+   "FPP-002",
+   "FPP-006",
+   "FPP-008",
+   "FPP-010",
+   "FPP-011",
+   "FPP-012",
+   "FPP-013",
+   "MDT-x0.1",
+   "MK-0-+",
+   "MK-0--",
+   "MK-1-+",
+   "MK-1--",
+   "MK-2-+",
+   "MK-2--",
+   "MP-L-x0.5",
+   "MP-L-x2.0",
+   "MP-L_rest-x0.5",
+   "MP-L_rest-x2.0",
+   "MP-Q-x0.5",
+   "MP-Q-x2.0",
+   "MRST-rest_i-x0.1",
+   "MRST-rest_i-x10.0",
+   "MRST-rest_ms-x0.5",
+   "MRST-rest_ms-x2.0",
+   "MS-s_cc",
+   "ROR-001",
+   "ROR-003",
+   "ROR-005",
+   "ROR-007",
+   "ROR-009",
+   "ROR-011",
+   "ROR-015",
+   "ROR-017",
+   "SDL-001",
+   "SDL-006",
+   "SDL-012",
+   "TW-001",
+   "TW-002",
+   "TW-003"
+  ]
+ },
+ "escaped_all": [],
+ "timing_only": [
+  "FPP-003",
+  "FPP-004",
+  "FPP-005",
+  "FPP-007",
+  "FPP-009"
+ ],
+ "stillborn_ids": []
+}

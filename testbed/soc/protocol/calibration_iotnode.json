@@ -1,0 +1,137 @@
+{
+ "board": "iotnode",
+ "baud": 115200,
+ "baseline_max_cycles": 107,
+ "cycle_budget": 214,
+ "reps": [
+  {
+   "build_s": 0.5256628039999214,
+   "ok": true,
+   "seconds_run": 35.00737404823303,
+   "bytes": 411798,
+   "error": null,
+   "attempts": 1,
+   "stale_nc_after": "880812 nc st-iotnode-1 20000",
+   "seconds_flash": 7.152557373046875e-07,
+   "experiment": 458317,
+   "node": 1,
+   "eval": {
+    "valid": true,
+    "passed": true,
+    "fails": [],
+    "max_cycles": 107,
+    "field": {
+     "fail": false,
+     "metrics": {
+      "25degC_Mixed5": {
+       "rmse": 0.007531414559414273,
+       "maxabs": 0.03209078181076064,
+       "in_range": true
+      },
+      "25degC_Mixed6": {
+       "rmse": 0.008552770467093504,
+       "maxabs": 0.03810355199940996,
+       "in_range": true
+      },
+      "25degC_Mixed7": {
+       "rmse": 0.007936969913619784,
+       "maxabs": 0.034779423996607495,
+       "in_range": true
+      },
+      "25degC_Mixed8": {
+       "rmse": 0.009599101952420227,
+       "maxabs": 0.04749217802336725,
+       "in_range": true
+      }
+     }
+    }
+   }
+  },
+  {
+   "build_s": 0.5562063069999112,
+   "ok": true,
+   "seconds_run": 35.00985884666443,
+   "bytes": 413764,
+   "error": null,
+   "attempts": 1,
+   "stale_nc_after": "881084 nc st-iotnode-1 20000",
+   "seconds_flash": 17.91090965270996,
+   "experiment": 458317,
+   "node": 1,
+   "eval": {
+    "valid": true,
+    "passed": true,
+    "fails": [],
+    "max_cycles": 107,
+    "field": {
+     "fail": false,
+     "metrics": {
+      "25degC_Mixed5": {
+       "rmse": 0.007531414559414273,
+       "maxabs": 0.03209078181076064,
+       "in_range": true
+      },
+      "25degC_Mixed6": {
+       "rmse": 0.008552770467093504,
+       "maxabs": 0.03810355199940996,
+       "in_range": true
+      },
+      "25degC_Mixed7": {
+       "rmse": 0.007936969913619784,
+       "maxabs": 0.034779423996607495,
+       "in_range": true
+      },
+      "25degC_Mixed8": {
+       "rmse": 0.009599101952420227,
+       "maxabs": 0.04749217802336725,
+       "in_range": true
+      }
+     }
+    }
+   }
+  },
+  {
+   "build_s": 0.4681546009999238,
+   "ok": true,
+   "seconds_run": 35.00705313682556,
+   "bytes": 413392,
+   "error": null,
+   "attempts": 1,
+   "stale_nc_after": "881359 nc st-iotnode-1 20000",
+   "seconds_flash": 18.0566303730011,
+   "experiment": 458317,
+   "node": 1,
+   "eval": {
+    "valid": true,
+    "passed": true,
+    "fails": [],
+    "max_cycles": 107,
+    "field": {
+     "fail": false,
+     "metrics": {
+      "25degC_Mixed5": {
+       "rmse": 0.007531414559414273,
+       "maxabs": 0.03209078181076064,
+       "in_range": true
+      },
+      "25degC_Mixed6": {
+       "rmse": 0.008552770467093504,
+       "maxabs": 0.03810355199940996,
+       "in_range": true
+      },
+      "25degC_Mixed7": {
+       "rmse": 0.007936969913619784,
+       "maxabs": 0.034779423996607495,
+       "in_range": true
+      },
+      "25degC_Mixed8": {
+       "rmse": 0.009599101952420227,
+       "maxabs": 0.04749217802336725,
+       "in_range": true
+      }
+     }
+    }
+   }
+  }
+ ]
+}

@@ -29,6 +29,41 @@ Code and frozen protocol: `testbed/soc/` (see `testbed/soc/protocol/README.md`).
   instruction proxy. Real-target PIL (NUCLEO-L476RG, IoT-LAB st-iotnode) replaces it for the paper (d-0010).
 - Cost of the PIL stage on QEMU is not representative; E2 must use real-target costs.
 
+## Results — subject 1, PIL on QEMU (development run, 2026-11-11; `results/e1_qemu.jsonl`, `_analysis.json`)
+Pre-registered analysis, 130 live mutants (0 stillborn), 68 field-relevant:
+
+| Config | Detected / 68 | Wilson 95 % CI | Median cost per run |
+|---|---|---|---|
+| A0 UNIT | 26 (38 %) | 28–50 % | 0.29 s |
+| A1 +MIL | 52 (76 %) | 65–85 % | 2.74 s |
+| A2 +SIL | 68 (100 %) | 95–100 % | 3.02 s |
+| A3 +PIL | 68 (100 %) | 95–100 % | 3.81 s (QEMU cost, not representative) |
+
+Exact McNemar: A0→A1 +26 (p = 3.0e-8), A1→A2 +16 (p = 3.1e-5), A2→A3 +0 (p = 1).
+First detection: all 26 field-relevant model mutants at MIL; code mutants at UNIT (26) or SIL (16).
+No escapes. Timing-only (PIL only, functional field oracle unaffected): FPP-003/004/005/007/009.
+
+M11 audit of the 100 %: every field-relevant code mutant failed a **requirement** test at SIL
+(not only back-to-back), so A2's rate is not a by-construction artefact of back-to-back; the
+by-construction parts are that MIL cannot see code-level mutants and back-to-back cannot see
+model-level ones. 21 non-field-relevant mutants were still flagged (requirements stricter than the
+field oracle); 41 were flagged by nothing (equivalent or benign; list in the analysis file).
+
+**Exploratory (post-hoc, not pre-registered):** SIL alone, running the requirement tests on the
+generated code, detects all 68 (MIL alone: 26) at ~1/8 of MIL's cost here; MIL's contribution in an
+automated-codegen pipeline is earlier feedback before code exists, not extra detection. PIL's unique
+value on this subject: timing regressions (5) and one uninitialised-state defect (SDL-007, visible only
+as PIL-vs-SIL back-to-back, because host and target leave different garbage in `rest_ms`).
+Observation: halving or doubling Q (MP-Q) is not field-relevant — the high observer gain masks it.
+
+Caveats: one subject; PIL functional verdicts from QEMU (real-target re-run on IoT-LAB st-iotnode in
+progress, exp 458317); thresholds are our design requirements.
+
+## Real target (FIT IoT-LAB st-iotnode-1, exp 458317, STM32L475VG @ 16 MHz)
+Baseline calibration, 3 reps, all pass: max 107 DWT cycles per step (6.7 µs), budget 214 cycles;
+per run: build 0.5 s, flash 18 s, serial capture 35 s (115200 baud, 44,636 rows, CRC-checked); queue
+wait at submission 1 s. Field RMSE identical to QEMU. Mutant re-run in progress.
+
 ## Metrics
 - Detection rate per configuration A0..A3 over field-relevant mutants (Wilson 95 % CI), exact McNemar
   between successive configurations, first-detecting stage per operator, stage-unique detections,
