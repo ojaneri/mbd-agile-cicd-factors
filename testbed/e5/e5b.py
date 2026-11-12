@@ -57,6 +57,22 @@ def build_fw(vdir, passes):
 R.sh = sh
 R.build_fw = build_fw
 
+# Deviation (2026-11-11, during the run): a host binary that aborts mid-write (MemorySanitizer at -O0, subject 3)
+# leaves a truncated last line that subject 3's _read_out cannot parse, which crashed the runner. A truncated
+# output file is treated like a missing one (empty output -> the length oracle fails), as run_e5 already does.
+_read_out = R.stages._read_out
+
+
+def _read_out_safe(path):
+    try:
+        return _read_out(path)
+    except ValueError:
+        import numpy as np
+        return (R._conv(np.zeros((0, len(R.S["fields"]) if R.S["fields"] else 1))),)
+
+
+R.stages._read_out = _read_out_safe
+
 
 def board_baseline(reps, out_path):
     tests, refs, names = R.tests_and_refs()

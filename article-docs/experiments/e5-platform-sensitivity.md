@@ -33,13 +33,37 @@ E5-BESS-INIT-05, E5-FUEL-INIT-02.
   baseline step has a CPI of about 1.6 (107 cycles, 68 instructions in subject 1), so 1-cycle instructions
   weigh more in QEMU's instruction count than in board cycles. The emulator's proxy mis-scales in both
   directions whenever the regression's cycles per instruction differ from the baseline's.
+- Paper Fig. 2 plots the H4 ladders (step max / each platform's own budget) via `manuscript/figs/fig_h4.py`.
 - Tiered replay (subject 3, 84 control mutants; costs UNIT 0.29, MIL 2.49, SIL 0.28, QEMU 0.86, board 30.0 s):
   no control mutant was caught by the board alone, so AT, A3q and A3b all have 0 escapes; compute per sprint
-  A2 36.8 s, A3q 47.1 s, **AT 77.1 s, A3b 396.7 s** (Cliff's delta AT vs A3b −1.0); latency AT = A3q (4 s),
+  A2 36.7 s (audit; was written 36.8), A3q 47.1 s, **AT 77.1 s, A3b 396.7 s** (Cliff's delta AT vs A3b −1.0); latency AT = A3q (4 s),
   A3b 33 s. With this pool the per-sprint board run adds cost only; its value is the timing class above
   (no DIV-like regression was in the control pool). Design, mutants and analysis are frozen in the commit
 that adds `testbed/e5/` and `testbed/bess/` (protocol: `testbed/e5/protocol/README.md`, normative rules in
 `testbed/e5/analyze_e5.py`). Tests [[claims/c4-platform-tiering]], which is exploratory until this runs.
+
+## E5b — robustness addendum (frozen d11bf25 and pushed 22:04Z 2026-11-11 before any run; run 22:07Z–02:20Z)
+Protocol `testbed/e5/protocol/ADDENDUM-E5b.md`, rules `analyze_e5b.py`, results `results/e5b/` (478 + 6 records,
+0 invalid). IoT-LAB exp 458356 (nRF52840-DK), 458357 and a 40-min follow-up (st-iotnode). Designed after E5's
+results: a replication, not part of the confirmatory set.
+- **R1 supported** (-O0, -Os; same ELF on QEMU and st-iotnode): 26 observable INIT/LUD mutants per level, 0
+  board-only and 0 QEMU-only. Detected: -O0 SIL 23, poison 26, Valgrind 26, MSan 26, QEMU 25, board 25;
+  -Os SIL 23, poison 26, Valgrind 25, MSan 26, QEMU 26, board 26.
+- **R2:** Valgrind misses E5-SOC-LUD-04 again at -Os (not at -O0), consistent with the register cause (t-0048);
+  MSan 0 misses at both levels (median 6.0 s per mutant at -O0, 1.95 s at -Os; QEMU 2.1 s).
+- **R3 supported:** 10 baseline runs per subject (each build+flash+reset) give identical step maxima: st-iotnode
+  107/119/131, nRF52840 158/167/208 cycles; spread 0 on both boards.
+- **R4 (nRF52840-DK, 64 MHz, cache off) supported:** H1n 84/84 control agree with E5's QEMU (Wilson 95.6–100 %);
+  H2n 26/28 detected, 0 nRF-only, 0 QEMU-only, identical per mutant to the st-iotnode; H4n: nRF flags a DIV level
+  QEMU misses in every subject. Exploratory: nRF flags fewer ladder levels than the st-iotnode (S1 DIV 1.5/3.0 vs
+  1.1–3.0; S2 DIV 1.5/3.0 vs 0.9–3.0; S3 ALU 1.5/3.0 vs 1.1–3.0; S3 DIV 3.0 vs 1.1–3.0): timing verdicts are
+  board-specific, functional verdicts are not.
+- Deviations: (1) a MemorySanitizer binary at -O0 aborted mid-write on E5-BESS-LUD-03, leaving a truncated line
+  that crashed subject 3's reader; `e5b.py` now treats a truncated file as missing (empty output, oracle fails),
+  and subject 3 -O0 was resumed (completed records kept). (2) Subject 2 -Os lost its board arm by the frozen
+  rule (one of 3 calibration captures had a broken stream; calibrate has no retry); the attempt is kept as
+  `calibration_fuel_Os_attempt1.json`, the board was recalibrated (clean, budget 328) and its 6 mutants run.
+  As frozen (without the board for S2): 21 compared, 0 counterexamples; completed: 26, 0.
 
 ## Why
 The host/emulator/board disagreements in E1 came from data already seen, and E1's QEMU run used a different
@@ -87,9 +111,9 @@ frame); mutants as proxies, as in E1.
 ## Todos
 - **[#t-0044]** status: done · author: osvaldo — E5 generator, RAM-paint firmware, host arms, runner and analysis written (`testbed/e5/`).
 - **[#t-0045]** status: done · author: osvaldo — Subject 3 built in `testbed/bess/`; licence CC BY 4.0 checked at the Zenodo API on 2026-11-11.
-- **[#t-0046]** status: open · author: osvaldo — Check whether a NUCLEO-L476RG run can be added as a second real board (see t-0038).
+- **[#t-0046]** status: done · author: osvaldo — Second board done as the nRF52840-DK on IoT-LAB (no NUCLEO-L476RG there), E5b R4. Original: Check whether a NUCLEO-L476RG run can be added as a second real board (see t-0038).
 - **[#t-0047]** status: done · author: osvaldo — E5 run 2026-11-11 (subject 3 E1 campaign, all arms, board in exp 458337).
-- **[#t-0048]** status: open · author: osvaldo — Find why Valgrind missed E5-SOC-LUD-04 (inspect the -O2 code) before the paper names the tool's limit.
+- **[#t-0048]** status: done · author: osvaldo — Cause found 2026-11-11 (`testbed/e5/diag/valgrind_lud04.sh`): at -O2 gcc keeps `lo` in xmm6, read but never written in the function; the register held a defined 0 (the original initial value), so the output is bit-identical and memcheck, which tracks value definedness, reports nothing; at -O0/-O1 memcheck reports it, and `gcc -O2 -Wall` warns 'lo is used uninitialized'. Original: Find why Valgrind missed E5-SOC-LUD-04 (inspect the -O2 code) before the paper names the tool's limit.
 
 ## Deviations (M10)
 - Host and board runs went in parallel; the first host attempt shared build directories with the board

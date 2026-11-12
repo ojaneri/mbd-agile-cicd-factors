@@ -110,6 +110,41 @@ All 75 live mutants ran, 75 valid streams, no retry. Budget 246 cycles (baseline
 Pooled across subjects: 202/205 agreement; all 3 disagreements are initialisation deletions. See
 [[claims/c4-platform-tiering]].
 
+## Equivalent-mutant screening (exploratory, added 2026-11-11 after the runs)
+The protocol (e0, rule 4) says equivalent mutants are screened and reported; that screening was not done
+before the runs. Done afterwards, so it is **exploratory**. Scope: the mutants flagged by no stage and not
+field-relevant in the QEMU analysis (`non_field_relevant.unflagged`): 41 in subject 1, 15 in subject 2.
+Method: SIL build (host gcc -O2), output text `%.9g` (exact for float32) compared with the baseline on
+REQ vectors, all field data (identification + held-out, unperturbed) and a seeded stress set (seed
+20261111: random/edge/long-rest/saturation/out-of-range traces, perturbed field data; values written
+float32-exact so boundary inputs reach the C). Model mutants: the C that gen.py generates from the mutant
+spec; MIL not re-simulated. Code: `testbed/{soc,fuel}/screen_equiv.py`; results with seed and input-set
+definitions (sha256 per vector) in `testbed/{soc,fuel}/results/equiv_screen.json`.
+
+| Subject | Screened | EQUIVALENT | NON-EQUIVALENT BENIGN | of these, differ only on stress | break a requirement on stress |
+|---|---|---|---|---|---|
+| 1 SoC | 41 | 18 | 23 | 5 | 4 |
+| 2 fuel | 15 | 11 | 4 | 3 | 3 |
+
+- Subject 1 EQUIVALENT: AOR-023 (`*`→`/` by DT_INT_S = 1), FPP-001/002/006/008/010–013, ROR-001/003/015/017,
+  SDL-001, SDL-006, TW-001/002/003. **SDL-006 is not a real equivalent**: it deletes the init of `v1`
+  (an uninitialised read). It matches on the host by chance, and the real-board PIL flags it (see above).
+- Subject 2 EQUIVALENT: AOR-013 (`*`→`/` by DT_SCALE = 1), FPP-005–009, ROR-001/003/009/013/015.
+  ROR-011 differs only in the sign of zero in `rate` (−0 vs +0; numerically identical). It is counted
+  as non-equivalent because the rule is bit-identity.
+- Requirement breaks on stress (counted only where the baseline passes the same check on the same trace):
+  subject 1 MS-s_cc (tracking, 5 random traces, up to 0.013 over the 0.03 tolerance), MK-2-+ (tracking,
+  3 traces, up to 0.005 over), MK-1-+ and MK-1-- (rest correction at low SoC, 1 trace, up to 0.005/0.002
+  over 0.01). Subject 2: MP-rate_max-x0.5 (REQ-2 whenever the rate is above 200 ml/min, 28 traces including
+  perturbed real tanks; the frozen REQ vectors never exceed 200 ml/min outside T7), and ROR-005 and ROR-007
+  (DFCO boundary THR = 21.0 / RPM = 1600 exactly: REQ-2, and ROR-005 also REQ-3). Those last two only
+  fire on exact boundary inputs. So the requirement tests are weak for these 7 mutants.
+- The baseline itself fails the stress tracking check on 4 of 10 random 20 A traces (subject 1), so the
+  stress tracking windows are not requirements. The stress windows were set after the runs; the tolerances
+  are the REQ ones.
+- Limits: equivalence is on the host build only. The target (Cortex-M4) can differ, as SDL-006 shows and as
+  the FPP timing-only mutants show. Inputs with NaN/Inf were not fed.
+
 ## Metrics
 - Detection rate per configuration A0..A3 over field-relevant mutants (Wilson 95 % CI), exact McNemar
   between successive configurations, first-detecting stage per operator, stage-unique detections,

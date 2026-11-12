@@ -19,6 +19,6 @@ Used in: [[sections/abstract]]. Venue: [[venue/isie-2027]].
   **Frame C1 as a measured comparison, not a general claim.** Why: the sources are qualitative; a reviewer will ask for numbers. Rejected: stating the gain without measurement, because it is the first thing an ISIE reviewer would reject. Cost: a case study is needed in about 5 weeks.
 
 ## Todos
-- **[#t-0043]** status: open · author: osvaldo — Add a sensitivity sweep on DT_COMMIT and P_DEFECT to `e2.py`, labelled as added after run 1.
+- **[#t-0043]** status: done · author: osvaldo — Sweep run 2026-11-11 (`testbed/e2_sweep.py`; see E2 Robustness): conclusions hold across spacing 0.5–8 h and defect probability 0.1–0.5. Original: Add a sensitivity sweep on DT_COMMIT and P_DEFECT to `e2.py`, labelled as added after run 1.
 - **[#t-0006]** status: open · author: osvaldo — Choose the case study (ECU/ADAS model, or a non-automotive proxy) and confirm it can be run in the time left.
 - **[#t-0007]** status: open · author: osvaldo — Define how lead time and defect escape are measured before any run.

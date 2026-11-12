@@ -1,0 +1,602 @@
+{
+ "subject": "bess",
+ "variant": "noise",
+ "board": "iotnode",
+ "opt": "-O2",
+ "reps": 10,
+ "runs": [
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 52.01051473617554,
+     "seconds_flash": 6.82956600189209,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 71.20372083899974,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  },
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 52.01066517829895,
+     "seconds_flash": 6.785586833953857,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 71.49060882699996,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  },
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 167.04245471954346,
+     "seconds_flash": 6.80704927444458,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 205.40286245800007,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  },
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 52.01036548614502,
+     "seconds_flash": 8.034119606018066,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 72.31896650600038,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  },
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 52.01065373420715,
+     "seconds_flash": 6.752581834793091,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 71.14027689300019,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  },
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 52.01069521903992,
+     "seconds_flash": 6.738083362579346,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 71.11748776499962,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  },
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 52.01068186759949,
+     "seconds_flash": 6.711337566375732,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 71.17436216499982,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  },
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 52.01095914840698,
+     "seconds_flash": 6.807870626449585,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 71.14751789399998,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  },
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 52.011292934417725,
+     "seconds_flash": 6.921536445617676,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 71.2665261279999,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  },
+  {
+   "arm": "board",
+   "valid": true,
+   "captures": [
+    {
+     "ok": true,
+     "seconds_run": 52.0108916759491,
+     "seconds_flash": 6.761254549026489,
+     "passes": [
+      {
+       "k": 0,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 1,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 2,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 3,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      },
+      {
+       "k": 4,
+       "passed": true,
+       "fails": [],
+       "st_max": 131,
+       "dw_max": 146
+      }
+     ]
+    }
+   ],
+   "wall_s": 71.18191777999982,
+   "detect_p0": false,
+   "detect_paint": false,
+   "differential_paint": false,
+   "differential_any": false,
+   "detected": false,
+   "st_max": 131,
+   "dw_max": 146
+  }
+ ],
+ "host": {},
+ "qemu": [],
+ "clean": {
+  "board": true
+ },
+ "excluded_arms": [],
+ "board_st_max_reps": [
+  131,
+  131,
+  131,
+  131,
+  131,
+  131,
+  131,
+  131,
+  131,
+  131
+ ],
+ "board_dw_max_reps": [
+  146,
+  146,
+  146,
+  146,
+  146,
+  146,
+  146,
+  146,
+  146,
+  146
+ ],
+ "board_baseline_st_max": 131,
+ "board_budget": 262,
+ "board_baseline_dw_max": 146
+}

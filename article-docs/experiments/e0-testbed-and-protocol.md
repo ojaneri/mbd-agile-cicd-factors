@@ -59,7 +59,8 @@ Both have real recorded data, which serves as the "field" oracle for escaped def
 - Mutation: model-level and code-level mutation operators (E1).
 - Installed and verified in WSL Ubuntu 26.04 on 2026-11-10: OpenModelica 1.27.2, FMPy 0.3.32,
   numpy/scipy/pandas, gcc, arm-none-eabi-gcc 14.2.1, cmake 4.2.3. Procedure and versions in skill
-  `testbed-toolchain-smoke`. Not yet checked: FIT IoT-LAB access. MATLAB/Simulink is optional if a
+  `testbed-toolchain-smoke`. Also used (recorded 2026-11-11 for the paper): host gcc 15.2.0, clang 21.1.8,
+  Valgrind 3.26.0, QEMU 10.2.1; host CPU AMD Ryzen 5 5500 (12 threads), WSL Ubuntu. Not yet checked: FIT IoT-LAB access. MATLAB/Simulink is optional if a
   UTFPR licence exists (t-0013).
 
 ## Protocol rules (to pass M04, M05, M06, M11)
@@ -129,5 +130,5 @@ submit a qualitative version as a regular paper; move to the WIP deadline (2027-
 - **[#t-0012]** status: open · author: osvaldo — Toolchain installed and smoke-tested 2026-11-10 (skill `testbed-toolchain-smoke`). Remaining: confirm the FIT IoT-LAB account still works and flash one test firmware.
 - **[#t-0013]** status: open · author: osvaldo — Check whether UTFPR provides a MATLAB/Simulink campus licence (optional second toolchain).
 - **[#t-0014]** status: done · author: osvaldo — Protocol committed before any run: commit e397dba, 2026-11-10 20:59 -0300. A local commit is weak proof on its own; push to a private remote (or deposit a hash) to make the timestamp verifiable by a third party (t-0025).
-- **[#t-0025]** status: open · author: osvaldo — Create a private GitHub repo for this paper and push, so the pre-registration commit has an external timestamp.
+- **[#t-0025]** status: done · author: osvaldo — Private repo https://github.com/ojaneri/cicd-mbd-agile created and pushed 2026-11-11 21:58Z. The push timestamps only the push, not the earlier local commits (all E0–E5 runs precede it); from E5b on, each freeze is pushed before its run (E5b: d11bf25, 22:04Z). Original: Create a private GitHub repo for this paper and push, so the pre-registration commit has an external timestamp.
 - **[#t-0015]** status: open · author: osvaldo — Decide how this paper differs from the genai-mbd-exp paper ("Generative-AI and ML-based MBD for agile development of automotive systems"); same data reused as subjects must be disclosed, and no text or results reused (V09, P06).

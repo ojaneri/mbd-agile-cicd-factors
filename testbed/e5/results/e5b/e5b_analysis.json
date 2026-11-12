@@ -1,0 +1,286 @@
+{
+ "R1": {
+  "O0": {
+   "n_mutants": 28,
+   "observable": 26,
+   "compared": 26,
+   "board_only": [],
+   "qemu_only": [],
+   "detected": {
+    "host_sil": 23,
+    "host_poison": 26,
+    "host_valgrind": 26,
+    "host_msan": 26,
+    "qemu": 25,
+    "board": 25
+   },
+   "supported": true
+  },
+  "Os": {
+   "n_mutants": 28,
+   "observable": 26,
+   "compared": 26,
+   "board_only": [],
+   "qemu_only": [],
+   "detected": {
+    "host_sil": 23,
+    "host_poison": 26,
+    "host_valgrind": 25,
+    "host_msan": 26,
+    "qemu": 26,
+    "board": 26
+   },
+   "supported": true
+  }
+ },
+ "R2": {
+  "O0": {
+   "host_valgrind": {
+    "counterexamples": [],
+    "median_wall_s": 3.3871992849999515
+   },
+   "host_msan": {
+    "counterexamples": [],
+    "median_wall_s": 5.993883101999927
+   },
+   "qemu_median_wall_s": 2.1270074990006833
+  },
+  "Os": {
+   "host_valgrind": {
+    "counterexamples": [
+     "E5-SOC-LUD-04"
+    ],
+    "median_wall_s": 3.2850180474997615
+   },
+   "host_msan": {
+    "counterexamples": [],
+    "median_wall_s": 1.9524235499993665
+   },
+   "qemu_median_wall_s": 2.1675635390001844
+  }
+ },
+ "R3": {
+  "iotnode": {
+   "soc": {
+    "n": 10,
+    "clean": true,
+    "st_min": 107,
+    "st_max": 107,
+    "dw_min": 137,
+    "dw_max": 137,
+    "spread": 0.0
+   },
+   "fuel": {
+    "n": 10,
+    "clean": true,
+    "st_min": 119,
+    "st_max": 119,
+    "dw_min": 133,
+    "dw_max": 133,
+    "spread": 0.0
+   },
+   "bess": {
+    "n": 10,
+    "clean": true,
+    "st_min": 131,
+    "st_max": 131,
+    "dw_min": 146,
+    "dw_max": 146,
+    "spread": 0.0
+   },
+   "supported": true
+  },
+  "nrf52840": {
+   "soc": {
+    "n": 10,
+    "clean": true,
+    "st_min": 158,
+    "st_max": 158,
+    "dw_min": 203,
+    "dw_max": 203,
+    "spread": 0.0
+   },
+   "fuel": {
+    "n": 10,
+    "clean": true,
+    "st_min": 167,
+    "st_max": 167,
+    "dw_min": 184,
+    "dw_max": 184,
+    "spread": 0.0
+   },
+   "bess": {
+    "n": 10,
+    "clean": true,
+    "st_min": 208,
+    "st_max": 208,
+    "dw_min": 226,
+    "dw_max": 226,
+    "spread": 0.0
+   },
+   "supported": true
+  }
+ },
+ "R4": {
+  "H1n": {
+   "n": 84,
+   "agree": 84,
+   "wilson95": [
+    0.95626827092561,
+    0.9999999999999999
+   ],
+   "disagreements": [],
+   "supported": true
+  },
+  "H2n": {
+   "n": 28,
+   "nrf_detected": 26,
+   "nrf_only": [],
+   "qemu_only": [],
+   "differs_from_iotnode": [],
+   "supported": true
+  },
+  "H4n": {
+   "ladders": {
+    "soc:ALU": {
+     "nrf_flags": [
+      1.1,
+      1.5,
+      3.0
+     ],
+     "qemu_flags": [
+      0.9,
+      1.1,
+      1.5,
+      3.0
+     ],
+     "iotnode_flags": [
+      1.1,
+      1.5,
+      3.0
+     ],
+     "st_max": {
+      "E5-SOC-ALU-01": 197,
+      "E5-SOC-ALU-02": 229,
+      "E5-SOC-ALU-03": 301,
+      "E5-SOC-ALU-04": 325,
+      "E5-SOC-ALU-05": 397,
+      "E5-SOC-ALU-06": 636
+     }
+    },
+    "soc:DIV": {
+     "nrf_flags": [
+      1.5,
+      3.0
+     ],
+     "qemu_flags": [],
+     "iotnode_flags": [
+      1.1,
+      1.5,
+      3.0
+     ],
+     "st_max": {
+      "E5-SOC-DIV-01": 188,
+      "E5-SOC-DIV-02": 208,
+      "E5-SOC-DIV-03": 261,
+      "E5-SOC-DIV-04": 268,
+      "E5-SOC-DIV-05": 321,
+      "E5-SOC-DIV-06": 501
+     }
+    },
+    "fuel:ALU": {
+     "nrf_flags": [
+      1.1,
+      1.5,
+      3.0
+     ],
+     "qemu_flags": [
+      0.9,
+      1.1,
+      1.5,
+      3.0
+     ],
+     "iotnode_flags": [
+      1.1,
+      1.5,
+      3.0
+     ],
+     "st_max": {
+      "E5-FUEL-ALU-01": 213,
+      "E5-FUEL-ALU-02": 260,
+      "E5-FUEL-ALU-03": 328,
+      "E5-FUEL-ALU-04": 364,
+      "E5-FUEL-ALU-05": 435,
+      "E5-FUEL-ALU-06": 704
+     }
+    },
+    "fuel:DIV": {
+     "nrf_flags": [
+      1.5,
+      3.0
+     ],
+     "qemu_flags": [],
+     "iotnode_flags": [
+      0.9,
+      1.1,
+      1.5,
+      3.0
+     ],
+     "st_max": {
+      "E5-FUEL-DIV-01": 201,
+      "E5-FUEL-DIV-02": 230,
+      "E5-FUEL-DIV-03": 290,
+      "E5-FUEL-DIV-04": 303,
+      "E5-FUEL-DIV-05": 363,
+      "E5-FUEL-DIV-06": 561
+     }
+    },
+    "bess:ALU": {
+     "nrf_flags": [
+      1.5,
+      3.0
+     ],
+     "qemu_flags": [
+      0.9,
+      1.1,
+      1.5,
+      3.0
+     ],
+     "iotnode_flags": [
+      1.1,
+      1.5,
+      3.0
+     ],
+     "st_max": {
+      "E5-BESS-ALU-01": 253,
+      "E5-BESS-ALU-02": 302,
+      "E5-BESS-ALU-03": 380,
+      "E5-BESS-ALU-04": 416,
+      "E5-BESS-ALU-05": 494,
+      "E5-BESS-ALU-06": 793
+     }
+    },
+    "bess:DIV": {
+     "nrf_flags": [
+      3.0
+     ],
+     "qemu_flags": [],
+     "iotnode_flags": [
+      1.1,
+      1.5,
+      3.0
+     ],
+     "st_max": {
+      "E5-BESS-DIV-01": 232,
+      "E5-BESS-DIV-02": 284,
+      "E5-BESS-DIV-03": 325,
+      "E5-BESS-DIV-04": 352,
+      "E5-BESS-DIV-05": 412,
+      "E5-BESS-DIV-06": 625
+     }
+    }
+   },
+   "supported": true
+  }
+ }
+}

@@ -20,7 +20,9 @@ Medians per sprint (bootstrap 95 % CI of the median), automated trigger:
 | A3 | 5 | 4.0 h | 0 | 509 s |
 | A3 | 10 | 9.0 h | 0 | 565 s |
 
-A manual 8 h trigger adds 8 h to every cell. A0 lets 1 defect per sprint escape (median); A1 and up, 0.
+A manual 8 h trigger adds 8 h to every cell. A0 lets 1 defect per sprint escape (median). **Correction
+(number audit, 2026-11-11):** A1's median is 0 but S1 lets at least one field-relevant defect escape in 642 of
+2000 sprints at A1 (mean 0.38); only from A2 on are escapes 0 in every replay.
 Cliff's delta (planned contrasts): A3 auto b1 vs b10 latency −0.97; compute +0.32; A3 b1 auto vs
 manual-8h lead time −1.0; b1 auto A2 vs A3 escapes 0.
 Reading: latency is set by cadence and trigger, not by stage cost; the real PIL stage multiplies
@@ -33,6 +35,14 @@ compute, A3 b1 266 s (6.1×), latency 22 s at b1 and about 9 h at b10; 0 escapes
 To check: in cell A0|b10|auto the reported median (8.67 h) lies outside its bootstrap CI
 (9.33–10 h), a percentile-bootstrap artefact on discrete data; use a different CI before the paper
 (t-0042).
+
+## Robustness (exploratory, added 2026-11-11 after run 1; `testbed/e2_sweep.py`, `testbed/e2_sweep.json`)
+- Interval fix (t-0042): medians now carry an order-statistic (binomial) 95 % CI, which always contains the
+  median; the frozen `e2.py` model is imported unchanged.
+- Sweep (t-0043): DT_COMMIT 0.5/2/8 h × P_DEFECT 0.1/0.3/0.5, both subjects. A3 batch-1 latency equals the
+  stage cost in every cell (57 s S1, 22 s S2); batch-10 latency scales with the spacing (2.3, 9.0, 36 h);
+  A3/A2 compute at batch 1 is 18.7–20.6 (S1) and 6.1 (S2); A2 escapes 0 everywhere; A1 escapes (S1) mean
+  0.12–0.63 per sprint, rising with P_DEFECT. Conclusions of run 1 unchanged.
 
 ## Setup
 - A **backlog of increments** per subject: a scripted sequence of feature changes (e.g., add
@@ -60,5 +70,5 @@ To check: in cell A0|b10|auto the reported median (8.67 h) lies outside its boot
 
 ## Todos
 - **[#t-0019]** status: open · author: osvaldo — Write the backlog of increments (at least 10 per subject) and the defect seeding plan; commit before runs.
-- **[#t-0042]** status: open · author: osvaldo — Replace the percentile bootstrap of the median in `e2.py` for discrete outcomes (median fell outside its CI in A0|b10|auto); rerun E2 after subject 2 real PIL.
+- **[#t-0042]** status: done · author: osvaldo — Done 2026-11-11 in `testbed/e2_sweep.py` (order-statistic CI). Original: Replace the percentile bootstrap of the median in `e2.py` for discrete outcomes (median fell outside its CI in A0|b10|auto); rerun E2 after subject 2 real PIL.
 - **[#t-0020]** status: open · author: osvaldo — Choose sprint batch size k and the manual-release delay range, with a reason recorded as a decision.

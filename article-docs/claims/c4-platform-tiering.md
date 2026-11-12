@@ -23,10 +23,15 @@ Evidence:
 - Tiered replay (subject 3): host + QEMU per commit and the board once per sprint cost 77 s per sprint
   against 397 s with the board every commit, with 0 escapes in both; no control mutant needed the board.
 
+- E5b (replication addendum, frozen and pushed before running): same functional result at -O0 and -Os and on a
+  second board (nRF52840-DK): 84/84 control agreement, 0 counterexamples in both directions; board timing noise
+  0 over 10 runs per subject on both boards; the two boards flag different ladder levels, so the timing check
+  must run on the production board.
+
 Would falsify it: functional disagreement between emulator and board on further subjects or compilers; a
 defect class the board catches that neither painted QEMU nor a sanitiser catches.
 
-Caveats: one MCU family (Cortex-M4 at 16 MHz, zero wait states, no cache) and one emulator; three subjects
+Caveats: two Cortex-M4F boards (STM32L4 16 MHz, nRF52840 64 MHz, both uncached) and one emulator; three subjects
 of the same kind (estimators); MSan as a secondary arm; the replay pool held no multi-cycle timing defect.
 
 Used in: [[sections/abstract]].

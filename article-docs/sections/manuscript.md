@@ -2,7 +2,9 @@
 
 Source: `manuscript/main.tex` (IEEEtran conference) and `manuscript/refs.bib`. Build in WSL with
 `bash /mnt/d/artigos/CICD/manuscript/build.sh` (latexmk; TeX Live with texlive-publishers, installed
-2026-11-11). Draft v1 written 2026-11-11 and compiles to **5 of 6 pages**, so about 0.7 page is free.
+2026-11-11). Draft v1 written 2026-11-11 and compiles to **5 of 6 pages**; with Fig. 2 about half a page
+is free on p. 5. Fig. 2 is regenerated with `wsl -- /root/venvs/cicd/bin/python /mnt/d/artigos/CICD/manuscript/figs/fig_h4.py`
+from `testbed/e5/results/e5_analysis.json` and the calibration budgets; never edit the PDF by hand.
 
 ## What each section argues and where its numbers come from
 | Section | Argues | Evidence |
@@ -14,20 +16,29 @@ Source: `manuscript/main.tex` (IEEEtran conference) and `manuscript/refs.bib`. B
 | IV-A RQ1 | Table I; the A2 100 % audit; the SIL-alone result marked exploratory; timing-only counts | [[experiments/e1-defect-detection-by-stage]], [[claims/c3-stage-detection]] |
 | IV-B | E1 platform disagreement 202/205, harness confound | E1, [[claims/c4-platform-tiering]] |
 | IV-C RQ2 | Table II (medians from `testbed/{soc,fuel}/results/e1_qemu_e2.json`); latency is a model output | [[experiments/e2-integration-cadence]], [[claims/c1-integration-gain]] |
-| IV-D RQ3 | E5 design, H1–H4, Table III, the tiered replay | [[experiments/e5-platform-sensitivity]] |
+| IV-D RQ3 | E5 design, H1–H4, Table III, Fig. 2 (H4 ladders, step max / own budget), the tiered replay | [[experiments/e5-platform-sensitivity]] |
 | V Discussion | the answer to the title; practical placement; threats (construct, internal, external) | C1, C3, C4 |
 | VI Conclusion | summary plus future work (real history, second board, ISO 26262 evidence) | — |
 
 ## Placeholders left in the text (must not be filled by guessing)
 - Author block (order and corresponding author t-0037; anonymity t-0036).
-- Repository URL and external timestamp of the pre-registration (t-0025).
+- Repository URL (private repo exists since 2026-11-11; the URL can only go in after anonymity is known, t-0036).
 - Kaggle dataset citation title/year (t-0049).
 - The AI-use disclosure, if ISIE requires one (t-0036).
 
+## Validation round 2026-11-11 (after draft v1)
+- Number audit (`manuscript/audit/number-audit.md`, rerun `python manuscript/audit/check_numbers.py`): 117 numbers,
+  2 mismatches (A1 escapes, 36.8→36.7 s) and 5 over-strong wordings, all fixed in main.tex; 3 unsourced versions
+  now recorded in E0.
+- E2 sweep and CI fix (E2 Robustness), Valgrind cause (E5 t-0048), equivalent-mutant screening (E1), added to the
+  text as post-run analyses.
+- E5b (second board nRF52840, -O0/-Os, timing noise): run 2026-11-11/12, all rules supported; in IV-D
+  "Robustness (addendum)", abstract, discussion, threats and conclusion. The paper is now **6 of 6 pages**.
+
 ## Known weak points for review
 - No recorded commit history: the RQ2 latency is a replay output (t-0019, t-0043).
-- E2 bootstrap CIs are not reported in Table II because of t-0042; medians only.
-- The Valgrind miss is reported without a cause (t-0048).
+- Table II still shows medians only; order-statistic CIs now exist in `testbed/e2_sweep.json` (t-0042 done).
+- The Valgrind miss is now explained in the text (t-0048 done).
 - Related work search did not cover ACM DL / SAE (t-0029); P1, P2 read at abstract level only (t-0034).
 
 ## Decisions
@@ -44,6 +55,6 @@ Source: `manuscript/main.tex` (IEEEtran conference) and `manuscript/refs.bib`. B
 
 ## Todos
 - **[#t-0049]** status: open · author: osvaldo — Check the dataset citations: Kaggle OBD-II title and year, and the LG HG2 author list (DataCite lists only M. Naguib; the Mendeley page lists four authors).
-- **[#t-0050]** status: open · author: osvaldo — Use the free ~0.7 page: candidate figure is the H4 ladder (cycles on the board vs QEMU ticks per level), generated from `testbed/e5/results/`.
+- **[#t-0050]** status: done · author: osvaldo — Fig. 2 (H4 ladders) added 2026-11-11, from `manuscript/figs/fig_h4.py`; text cites S1 values 0.95/1.22 (ALU 0.9) and 2.12/0.69 (DIV 3.0).
 - **[#t-0051]** status: open · author: osvaldo — Run `/artdocs:virtual-review` on draft v1 and a humanizer pass on the prose before showing it to the co-author.
 - **[#t-0052]** status: open · author: osvaldo — Co-author (Max Mauro Dias Santos) to read draft v1, in particular the reframed thesis (d-0011) and the self-citation of [9] (P8).
