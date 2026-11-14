@@ -67,4 +67,9 @@ Copied read-only from janeri2 `/var/lib/article-docs/tenants/u1/`:
 ## Todos
 - **[#t-0038]** status: open · author: osvaldo — Plug the NUCLEO-L476RG with a data cable; confirm COM port and drive letter.
 - **[#t-0039]** status: open · author: osvaldo — Verify against NXP's datasheet that S32K14x uses a Cortex-M4F before writing it in the paper.
-- **[#t-0040]** status: open · author: osvaldo — Decide whether `docs/labs-from-server/` (contains login names and an e-mail) stays out of any anonymised artifact.
+- **[#t-0040]** status: done · author: osvaldo — Done 2026-11-14: folder removed from the repository at the owner's request (history not rewritten). Original: Decide whether `docs/labs-from-server/` (contains login names and an e-mail) stays out of any anonymised artifact.
+  Checked 2026-11-14: the folder is in the public `main` (since commit 40a4064, 2026-11-10). It holds the
+  first author's UTFPR student e-mail (Shepherd account, 2 files), the IoT-LAB login and frontend hosts, the
+  name (not the content) of the IoT-LAB SSH key file, and paths on the first author's server. No password,
+  token or private key. None of it is needed by this paper. Proposed: remove the folder from `main` in the
+  next commit (history keeps it unless rewritten, which needs the owner's explicit yes).

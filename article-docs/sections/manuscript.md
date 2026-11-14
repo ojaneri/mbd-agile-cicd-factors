@@ -74,6 +74,13 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
   Santos Dominguez, Jeferson José de Lima (in this order), with ORCIDs; affiliation Department of Electronics,
   UTFPR-PG (the source gave no affiliation mark for Rafael; João Francisco Justo, in the source block, was not in
   the requested list and is not included). Applied in main.tex; IEEE membership grades omitted (conference style).
+  Update 2026-11-14: the owner moved the paper to a new Overleaf project, 6af7caef9184bd0d4133de43 ("forget the
+  old one"); the co-authors will work from it. It held a copy from 2026-11-13 with two edits not in the repo:
+  author order Osvaldo, Rafael, Jeferson, Max, and a section-roadmap paragraph at the end of the Introduction.
+  At the owner's instruction ("pode sobreescrever totalmente") it was overwritten with commit c939244 (order
+  Osvaldo, Max, Rafael, Jeferson; no roadmap); 6 pages on Overleaf. If that order change was intended, it has
+  to be redone in main.tex (the roadmap costs about 10 lines; one sentence fits only with cuts elsewhere).
+  From now on co-author edits arrive on Overleaf first: fetch and compare before any upload.
 - **[#d-0016]** date: 2026-11-13 · status: proposed · author: osvaldo
   **AI-use acknowledgment: "The authors used Claude (Anthropic), through Claude Code, to draft the text of all
   sections from the authors' results and notes, to write the experiment and analysis scripts, and to check

@@ -72,7 +72,7 @@
 {"type":"decision","id":"d-0008","file":"experiments/labs-access.md","title":"PIL target: NUCLEO-L476RG (local) as primary, FIT IoT-LAB st-iotnode as replication; QEMU for develo","status":"proposed","author":"osvaldo","date":"2026-11-11"}
 {"type":"todo","id":"t-0038","file":"experiments/labs-access.md","title":"Plug the NUCLEO-L476RG with a data cable; confirm COM port and drive letter.","status":"open","author":"osvaldo"}
 {"type":"todo","id":"t-0039","file":"experiments/labs-access.md","title":"Verify against NXP's datasheet that S32K14x uses a Cortex-M4F before writing it in the paper.","status":"open","author":"osvaldo"}
-{"type":"todo","id":"t-0040","file":"experiments/labs-access.md","title":"Decide whether docs/labs-from-server/ (contains login names and an e-mail) stays out of any anonymised artifact.","status":"open","author":"osvaldo"}
+{"type":"todo","id":"t-0040","file":"experiments/labs-access.md","title":"Done 2026-11-14: folder removed from the repository at the owner's request (history not rewritten). Original: Decide whether docs/labs-from-server/ (contains login names and an e-mail) stays out of any anonymised artifact.","status":"done","author":"osvaldo"}
 {"type":"section","id":"predecessors","file":"references/predecessors.md","title":"Predecessors — closest works and positioning (K03, R05)"}
 {"type":"todo","id":"t-0026","file":"references/predecessors.md","title":"ETFA 2026 (P3) and ISIE 2025 (P8) read in full on 2026-11-11; neither covers the E1/E2 measurement.","status":"done","author":"osvaldo"}
 {"type":"todo","id":"t-0027","file":"references/predecessors.md","title":"IV 2025, ICCUBEA 2023, ICSA-C 2018 read on IEEE; KSAE 2026 and Artshop abstracts read on Scopus.","status":"done","author":"osvaldo"}
