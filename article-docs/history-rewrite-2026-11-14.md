@@ -24,3 +24,10 @@ At the owner's request, `docs/labs-from-server/` (notes from other projects with
 | `811b1f1` | `fd96ff6` | 2026-11-14 | paper+memory: new title, r4 review, AI acknowledgment, r3+r4 wording package and suite figure |
 | `c939244` | `3f2e000` | 2026-11-14 | paper+memory: virtual review r5 and its wording package |
 | `941da51` | `62fddd5` | 2026-11-14 | chore: remove docs/labs-from-server; record the new Overleaf project |
+
+## New repository (2026-11-14)
+GitHub kept serving the old commits by hash after the force-push, so at the owner's request the artefact moved
+to a new public repository, https://github.com/ojaneri/mbd-agile-cicd-factors, created from the rewritten
+`main` (the hashes in the table above are the ones in the new repository). The URL in main.tex was updated.
+The old repository, github.com/ojaneri/cicd-mbd-agile, still exists and still serves the old commits by hash
+until the owner deletes it or makes it private. Records written before this date cite the old URL.
