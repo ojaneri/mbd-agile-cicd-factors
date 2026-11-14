@@ -81,6 +81,9 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
   Osvaldo, Max, Rafael, Jeferson; no roadmap); 6 pages on Overleaf. If that order change was intended, it has
   to be redone in main.tex (the roadmap costs about 10 lines; one sentence fits only with cuts elsewhere).
   From now on co-author edits arrive on Overleaf first: fetch and compare before any upload.
+  Note 2026-11-14 (Overleaf history): the author-order change and the roadmap paragraph were made by Max
+  Mauro Dias Santos (account maxmaurodias, 02:44–02:50 UTC). They were discarded by the owner's overwrite
+  instruction; the owner should confirm the order with Max (t-0037).
 - **[#d-0016]** date: 2026-11-13 · status: proposed · author: osvaldo
   **AI-use acknowledgment: "The authors used Claude (Anthropic), through Claude Code, to draft the text of all
   sections from the authors' results and notes, to write the experiment and analysis scripts, and to check
