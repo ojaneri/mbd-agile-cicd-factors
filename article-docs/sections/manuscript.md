@@ -23,7 +23,7 @@ from `testbed/e5/results/e5_analysis.json` and the calibration budgets; never ed
 ## Placeholders left in the text
 None since 2026-11-13. Filled from sources read that day: author block (ISIE page counts authors in the 6
 pages and asks no anonymisation, t-0036 done; ORDER PROVISIONAL, d-0015, t-0037); repository URL (the repo is
-still PRIVATE, t-0060); Kaggle reference (t-0049 done); AI-use acknowledgment (IEEE policy, wording d-0016).
+public since 2026-11-13, verified unauthenticated via the GitHub API; t-0060 done); Kaggle reference (t-0049 done); AI-use acknowledgment (IEEE policy, wording d-0016).
 
 ## Validation round 2026-11-11 (after draft v1)
 - Number audit (`manuscript/audit/number-audit.md`, rerun `python manuscript/audit/check_numbers.py`): 117 numbers,
@@ -70,11 +70,20 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
   **Author block filled provisionally as "Osvaldo Janeri Filho and Max Mauro Dias Santos", UTFPR, no e-mails.**
   Why: the venue is not anonymous (t-0036) and a placeholder blocks submission. Order and corresponding
   author are still to be agreed with the co-author (t-0037); change the block if they differ.
+  Update 2026-11-13: the first author gave the block: Osvaldo Janeri Filho, Max Mauro Dias Santos, Rafael
+  Santos Dominguez, Jeferson José de Lima (in this order), with ORCIDs; affiliation Department of Electronics,
+  UTFPR-PG (the source gave no affiliation mark for Rafael; João Francisco Justo, in the source block, was not in
+  the requested list and is not included). Applied in main.tex; IEEE membership grades omitted (conference style).
 - **[#d-0016]** date: 2026-11-13 · status: proposed · author: osvaldo
   **AI-use acknowledgment: "The authors used Claude (Anthropic), through Claude Code, to draft the text of all
   sections from the authors' results and notes, to write the experiment and analysis scripts, and to check
   numbers and references against the data and bibliographic records."** Why: IEEE requires naming the system,
   sections and level of use in the acknowledgments. The authors confirm the wording matches their use.
+  Update 2026-11-13: replaced by the first author's text (UTFPR-PG thanks; "Generative AI (Anthropic) was used,
+  under the direction of the authors, to check and revise text in all sections … to generate and run the
+  simulation and analysis code, and for language editing. The authors reviewed and edited all content and take
+  full responsibility for it."). Note for the authors: the drafts of the text were produced with the tool
+  (sessions in this repo); confirm that "check and revise" describes that use under the IEEE policy.
 - **[#d-0012]** date: 2026-11-11 · status: proposed · author: osvaldo
   **Manuscript source lives in `manuscript/` as IEEEtran LaTeX, built with latexmk in WSL.**
   Why: ISIE requires the IEEE two-column template and PDF; LaTeX keeps tables generated from the
@@ -87,7 +96,7 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
   data. Rejected printing those CIs. Cost: Table II carries no uncertainty for now.
 
 ## Todos
-- **[#t-0060]** status: open · author: osvaldo — The repository cited in main.tex (github.com/ojaneri/cicd-mbd-agile) is private: make it public, or archive a snapshot on Zenodo and cite its DOI, before submission (2026-12-15). Outward-facing: the owner decides.
+- **[#t-0060]** status: done · author: osvaldo — The repository cited in main.tex (github.com/ojaneri/cicd-mbd-agile) is private: make it public, or archive a snapshot on Zenodo and cite its DOI, before submission (2026-12-15). Outward-facing: the owner decides.
 - **[#t-0049]** status: done · author: osvaldo — Check the dataset citations (virtual review r1, 2026-11-12: Kaggle record shows title "OBD2_panel_opel_2012", creator "Pedro" (handle pedro2025), CC BY 4.0, v10 updated 2026-10-03; first-publication year still unread): Kaggle OBD-II title and year, and the LG HG2 author list (DataCite lists only M. Naguib; the Mendeley page lists four authors).
 - **[#t-0050]** status: done · author: osvaldo — Fig. 2 (H4 ladders) added 2026-11-11, from `manuscript/figs/fig_h4.py`; text cites S1 values 0.95/1.22 (ALU 0.9) and 2.12/0.69 (DIV 3.0).
 - **[#t-0051]** status: done · author: osvaldo — Done 2026-11-12 (humanizer pass, then `reviews/virtual/2026-11-12-r1.md`). Original: Run `/artdocs:virtual-review` on draft v1 and a humanizer pass on the prose before showing it to the co-author.

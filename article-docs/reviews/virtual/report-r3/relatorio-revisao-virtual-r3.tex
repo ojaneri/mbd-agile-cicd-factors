@@ -1,0 +1,231 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.95]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=2cm,top=2.4cm,bottom=2.2cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{booktabs,tabularx,array,colortbl,xltabular}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{ink}{HTML}{1F2A37}
+\definecolor{accent}{HTML}{0B5CAD}
+\definecolor{muted}{HTML}{5B6573}
+\definecolor{line}{HTML}{D5DAE1}
+\definecolor{SR}{HTML}{F4C7C3}
+\definecolor{WR}{HTML}{FBE3B8}
+\definecolor{WA}{HTML}{DCEFD3}
+\definecolor{SA}{HTML}{B9E0A5}
+\definecolor{soft}{HTML}{F3F6FA}
+
+\newcommand{\vSR}{\cellcolor{SR}Strong Reject}
+\newcommand{\vWR}{\cellcolor{WR}Weak Reject}
+\newcommand{\vWA}{\cellcolor{WA}Weak Accept}
+\newcommand{\vSA}{\cellcolor{SA}Strong Accept}
+
+\color{ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\arraystretch}{1.25}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{\thesection}{0.6em}{}[\vspace{-2pt}{\color{line}\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+\titleformat{\subsection}{\normalsize\bfseries\color{ink}}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{3pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\small\color{muted}Revisão virtual — rodada 3}
+\fancyhead[R]{\small\color{muted}MBD, Agile, or CI/CD? · IEEE ISIE 2027}
+\fancyfoot[C]{\small\color{muted}\thepage}
+
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=3pt,topsep=2pt}
+
+\newtcolorbox{panel}[1][]{colback=soft,colframe=line,boxrule=0.5pt,arc=2pt,left=8pt,right=8pt,top=6pt,bottom=6pt,#1}
+\newtcolorbox{keybox}[1]{colback=white,colframe=accent,boxrule=0.8pt,arc=2pt,left=8pt,right=8pt,top=6pt,bottom=6pt,
+  title={\bfseries #1},coltitle=white,colbacktitle=accent,fonttitle=\small}
+
+\begin{document}
+
+\begin{tcolorbox}[colback=accent,colframe=accent,arc=0pt,left=12pt,right=12pt,top=10pt,bottom=10pt]
+\color{white}
+{\small RELATÓRIO DE REVISÃO VIRTUAL PRÉ-SUBMISSÃO}\\[3pt]
+{\LARGE\bfseries MBD, Agile, or CI/CD?}\\[2pt]
+{\normalsize A Comparative Analysis and Integrated Pipeline for Automotive Embedded Systems}\\[6pt]
+{\small Rodada 3 · 13 de novembro de 2026 · alvo: IEEE ISIE 2027 (6 páginas, não anônimo)}
+\end{tcolorbox}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{@{}>{\color{muted}\small}l>{\small}X@{}}
+Manuscrito & \texttt{manuscript/main.tex}, branch \texttt{virtual-review/2026-11-13}. Inclui o pacote de redação da r2, o bloco de autores, o novo agradecimento e o repositório público. O PDF tem 6 páginas.\\
+Classificação & Empírico quantitativo (QN) com artefato de engenharia (DS); software embarcado automotivo; conferência de 6 páginas\\
+Painel & R0 editor · R1 especialista hostil · R2 metodologista · R3 evidências · R4 referências · R5 linguagem. Um líder conferiu todos os achados críticos na fonte.\\
+Registro & \texttt{article-docs/reviews/virtual/2026-11-13-r3.md}\\
+\end{tabularx}
+
+\section{Resumo executivo}
+
+\begin{tcolorbox}[colback=WR,colframe=WR!60!black,boxrule=0.6pt,arc=2pt,left=10pt,right=10pt]
+\textbf{Veredito geral: Weak Reject. Os domínios obrigatórios passam.}\\[2pt]
+Não resta nenhum problema bloqueante (S0) nem crítico (S1) nos domínios obrigatórios (memória, evento, higiene, referências, ética). A única objeção crítica que sobra é o \textbf{título}. Ele pergunta ``MBD, Agile ou CI/CD?'', e o próprio artigo responde que as três práticas são fatores complementares, não alternativas. Mudar o título é decisão dos autores (d-0014). Em todos os outros domínios o artigo já está em Weak Accept ou melhor.
+\end{tcolorbox}
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & \textbf{Rodada 1} & \textbf{Rodada 2} & \textbf{Rodada 3}\\
+\midrule
+Veredito geral & \vSR & \vWR & \vWR\\
+Domínios obrigatórios & bloqueados (S0) & bloqueados (S1) & \cellcolor{SA}abertos\\
+Nota estimada (1--5) & 1 & 2 & 2 $\rightarrow$ $\approx$4 com o título\\
+Números centrais errados & 0 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Veredito por domínio}
+
+{\small
+\begin{xltabular}{\linewidth}{@{}l>{\centering\arraybackslash}p{2.6cm}X@{}}
+\toprule
+\textbf{Domínio} & \textbf{Veredito} & \textbf{O que define o veredito}\\
+\midrule\endhead
+P · Memória (obrigatório) & \vWA & Decisões d-0011 e d-0014 a d-0020 ainda propostas; o cabeçalho do arquivo do evento ainda diz ``sketch''.\\
+V · Evento e formato (obrig.) & \vWA & A \texttt{main} pública não tem as edições da branch. Um autor aparece sem afiliação.\\
+H · Higiene (obrigatório) & \vSA & Só siglas não definidas (S3).\\
+R · Referências (obrigatório) & \vWA & MoVES descrito como ``timing analysis tool''. As 4 ORCIDs conferem.\\
+E · Ética e IA (obrigatório) & \vWA & O agradecimento descreve menos uso de IA do que o registrado; falta o consentimento do coautor.\\
+K · Contribuição & \vWR & O título (S1, decisão dos autores), mais quatro problemas S2.\\
+M · Método & \vWA & A Introdução diz que o protocolo do RQ2 veio antes da execução; as ameaças dizem o contrário.\\
+X · Evidências & \vSA & Todos os números alterados conferem com a fonte; só sobram arredondamentos.\\
+QN · Pacote quantitativo & \vWA & Valores de $p$ descritivos, agrupamento dos mutantes, t-0059 (S3).\\
+DS · Pacote de artefato & \vSA & Alcance declarado no emulador, na contribuição (iv) e na colocação em níveis.\\
+W · Redação & \vWR & Seis problemas S2, todos de redação (classe B).\\
+\bottomrule
+\end{xltabular}}
+{\small\color{muted}Confiança dos revisores: 4 em todos (R0 dá 3 para K). Não houve divergência de dois níveis entre eles.}
+
+\section{O que melhorou desde a rodada 2}
+\begin{itemize}
+\item \textbf{Repositório:} agora é público, sem login, e a varredura não achou segredos nem e-mail pessoal.
+\item \textbf{Suíte de testes:} o especialista considera ``genuinamente resolvidas'' as duas objeções críticas: o oráculo unitário cego à especificação e a Discussão que contradizia os resultados.
+\item \textbf{Método:} subiu de Weak Reject para Weak Accept, porque todos os problemas S2 da r2 foram resolvidos ou reduzidos.
+\item \textbf{Evidências:} subiram de Weak Accept para Strong Accept. A contagem de checks unitários foi corrigida (4 e 3 grupos de teste), e a regressão de conteúdo confirma que nenhum número mudou sem fonte.
+\item \textbf{Autoria e agradecimento:} bloco de autores definido pelo primeiro autor, com as quatro ORCIDs conferidas na API pública da ORCID. O agradecimento agora traz o texto dos próprios autores.
+\end{itemize}
+
+\section{Achados que restam}
+
+\subsection{Crítico (S1)}
+\begin{panel}
+\textbf{Título vs. enquadramento} (VR2-K-01, decisão dos autores, d-0014). O título faz uma pergunta de escolha. O desenho fatorial responde por construção que as práticas são complementares, e Agile aparece só como o número de commits verificados juntos. \emph{Sugestão do especialista:} nomear o que foi medido, por exemplo estágios, suíte, tamanho de lote e plataforma como fatores de um pipeline MBD--CI embarcado, e manter Agile como motivação. O novo título não fica mais longo que o atual.
+\end{panel}
+
+\subsection{Sérios (S2)}
+\begin{itemize}
+\item \textbf{RQ2 na Introdução} (dois revisores): diz que ``The protocols of RQ1 and RQ2 were committed before their runs'', mas o replay substituiu o desenho registrado. A correção é de uma linha e não aumenta o texto.
+\item \textbf{``Complementary''} tem dois sentidos opostos no texto: a hipótese refutada e a resposta da Discussão.
+\item \textbf{ISO 26262:} recomendar o emulador para veredictos funcionais pede uma frase sobre qualificação de ferramenta. Ela cabe se a frase de triagem for cortada.
+\item \textbf{Trabalhos relacionados} (t-0058): faltam Inozemtseva \& Holmes, as ferramentas de mutação de Simulink e testes back-to-back.
+\item \textbf{MoVES:} o resumo do artigo descreve o MoVES como apoio para achar soluções de projeto que cumprem requisitos de tempo, não como ferramenta de análise de tempo.
+\item \textbf{Agradecimento de IA:} ``check and revise text'' e ``language editing'' descrevem menos do que o registro mostra, porque os rascunhos foram gerados com a ferramenta. O texto também não nomeia o sistema (Claude/Claude Code). Decisão dos autores. O editor alerta que manter essa redação contra o registro vira S1.
+\item \textbf{Autores:} Rafael Santos Dominguez está sem afiliação. É preciso confirmar se João Francisco Justo ficou de fora de propósito.
+\item \textbf{Repositório:} a \texttt{main} pública ainda não tem as edições. Falta fazer merge, criar uma tag do commit submetido e decidir se as pastas de agentes (\texttt{.claude}, \texttt{.gemini}, \texttt{.opencode}) continuam públicas.
+\item \textbf{Redação (6 itens):}
+  \begin{itemize}
+  \item frase de 60 palavras sobre os testes unitários no resumo;
+  \item frase da triagem;
+  \item oração sem verbo em IV-A;
+  \item elipse na Discussão;
+  \item ``specification-level'' contra ``model-level'' na conclusão;
+  \item a conclusão não diz a que subjeito se referem os 77\,s.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Menores (S3/S4)}
+\begin{itemize}
+\item \textbf{Números:}
+  \begin{itemize}
+  \item ``about nine times SIL's cost'', mas a Tabela I dá 8,4. Usar ``8--9''.
+  \item ``6 to 21'' mistura a execução principal com o máximo da varredura. Usar ``6 to 19''.
+  \item ``levels at 1.1'' deve ser ``levels that add 1.1''.
+  \end{itemize}
+\item \textbf{Estatística:}
+  \begin{itemize}
+  \item os $p$ da Tabela I poderiam ser cortados, o que abre espaço;
+  \item falta dizer que o agrupamento dos mutantes torna os intervalos de Wilson otimistas;
+  \item H1 e H2 são testes de zero contraexemplo, com limites superiores de 4,4\,\% e 12,9\,\%.
+  \end{itemize}
+\item \textbf{Referências:}
+  \begin{itemize}
+  \item o ano do Kaggle aparece depois da data de acesso;
+  \item os DOIs dos datasets não são impressos;
+  \item falta a data de acesso do Manifesto.
+  \end{itemize}
+\item \textbf{Linguagem:}
+  \begin{itemize}
+  \item jargão (arms, painted, poisoned, escapes, unseen);
+  \item siglas a expandir (ECU, MCU, OCV, RMSE, OBD, SoC, BESS, ALU…);
+  \item ortografia britânica contra americana.
+  \end{itemize}
+\item \textbf{Fonte em aberto:} o ``zero wait states'' da STM32L4 continua sem fonte (t-0057).
+\end{itemize}
+
+\section{O que depende de vocês}
+\begin{enumerate}
+\item \textbf{Título} (d-0014): é a única objeção crítica que resta.
+\item \textbf{Agradecimento de IA} (d-0016, t-0066): decidir o nível de uso declarado e nomear o sistema.
+\item \textbf{Autores} (d-0015, t-0066):
+  \begin{itemize}
+  \item a afiliação de Rafael;
+  \item a omissão de João Francisco Justo;
+  \item a leitura e o consentimento dos coautores (t-0052).
+  \end{itemize}
+\item \textbf{Repositório} (t-0067):
+  \begin{itemize}
+  \item fazer merge da branch na \texttt{main} e criar uma tag do commit submetido;
+  \item decidir se as pastas de agentes continuam públicas;
+  \item opcionalmente, criar um DOI no Zenodo.
+  \end{itemize}
+\item \textbf{Decisões propostas:} promover ou reverter d-0011 e d-0014 a d-0020.
+\end{enumerate}
+
+\section{As três mudanças que mais elevam o veredito}
+\begin{keybox}{Da mais barata para a mais cara}
+\begin{enumerate}[leftmargin=1.4em]
+\item \textbf{Pacote r3 de redação (t-0065), sem dados novos e sem passar de 6 páginas:}
+  \begin{itemize}
+  \item a frase do RQ2;
+  \item ``complementary'';
+  \item a frase sobre ISO 26262, com o corte da triagem;
+  \item o MoVES;
+  \item os seis S2 de redação;
+  \item ``8--9 times'', ``6 to 19'' e ``levels that add''.
+  \end{itemize}
+  Isso leva M, R, W e QN para Weak Accept ou melhor.
+\item \textbf{Decisões humanas:} título, agradecimento de IA, autores e o merge e a tag no repositório público. Com o título reenquadrado, K sobe para Weak Accept e a nota estimada vai a cerca de 4.
+\item \textbf{Trabalhos relacionados} (t-0058): um parágrafo curto com referências verificadas, pago com cortes. É o único item que exige leitura nova.
+\end{enumerate}
+\end{keybox}
+
+\section{Pontos fortes a preservar}
+\begin{itemize}
+\item \textbf{Rastreabilidade:} cada número central vem de um arquivo armazenado. Em três rodadas, nenhum número central esteve errado.
+\item \textbf{Honestidade sobre previsões:} as previsões refutadas aparecem como refutadas, e as premissas (sem mascaramento, latência como saída do modelo) estão declaradas no corpo, nas ameaças e na conclusão.
+\item \textbf{Desenho pareado:} o mesmo ELF roda no emulador e na placa; o experimento confirmatório foi congelado antes de rodar; e a replicação inclui duas otimizações e uma segunda placa.
+\item \textbf{Referências:} as 16 resolvem, e as três que mudaram batem com os registros de origem.
+\end{itemize}
+
+\vfill
+{\footnotesize\color{muted}
+\textbf{Sobre o processo.} A revisão seguiu o protocolo \texttt{article-docs/VIRTUAL-REVIEWERS.md}: checagem automática, painel de seis revisores simulados por modelos de IA e verificação de cada achado crítico na fonte por um revisor líder. Severidades: S0 bloqueante, S1 crítico, S2 sério, S3 menor, S4 sugestão. Os vereditos e notas são estimativas e não substituem a revisão por pares do evento. Nada foi alterado no manuscrito nesta rodada.}
+
+\end{document}
