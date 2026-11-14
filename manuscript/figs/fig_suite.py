@@ -30,10 +30,10 @@ for ax, (s, lab) in zip(axes, SUBJ):
             x = i + (j - 0.5) * w
             ax.bar(x, 100 * k / n, w, color=col, edgecolor="0.1", lw=0.5, hatch=hatch,
                    label=f"{cname}" if i == 0 else None)
-            ax.text(x, 100 * k / n + 2, f"{k}/{n}", ha="center", va="bottom", fontsize=4.6, rotation=90)
+            ax.text(x, 100 * k / n + 2, f"{k}/{n}", ha="center", va="bottom", fontsize=6, rotation=90)
     ax.set_xticks(range(len(ARMS)))
     ax.set_xticklabels([a[1] for a in ARMS], fontsize=6)
-    ax.set_ylim(0, 128)
+    ax.set_ylim(0, 135)
     ax.set_yticks([0, 50, 100])
     ax.tick_params(length=2, pad=1.5)
     ax.text(0.02, 0.97, lab, transform=ax.transAxes, fontsize=7, va="top", fontweight="bold")

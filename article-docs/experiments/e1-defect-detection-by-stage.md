@@ -45,8 +45,9 @@ No escapes. Timing-only (PIL only, functional field oracle unaffected): FPP-003/
 
 M11 audit of the 100 %: every field-relevant code mutant failed a **requirement** test at SIL
 (not only back-to-back), so A2's rate is not a by-construction artefact of back-to-back; the
-by-construction parts are that MIL cannot see code-level mutants and back-to-back cannot see
-model-level ones. 21 non-field-relevant mutants were still flagged (requirements stricter than the
+by-construction part is that MIL cannot see code-level mutants. Back-to-back was expected not to see
+model-level ones, but it caught one in S1 (MS-s_corr, saturation: max diff 2.4e-4 on T1 above the 1e-5
+tolerance; corrected 2026-11-14, VR5-M-01, e1_decompose.json soc model b2b = 1). 21 non-field-relevant mutants were still flagged (requirements stricter than the
 field oracle); 41 were flagged by nothing (equivalent or benign; list in the analysis file).
 
 **Exploratory (post-hoc, not pre-registered):** SIL alone, running the requirement tests on the
