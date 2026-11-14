@@ -6,9 +6,10 @@ Status: draft v1 (2026-11-11, thesis per d-0011, proposed); copied verbatim into
 
 Abstract v0 argument, kept for the framing only:
 
-Title (chosen by the author on 2026-11-10, see d-0007): *MBD, Agile, or CI/CD? A Comparative Analysis and Integrated Pipeline for Automotive Embedded Systems*
+Title (changed by the first author on 2026-11-13, d-0014 option 1, after virtual review r3): *MBD, Agile and CI/CD as Factors of One Pipeline: A Mutation-Based Study on Embedded Estimator Software*
+Previous title (2026-11-10, d-0007, superseded): *MBD, Agile, or CI/CD? A Comparative Analysis and Integrated Pipeline for Automotive Embedded Systems*
 
-Title constraints (K06): "Comparative Analysis" must be the measured factorial comparison (E1, E2), not a literature opinion; "Integrated Pipeline" must be the pipeline actually built and run; "Agile" is operationalised as integration cadence (d-0003) and the abstract must say so. The question in the title must be answered in the abstract.
+Title constraints for the superseded d-0007 title (kept for history; since 2026-11-13 the title presents the practices as factors, so "answer the question" no longer applies) (K06): "Comparative Analysis" must be the measured factorial comparison (E1, E2), not a literature opinion; "Integrated Pipeline" must be the pipeline actually built and run; "Agile" is operationalised as integration cadence (d-0003) and the abstract must say so. The question in the title must be answered in the abstract.
 
 Argument:
 1. MBD gives early, rigorous validation (MIL/SIL/HIL/VIL) but has high upfront cost and weak change flow.

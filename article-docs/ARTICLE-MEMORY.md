@@ -3,7 +3,7 @@
 Human-readable index of this article's durable memory.
 
 ## What this is
-Comparative paper on Model-Based Design (MBD), Agile and CI/CD for automotive embedded and
+Factorial study (not a comparison of alternatives, since 2026-11-13) of Model-Based Design (MBD), Agile and CI/CD for automotive embedded and
 Software-Defined Vehicle (SDV) development, proposing an integrated four-stage flow with
 feedback loops. Target: IEEE ISIE 2027 (regular paper, 6 pages, IEEE two-column).
 State: **E1, E2 (two subjects) and E5 (three subjects, confirmatory) run; manuscript draft v1 in `manuscript/` (6 of 6 pages; virtual review r1 2026-11-12).** Thesis under
@@ -24,7 +24,7 @@ revision (d-0011, proposed): stages set what is caught, cadence and trigger set 
 | Machine index | `index.jsonl` |
 
 ## Quick facts
-- Title (accepted, d-0007): *MBD, Agile, or CI/CD? A Comparative Analysis and Integrated Pipeline for Automotive Embedded Systems*
+- Title (chosen by the first author 2026-11-13, d-0014; supersedes d-0007): *MBD, Agile and CI/CD as Factors of One Pipeline: A Mutation-Based Study on Embedded Estimator Software*
 - Venue: IEEE ISIE 2027. Regular paper deadline 2026-12-15. Track candidate: 06 (Industrial CPS), see `venue/isie-2027.md`.
 - Authors: Osvaldo Janeri Filho (UTFPR) and Max Mauro Dias Santos (UTFPR-PG, advisor). Order and corresponding author not decided; see `identity/ownership.md`.
 - Trap: the ISIE 2025 venue exemplar (doi 10.1109/ISIE62713.2025.11124734) is co-authored by the advisor. Citing it is self-citation; under double-anonymous review it must be cited in the third person.

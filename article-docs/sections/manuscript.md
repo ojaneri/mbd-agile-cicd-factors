@@ -17,7 +17,7 @@ from `testbed/e5/results/e5_analysis.json` and the calibration budgets; never ed
 | IV-B | E1 platform disagreement 202/205, harness confound | E1, [[claims/c4-platform-tiering]] |
 | IV-C RQ2 | Table II (medians from `testbed/{soc,fuel}/results/e1_qemu_e2.json`); latency is a model output | [[experiments/e2-integration-cadence]], [[claims/c1-integration-gain]] |
 | IV-D RQ3 | E5 design, H1–H4, Table III, Fig. 2 (H4 ladders, step max / own budget), the tiered replay | [[experiments/e5-platform-sensitivity]] |
-| V Discussion | the answer to the title; practical placement; threats (construct, internal, external) | C1, C3, C4 |
+| V Discussion | the factors and what each changed; practical placement; threats (construct, internal, external) | C1, C3, C4 |
 | VI Conclusion | summary plus future work (real history, second board, ISO 26262 evidence) | — |
 
 ## Placeholders left in the text
@@ -84,6 +84,12 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
   simulation and analysis code, and for language editing. The authors reviewed and edited all content and take
   full responsibility for it."). Note for the authors: the drafts of the text were produced with the tool
   (sessions in this repo); confirm that "check and revise" describes that use under the IEEE policy.
+  Update 2026-11-14: replaced by the first author's text after comparing five published disclosures: "Claude
+  (Anthropic), used under the authors' direction, drafted the text from the authors' results and notes, helped
+  to write and run the simulation and analysis code that produces the results, and was used for language
+  editing. The authors reviewed and edited all content and take full responsibility for it." Only change by
+  the lead: "helped to wrote and ran" → "helped to write and run" (grammar). Names the system and the drafting,
+  so it addresses VR4-E-01; still 6 pages.
 - **[#d-0012]** date: 2026-11-11 · status: proposed · author: osvaldo
   **Manuscript source lives in `manuscript/` as IEEEtran LaTeX, built with latexmk in WSL.**
   Why: ISIE requires the IEEE two-column template and PDF; LaTeX keeps tables generated from the

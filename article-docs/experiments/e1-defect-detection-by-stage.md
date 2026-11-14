@@ -154,6 +154,8 @@ expected values are generated from the mutated spec. Unit-suite size 4 test grou
 earlier 6 / 4 counted the check() definition); gcov line coverage
 97.4 % / 100 %, branches taken 83.3 % / 100 % (`testbed/e1_unit_coverage.sh`). Factor A therefore confounds
 stage with suite; the gain is the requirement suite's.
+Plotted (2026-11-14, d-0022) as the paper's Fig. 2 by `manuscript/figs/fig_suite.py` from
+`testbed/e1_decompose.json`, split by model-/code-level; the McNemar p values left Table I and remain here.
 
 ## Metrics
 - Detection rate per configuration A0..A3 over field-relevant mutants (Wilson 95 % CI), exact McNemar

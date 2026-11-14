@@ -1,0 +1,210 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.95]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=2cm,top=2.4cm,bottom=2.2cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{booktabs,tabularx,array,colortbl,xltabular}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{ink}{HTML}{1F2A37}
+\definecolor{accent}{HTML}{0B5CAD}
+\definecolor{muted}{HTML}{5B6573}
+\definecolor{line}{HTML}{D5DAE1}
+\definecolor{SR}{HTML}{F4C7C3}
+\definecolor{WR}{HTML}{FBE3B8}
+\definecolor{WA}{HTML}{DCEFD3}
+\definecolor{SA}{HTML}{B9E0A5}
+\definecolor{soft}{HTML}{F3F6FA}
+
+\newcommand{\vSR}{\cellcolor{SR}Strong Reject}
+\newcommand{\vWR}{\cellcolor{WR}Weak Reject}
+\newcommand{\vWA}{\cellcolor{WA}Weak Accept}
+\newcommand{\vSA}{\cellcolor{SA}Strong Accept}
+
+\color{ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\arraystretch}{1.25}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{\thesection}{0.6em}{}[\vspace{-2pt}{\color{line}\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+\titleformat{\subsection}{\normalsize\bfseries\color{ink}}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{3pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\small\color{muted}Revisão virtual — rodada 4}
+\fancyhead[R]{\small\color{muted}MBD, Agile and CI/CD as Factors · IEEE ISIE 2027}
+\fancyfoot[C]{\small\color{muted}\thepage}
+
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=3pt,topsep=2pt}
+
+\newtcolorbox{panel}[1][]{colback=soft,colframe=line,boxrule=0.5pt,arc=2pt,left=8pt,right=8pt,top=6pt,bottom=6pt,#1}
+\newtcolorbox{keybox}[1]{colback=white,colframe=accent,boxrule=0.8pt,arc=2pt,left=8pt,right=8pt,top=6pt,bottom=6pt,
+  title={\bfseries #1},coltitle=white,colbacktitle=accent,fonttitle=\small}
+
+\begin{document}
+
+\begin{tcolorbox}[colback=accent,colframe=accent,arc=0pt,left=12pt,right=12pt,top=10pt,bottom=10pt]
+\color{white}
+{\small RELATÓRIO DE REVISÃO VIRTUAL PRÉ-SUBMISSÃO}\\[3pt]
+{\Large\bfseries MBD, Agile and CI/CD as Factors of One Pipeline}\\[2pt]
+{\normalsize A Mutation-Based Study on Embedded Estimator Software}\\[6pt]
+{\small Rodada 4 · 13 de novembro de 2026 · alvo: IEEE ISIE 2027 (6 páginas, não anônimo)}
+\end{tcolorbox}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{@{}>{\color{muted}\small}l>{\small}X@{}}
+Overleaf & \href{https://www.overleaf.com/project/6af7c3949184bd0d4130af4c}{\color{accent}\texttt{overleaf.com/project/6af7c3949184bd0d4130af4c}}. Contém \texttt{main.tex}, \texttt{refs.bib} e \texttt{figs/fig\_h4.pdf}, e compila em 6 páginas.\\
+Manuscrito & \texttt{manuscript/main.tex}, branch \texttt{virtual-review/2026-11-13}, com o título novo. O PDF tem 6 páginas.\\
+Classificação & Empírico quantitativo (QN) com artefato de engenharia (DS); software embarcado; conferência de 6 páginas\\
+Painel & R0 editor · R1 especialista hostil · R2 metodologista · R3 evidências · R4 referências · R5 linguagem. Um revisor líder conferiu cada achado crítico na fonte.\\
+Registro & \texttt{article-docs/reviews/virtual/2026-11-13-r4.md}\\
+\end{tabularx}
+
+\section{Resumo executivo}
+
+\begin{tcolorbox}[colback=WA,colframe=WA!50!black,boxrule=0.6pt,arc=2pt,left=10pt,right=10pt]
+\textbf{O título novo resolveu a objeção crítica. No mérito, o artigo chega a Weak Accept.}\\[2pt]
+O especialista hostil diz que a correção é ``real, não cosmética''. O domínio de contribuição sobe de Weak Reject para Weak Accept, e ele espera agora nota 3,5 a 4 de 5. \textbf{Um único ponto ainda bloqueia a submissão:} o agradecimento declara ``check and revise text'' e ``language editing'', mas o registro mostra que o texto foi \emph{redigido} com a ferramenta, e o agradecimento também não nomeia o sistema. A decisão é dos autores.
+\end{tcolorbox}
+
+\begin{center}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \textbf{R1} & \textbf{R2} & \textbf{R3} & \textbf{R4}\\
+\midrule
+Veredito geral & \vSR & \vWR & \vWR & \vWR\\
+Veredito no mérito & \vWR & \vWR & \vWR & \vWA\\
+Bloqueio & S0 & S1 (repo, autores) & aberto & \cellcolor{WR}só o agradecimento\\
+Nota estimada (1--5) & 1 & 2 & 2 & 3 $\rightarrow$ $\approx$4\\
+Números centrais errados & 0 & 0 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Veredito por domínio}
+
+{\small
+\begin{xltabular}{\linewidth}{@{}l>{\centering\arraybackslash}p{2.6cm}X@{}}
+\toprule
+\textbf{Domínio} & \textbf{Veredito} & \textbf{O que define o veredito}\\
+\midrule\endhead
+P · Memória (obrigatório) & \vWA & A memória do título antigo foi corrigida nesta rodada. Faltam as decisões propostas e o cabeçalho ``sketch'' do arquivo do evento.\\
+V · Evento e formato (obrig.) & \vWA & Falta a afiliação de Rafael, João Francisco Justo ficou de fora e a branch ainda não foi para a \texttt{main} pública.\\
+H · Higiene (obrigatório) & \vSA & Só siglas não definidas (S3).\\
+R · Referências (obrigatório) & \vWA & Descrição do MoVES; formatação das referências; a motivação nova não tem citação.\\
+E · Ética e IA (obrigatório) & \vWR & O agradecimento omite que a IA redigiu o texto (S1, decisão dos autores).\\
+K · Contribuição & \vWA & \textbf{Subiu} de Weak Reject. O título já não é S1; restam S2.\\
+M · Método & \vWA & A frase sobre o protocolo do RQ2 na Introdução (S2) ainda está aberta.\\
+X · Evidências & \vSA & Nenhum número mudou; as frases novas têm apoio nos dados.\\
+QN · Pacote quantitativo & \vWA & $p$ descritivos, agrupamento dos mutantes, t-0059.\\
+DS · Pacote de artefato & \vSA & ---\\
+W · Redação & \vWR & Cinco problemas S2 da r3 ainda abertos (classe B).\\
+\bottomrule
+\end{xltabular}}
+{\small\color{muted}Os seis revisores deram confiança 4. Não houve divergência de dois níveis.}
+
+\section{O que o título novo resolveu}
+\begin{itemize}
+\item \textbf{Título e enquadramento} (VR2-K-01): era S1 e agora é S3. Resumo, Introdução (``We do not compare the methods as alternatives''), Discussão (``The factors'') e Conclusão contam a mesma história.
+\item \textbf{``Complementary''} com dois sentidos: resolvido. A hipótese agora diz ``non-redundant'', e a palavra ``complementary'' saiu do texto.
+\item \textbf{Escopo:} ``Embedded Estimator Software'' descreve melhor os três sujeitos do que ``Automotive Embedded Systems'', porque o S3 é um rack de baterias estacionário.
+\item \textbf{Conteúdo:} nenhum número mudou. O Overleaf compila os mesmos fontes em 6 páginas.
+\end{itemize}
+
+\section{Achados que restam}
+
+\subsection{Crítico (S1), decisão dos autores}
+\begin{panel}
+\textbf{Nível de uso de IA no agradecimento} (VR4-E-01, d-0016). O texto atual diz: ``Generative AI (Anthropic) was used \ldots{} to check and revise text in all sections \ldots{} and for language editing''. O registro do projeto mostra que o texto de todas as seções foi redigido com a ferramenta, e o protocolo diz que \emph{redigir não é revisar linguagem}. \emph{Sugestão:} acrescentar ``to draft the text of all sections from the authors' results and notes'' e nomear o sistema (Claude, via Claude Code). O texto final precisa descrever o uso real, e quem decide são vocês.
+\end{panel}
+
+\subsection{Sérios (S2)}
+\begin{itemize}
+\item \textbf{RQ2 na Introdução} (três revisores): o texto diz ``The protocols of RQ1 and RQ2 were committed before their runs'', mas a seção de ameaças diz que o replay substituiu o desenho do RQ2. Corrigir isso não aumenta o texto.
+\item \textbf{``Agile'' no título} (VR4-K-01): é o fator com menos suporte, porque é só o tamanho de incremento, avaliado num replay. O especialista sugere levar ao resumo a frase ``the Agile factor is narrow by design'', que não custa espaço.
+\item \textbf{Motivação sem citação} (VR4-K-02): a frase de que as práticas são ``usually compared qualitatively, as alternatives'' precisa de uma referência verificada, ou passar para ``often presented''.
+\item \textbf{ISO 26262 e QEMU PIL:} falta uma frase sobre qualificação de ferramenta, e falta dizer por que o PIL emulado continua em todo commit.
+\item \textbf{Trabalhos relacionados} (t-0058).
+\item \textbf{Redação} (cinco itens da r3):
+  \begin{itemize}
+  \item a frase dos testes unitários no resumo (``mutated specification'');
+  \item a frase da triagem;
+  \item a oração sem verbo em IV-A;
+  \item a elipse na Discussão;
+  \item ``specification-level'' na conclusão.
+  \end{itemize}
+\item \textbf{Autores e repositório:}
+  \begin{itemize}
+  \item a afiliação de Rafael;
+  \item a omissão de João Francisco Justo;
+  \item o merge da branch na \texttt{main} pública e a tag do commit submetido.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Menores (S3/S4)}
+\begin{itemize}
+\item \textbf{Fatores um de cada vez} (VR4-M-01): dizer que os fatores foram variados um de cada vez e que as interações não foram estimadas.
+\item \textbf{Números:} ``6 to 21'' deve ser ``6 to 19''; ``about nine'' deve ser ``about 8--9'' (a Tabela I dá 8,4); o ``zero wait states'' da STM32L4 está sem fonte (t-0057).
+\item \textbf{Referências:} a descrição do MoVES e a formatação de três entradas (ano do Kaggle, DOIs dos datasets, data de acesso do Manifesto).
+\item \textbf{Linguagem:}
+  \begin{itemize}
+  \item ``Factors \emph{of} One Pipeline'' no título, enquanto o corpo diz ``\emph{in} one pipeline'' (o título é escolha de vocês);
+  \item a abertura da Discussão repete ``factors'';
+  \item a hipótese aparece com duas redações;
+  \item ``and \ldots{} and'' na escada de divisão;
+  \item jargão e siglas a expandir.
+  \end{itemize}
+\end{itemize}
+
+\section{O que depende de vocês}
+\begin{enumerate}
+\item \textbf{O agradecimento} (d-0016): é o único bloqueio que resta.
+\item \textbf{Autores:} a afiliação de Rafael e a omissão de João Francisco Justo (t-0066).
+\item \textbf{Repositório:} o merge e a tag no GitHub antes do upload (t-0067).
+\item \textbf{Decisões propostas:} promover ou reverter d-0011 e d-0014 a d-0020.
+\end{enumerate}
+
+\section{As três mudanças que mais elevam o veredito}
+\begin{keybox}{Da mais barata para a mais cara}
+\begin{enumerate}[leftmargin=1.4em]
+\item \textbf{Ajustar o agradecimento} ao uso real (uma frase). Isso desbloqueia a submissão.
+\item \textbf{Pacote de redação r3 + r4} (t-0065 e t-0069), sem dados novos e sem passar de 6 páginas:
+  \begin{itemize}
+  \item a frase do RQ2;
+  \item ``Agile narrow by design'' no resumo;
+  \item a motivação, com citação ou suavizada;
+  \item ``um fator de cada vez'';
+  \item a frase sobre ISO 26262, com o corte da triagem;
+  \item os cinco itens S2 de redação;
+  \item os arredondamentos e o MoVES.
+  \end{itemize}
+  Isso leva W, M e R para Weak Accept ou melhor, e a nota estimada a cerca de 4.
+\item \textbf{Trabalhos relacionados} (t-0058): um parágrafo curto com referências verificadas, pago com cortes.
+\end{enumerate}
+\end{keybox}
+
+\section{Pontos fortes a preservar}
+\begin{itemize}
+\item \textbf{Rastreabilidade:} em quatro rodadas, nenhum número central esteve errado, e cada número vem de um arquivo armazenado.
+\item \textbf{Enquadramento coerente:} título, resumo, Introdução e Discussão agora contam a mesma história. As práticas aparecem como fatores, e as premissas estão declaradas.
+\item \textbf{Desenho:} o desenho é pareado; o mesmo ELF roda no emulador e na placa; o experimento confirmatório foi congelado antes de rodar; e a replicação cobre duas otimizações e uma segunda placa.
+\item \textbf{Abertura:} o repositório é público, e as quatro ORCIDs batem com os autores.
+\end{itemize}
+
+\vfill
+{\footnotesize\color{muted}
+\textbf{Sobre o processo.} A revisão seguiu o protocolo \texttt{article-docs/VIRTUAL-REVIEWERS.md}: checagem automática, painel de seis revisores simulados por modelos de IA e verificação de cada achado crítico na fonte por um revisor líder. Severidades: S0 bloqueante, S1 crítico, S2 sério, S3 menor, S4 sugestão. Os vereditos e notas são estimativas e não substituem a revisão por pares do evento. Nesta rodada, o único texto alterado no manuscrito foi a troca de título pedida pelo primeiro autor.}
+
+\end{document}
