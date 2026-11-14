@@ -1,0 +1,25 @@
+== soc unit exit=0
+File 'soc_obs.c'
+Lines executed:97.44% of 39
+Branches executed:100.00% of 18
+Taken at least once:83.33% of 18
+Calls executed:66.67% of 3
+Creating 'soc_obs.c.gcov'
+functions in soc_obs.c:
+Function 'soc_obs_step'	100.00% of 15
+Function 'soc_obs_init'	100.00% of 6
+Function 'soc_obs_ocv_inv'	100.00% of 9
+Function 'soc_obs_ocv'	88.89% of 9
+97.44% of 39	Lines executed:97.44% of 39
+== fuel unit exit=0
+File 'fuel.c'
+Lines executed:100.00% of 28
+Branches executed:100.00% of 16
+Taken at least once:100.00% of 16
+Calls executed:100.00% of 1
+Creating 'fuel.c.gcov'
+functions in fuel.c:
+Function 'fuel_step'	100.00% of 10
+Function 'fuel_rate_of'	100.00% of 14
+Function 'fuel_init'	100.00% of 4
+100.00% of 28	Lines executed:100.00% of 28

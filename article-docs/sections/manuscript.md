@@ -20,11 +20,10 @@ from `testbed/e5/results/e5_analysis.json` and the calibration budgets; never ed
 | V Discussion | the answer to the title; practical placement; threats (construct, internal, external) | C1, C3, C4 |
 | VI Conclusion | summary plus future work (real history, second board, ISO 26262 evidence) | — |
 
-## Placeholders left in the text (must not be filled by guessing)
-- Author block (order and corresponding author t-0037; anonymity t-0036).
-- Repository URL (private repo exists since 2026-11-11; the URL can only go in after anonymity is known, t-0036).
-- Kaggle dataset citation title/year (t-0049).
-- The AI-use disclosure, if ISIE requires one (t-0036).
+## Placeholders left in the text
+None since 2026-11-13. Filled from sources read that day: author block (ISIE page counts authors in the 6
+pages and asks no anonymisation, t-0036 done; ORDER PROVISIONAL, d-0015, t-0037); repository URL (the repo is
+still PRIVATE, t-0060); Kaggle reference (t-0049 done); AI-use acknowledgment (IEEE policy, wording d-0016).
 
 ## Validation round 2026-11-11 (after draft v1)
 - Number audit (`manuscript/audit/number-audit.md`, rerun `python manuscript/audit/check_numbers.py`): 117 numbers,
@@ -35,6 +34,31 @@ from `testbed/e5/results/e5_analysis.json` and the calibration budgets; never ed
 - E5b (second board nRF52840, -O0/-Os, timing noise): run 2026-11-11/12, all rules supported; in IV-D
   "Robustness (addendum)", abstract, discussion, threats and conclusion. The paper is now **6 of 6 pages**.
 
+## Humanizer pass 2026-11-12
+Prose only, no number changed, still 6 of 6 pages: the abstract's long parenthetical split into sentences;
+a duplicated RQ1 sentence ("No field-relevant mutant escaped from A2") cut; "What is true by construction"
+and "pure cost" rewritten as plain statements; the addendum's "a reviewer may ask about" replaced by the
+three things it varies; the Discussion's repeated "only on the production board" kept once (Practical
+placement); the conclusion's run-on sentence split; Fig. 2 caption no longer names the internal "E5".
+
+## Virtual review r1 fixes 2026-11-13 (`reviews/virtual/2026-11-12-r1.md`)
+- RQ1 split by test suite (exploratory, `testbed/e1_decompose.py` -> `e1_decompose.json`, re-analysis of E1
+  records): on host C the requirement tests caught 68/68 (S1) and 34/34 (S2) field-relevant mutants, the unit
+  tests 26 and 23; unit tests caught 0 model-level mutants because their expectations are generated from the
+  (mutated) spec. Unit suites: 6 checks (S1), 4 (S2); gcov on the baseline (`testbed/e1_unit_coverage.sh`,
+  output `e1_unit_coverage.txt`): lines 97.4 % / 100 %, branches taken 83.3 % / 100 %.
+- Text: abstract rewritten (228 words; Agile as increment size, suite > stage, no-masking replay, latency at an
+  assumed 2 h spacing; tiered 397->77 s dropped from the abstract); intro reframes Agile with the Agile
+  Manifesto principle (agilemanifesto, read 2026-11-13); RQ1 asks about stage and suite; "pre-registered"
+  for RQ1/RQ2 replaced by "committed before their runs (locally)"; III states parallel model/code generation
+  (no translation faults), unit-suite size and spec-derived expectations, S1 field-oracle thresholds
+  (+0.005 RMSE, +0.02 max, from soc/protocol/README.md), the no-masking assumption, what the Wilson CIs cover;
+  IV-A suite split; IV-C no-masking wording, Cliff's delta on latency dropped, A0 escape is S1's, sweep 36-37 h;
+  tiered "not tested on the class it exists for"; nRF "fewer levels on 4 of 6 ladders"; Discussion answer
+  reworded; threats add translation faults, one team wrote tests and oracles, no-masking; "both without
+  cache" replaced (STM32L4 cache state unsourced, t-0057); conclusion rewritten; MIL/SIL/PIL/HIL expanded.
+- Lint: gate open (S0 0, S1 0); 6 of 6 pages.
+
 ## Known weak points for review
 - No recorded commit history: the RQ2 latency is a replay output (t-0019, t-0043).
 - Table II still shows medians only; order-statistic CIs now exist in `testbed/e2_sweep.json` (t-0042 done).
@@ -42,6 +66,15 @@ from `testbed/e5/results/e5_analysis.json` and the calibration budgets; never ed
 - Related work search did not cover ACM DL / SAE (t-0029); P1, P2 read at abstract level only (t-0034).
 
 ## Decisions
+- **[#d-0015]** date: 2026-11-13 · status: proposed · author: osvaldo
+  **Author block filled provisionally as "Osvaldo Janeri Filho and Max Mauro Dias Santos", UTFPR, no e-mails.**
+  Why: the venue is not anonymous (t-0036) and a placeholder blocks submission. Order and corresponding
+  author are still to be agreed with the co-author (t-0037); change the block if they differ.
+- **[#d-0016]** date: 2026-11-13 · status: proposed · author: osvaldo
+  **AI-use acknowledgment: "The authors used Claude (Anthropic), through Claude Code, to draft the text of all
+  sections from the authors' results and notes, to write the experiment and analysis scripts, and to check
+  numbers and references against the data and bibliographic records."** Why: IEEE requires naming the system,
+  sections and level of use in the acknowledgments. The authors confirm the wording matches their use.
 - **[#d-0012]** date: 2026-11-11 · status: proposed · author: osvaldo
   **Manuscript source lives in `manuscript/` as IEEEtran LaTeX, built with latexmk in WSL.**
   Why: ISIE requires the IEEE two-column template and PDF; LaTeX keeps tables generated from the
@@ -54,7 +87,8 @@ from `testbed/e5/results/e5_analysis.json` and the calibration budgets; never ed
   data. Rejected printing those CIs. Cost: Table II carries no uncertainty for now.
 
 ## Todos
-- **[#t-0049]** status: open · author: osvaldo — Check the dataset citations: Kaggle OBD-II title and year, and the LG HG2 author list (DataCite lists only M. Naguib; the Mendeley page lists four authors).
+- **[#t-0060]** status: open · author: osvaldo — The repository cited in main.tex (github.com/ojaneri/cicd-mbd-agile) is private: make it public, or archive a snapshot on Zenodo and cite its DOI, before submission (2026-12-15). Outward-facing: the owner decides.
+- **[#t-0049]** status: done · author: osvaldo — Check the dataset citations (virtual review r1, 2026-11-12: Kaggle record shows title "OBD2_panel_opel_2012", creator "Pedro" (handle pedro2025), CC BY 4.0, v10 updated 2026-10-03; first-publication year still unread): Kaggle OBD-II title and year, and the LG HG2 author list (DataCite lists only M. Naguib; the Mendeley page lists four authors).
 - **[#t-0050]** status: done · author: osvaldo — Fig. 2 (H4 ladders) added 2026-11-11, from `manuscript/figs/fig_h4.py`; text cites S1 values 0.95/1.22 (ALU 0.9) and 2.12/0.69 (DIV 3.0).
-- **[#t-0051]** status: open · author: osvaldo — Run `/artdocs:virtual-review` on draft v1 and a humanizer pass on the prose before showing it to the co-author.
+- **[#t-0051]** status: done · author: osvaldo — Done 2026-11-12 (humanizer pass, then `reviews/virtual/2026-11-12-r1.md`). Original: Run `/artdocs:virtual-review` on draft v1 and a humanizer pass on the prose before showing it to the co-author.
 - **[#t-0052]** status: open · author: osvaldo — Co-author (Max Mauro Dias Santos) to read draft v1, in particular the reframed thesis (d-0011) and the self-citation of [9] (P8).

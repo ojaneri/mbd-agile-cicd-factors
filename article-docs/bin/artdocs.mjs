@@ -136,7 +136,7 @@ function printTable(rows, cols) {
  */
 function parseMdSection(relPath) {
   const text = readFileSync(r(relPath), 'utf8');
-  const lines = text.split('\n');
+  const lines = text.split(/\r?\n/); // CRLF checkouts (core.autocrlf) must parse like LF
   const entries = [];
 
   const h1 = lines.find(l => l.startsWith('# '));
@@ -192,7 +192,7 @@ function parseMdSection(relPath) {
 function parseSessionFile(relPath) {
   const text = readFileSync(r(relPath), 'utf8');
   const id = basename(relPath, '.md');
-  const h1 = text.split('\n').find(l => l.startsWith('# '));
+  const h1 = text.split(/\r?\n/).find(l => l.startsWith('# '));
   const title = h1 ? h1.slice(2).trim().replace(/^Session:\s*\d{4}-\d{2}-\d{2}\s*—\s*/, '') : id;
   const authorM = /\*\*User:\*\*\s*(.+)/.exec(text);
   const dateM   = /\*\*Started:\*\*\s*(\d{4}-\d{2}-\d{2})/.exec(text);
@@ -638,7 +638,7 @@ function truncateAtSection(text, budgetChars) {
   if (text.length <= budgetChars) return { text, dropped: [] };
 
   // Split into (heading, body) blocks, keeping the preamble as the first block.
-  const lines = text.split('\n');
+  const lines = text.split(/\r?\n/);
   const blocks = [];
   let current = { heading: null, lines: [] };
   for (const line of lines) {

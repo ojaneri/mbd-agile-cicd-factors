@@ -16,30 +16,29 @@
 
 \title{MBD, Agile, or CI/CD? A Comparative Analysis and Integrated Pipeline for Automotive Embedded Systems}
 
-% Author order and corresponding author are not decided (t-0037); ISIE's review regime is not known
-% yet (t-0036). Keep the block as a placeholder until both are settled.
-\author{\IEEEauthorblockN{[Author block pending: order and corresponding author, t-0037; anonymity, t-0036]}
-\IEEEauthorblockA{[Affiliations]}}
+% ISIE 2027 paper-submission page (read 2026-11-13): 6 pages "including title, authors, affiliations",
+% no anonymisation instruction, so the author block is filled (t-0036). Order and corresponding author are
+% PROVISIONAL until agreed with the co-author (t-0037, d-0015); e-mails pending.
+\author{\IEEEauthorblockN{Osvaldo Janeri Filho and Max Mauro Dias Santos}
+\IEEEauthorblockA{Universidade Tecnol\'ogica Federal do Paran\'a (UTFPR), Brazil}}
 
 \maketitle
 
 \begin{abstract}
-Model-based design (MBD), Agile iteration and CI/CD are usually compared qualitatively, as if they were
-alternatives. We treat them as factors of one controlled pipeline: verification stages (unit, MIL, SIL,
-PIL), integration cadence (the only Agile property measured here) and release trigger. On two automotive
-estimators built from public field data, we injected 205 mutants, 102 of them field-relevant, and ran each
-on a host, an emulator and a real STM32L4 board. Unit tests alone detected 38--68\,\% of the field-relevant
-mutants; adding MIL and SIL reached 100\,\% (95\,\% CI lower bounds 90--95\,\%), and PIL detected no
-further field-relevant mutant. In a trace-driven replay, per-commit runs returned feedback in under a minute against
-about 9\,h for ten-commit batches, while board PIL multiplied compute per sprint by 6 to 19. A confirmatory
-experiment with one binary on both platforms and an unseen third subject found no functional verdict that
-only the board produced (84 of 84 control mutants agreed; 26 of 26 uninitialised-state mutants caught on
-the emulator with stack painting, and by MemorySanitizer on the host, while the pre-registered Valgrind
-check missed one); the board was needed only for timing, where the emulator's instruction count missed
-multi-cycle regressions. A pre-registered addendum reproduced the functional result at two other optimisation
-levels and on a second board, whose timing verdicts differed from the first. The methods are therefore not alternatives: stages set what is caught, cadence
-and trigger set when, and the platform sets where a stage must run; running the board once per sprint
-instead of per commit cut compute from 397\,s to 77\,s per sprint with no extra escapes.
+Model-based design (MBD), Agile iteration and continuous integration and delivery (CI/CD) are usually
+compared qualitatively, as alternatives. We turn them into factors of one pipeline: verification stages
+(unit, model-, software- and processor-in-the-loop), the increment size that Agile practice sets (commits
+verified together) and the release trigger. On two automotive estimators we injected 205 defects (mutants),
+102 of which degrade the estimate on recorded field data, and ran each on a host, an emulator and an STM32L4
+board. Unit tests that executed 97--100\,\% of the lines caught 38--68\,\% of these; requirement tests caught
+all of them on host C code alone, so the gain came from the test suite more than from the stage, and the board
+added none. In a replay that assumes defects do
+not mask each other, cadence changed only latency, from under a minute to about 9\,h at an assumed 2\,h commit
+spacing, and board runs multiplied compute by 6 to 19. With one binary on both platforms, a confirmatory
+experiment on a third subject found no functional verdict that only the board produced (84 of 84 control
+mutants agreed; the emulator caught all 26 uninitialised-state mutants), and a replication found the same at
+two more optimisation levels and on a second board. The board was needed only for timing, where the emulator's
+instruction count missed multi-cycle regressions and the two boards disagreed.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -50,8 +49,9 @@ model-based design, continuous integration, processor-in-the-loop, mutation test
 \section{Introduction}
 
 Automotive control software is developed with three families of practice that are often presented side
-by side. Model-based design (MBD) validates a model before code exists and then re-runs the same tests on
-generated code and on the target processor (MIL, SIL, PIL, HIL). Agile methods deliver small increments
+by side. Model-based design (MBD) validates a model before code exists (model-in-the-loop, MIL) and then
+re-runs the same tests on generated code on the host (software-in-the-loop, SIL), on the target processor
+(processor-in-the-loop, PIL) and against a plant (hardware-in-the-loop, HIL). Agile methods deliver small increments
 and integrate them often. CI/CD automates the build, the tests and the release of every change. Industrial
 pipelines already combine them: virtual ECUs run software-in-the-loop tests inside CI~\cite{kavgic2026,kim2026},
 and DevOps practice is being carried into hardware-in-the-loop work~\cite{schlatzer2025}. The comparisons
@@ -59,33 +59,35 @@ that guide such choices, however, are mostly qualitative tables of strengths and
 which method to adopt.
 
 That question can be answered with measurements once each method is turned into a factor that can be
-switched on and off in one pipeline. We take MBD to be the set of verification stages that run, Agile to
-be the integration cadence (how many commits are verified together), and CI/CD to be the trigger
-(automatic on every change, or a gated manual release). Agile is thus reduced to one measurable property;
-team practices are not studied here. With known injected defects and field data as an oracle, the effect
+switched on and off in one pipeline. Agile and CI/CD overlap here: Agile asks for working software delivered
+frequently, preferring the shorter timescale~\cite{agilemanifesto}, and CI/CD automates the integration of each
+increment. We take MBD to be the set of verification stages that run; Agile's measurable contribution to be
+the increment size, i.e.\ how many commits are verified together, a parameter that CI/CD also exposes; and
+CI/CD's own contribution to be the trigger (automatic on every change, or a gated manual release). Team
+practices are not studied, so the Agile factor is narrow by design. With known injected defects and field data as an oracle, the effect
 of each factor can be measured on the same defects, in paired comparisons.
 
 We ask three questions:
 \begin{itemize}
-\item \textbf{RQ1} (what is caught): how much does each verification stage add to the detection of
-field-relevant defects, and at what cost?
+\item \textbf{RQ1} (what is caught): how much does each verification stage, and the test suite it runs,
+add to the detection of field-relevant defects, and at what cost?
 \item \textbf{RQ2} (when it is caught): how do batch size and trigger change feedback latency and
 compute?
 \item \textbf{RQ3} (where it must run): when does the execution platform (host, emulator, real MCU)
 change a verdict, and what is the cheapest placement of the stages that keeps detection?
 \end{itemize}
-RQ1 and RQ2 were pre-registered. RQ3 was added after the first experiment showed host/emulator/board
+The protocols of RQ1 and RQ2 were committed before their runs (locally; Section~\ref{sec:threats}). RQ3 was added after the first experiment showed host/emulator/board
 disagreements; it was then tested in a separate confirmatory experiment, frozen before it ran, on new
-mutants and an unseen subject. We report the pre-registered hypothesis that each stage is complementary
-as partly refuted.
+mutants and an unseen subject. The pre-registered hypothesis that the stages are complementary was
+partly refuted.
 
 The contributions are: (i) an open pipeline (OpenModelica, gcc, QEMU, a real Cortex-M4 board on FIT
 IoT-LAB~\cite{adjih2015}) applied to three subjects built from public field data; (ii) a paired measurement
 of detection per stage and of latency and compute per cadence and trigger, on 205 mutants; (iii) a
-confirmatory test showing that, with one binary, an emulator reproduces the board's functional verdicts and
-that the board is needed only for cycle-accurate timing; and (iv) a tiered placement of the stages derived
+confirmatory test showing that, with one binary and for computation-only code without peripherals or
+interrupts, an emulator reproduces the board's functional verdicts and the board is needed only for timing; and (iv) a tiered placement of the stages derived
 from (iii) and evaluated in a replay. Scripts, protocols and raw results are available at
-[repository URL, t-0025].
+\url{https://github.com/ojaneri/cicd-mbd-agile}.
 
 % ---------------------------------------------------------------------------------------------------
 \section{Related Work}
@@ -142,8 +144,10 @@ B is the number of commits verified together; C is the trigger; P is the platfor
 \end{figure}
 
 \subsection{Pipeline}
-For each subject a single specification generates both a Modelica model and C code (Fig.~\ref{fig:pipeline}).
-UNIT runs hand-written unit tests of the C functions on the host. MIL simulates the model natively in
+For each subject a single specification generates a Modelica model and C code in parallel
+(Fig.~\ref{fig:pipeline}); there is no model-to-code generator, so translation faults are outside this study.
+UNIT runs hand-written unit tests of the C functions on the host (six checks for S1, four for S2) whose
+expected values are generated from the specification. MIL simulates the model natively in
 OpenModelica 1.27.2 inside a testbench that replays the requirement vectors; the FMU route under FMPy was
 abandoned because model-exchange events were not processed with external inputs. SIL compiles the C code
 for the host (gcc 15.2, \texttt{-O2}), runs the requirement tests and compares the outputs back-to-back with
@@ -157,8 +161,8 @@ processor-in-the-loop on the target; we call the board stage PIL, not HIL, becau
 \subsection{Subjects and field oracles}
 All three subjects are estimators identified on public recorded data, which also serves as the field
 oracle. \emph{S1}, a state-of-charge observer (1RC equivalent circuit, 11-knot OCV table, 1\,s step),
-identified on LG HG2 drive cycles at 25\,\textdegree C~\cite{lghg2data}; the field oracle is the SoC error on
-four held-out cycles. \emph{S2}, a fuel-flow virtual sensor from OBD-II data of a 2012 passenger car with
+identified on LG HG2 drive cycles at 25\,\textdegree C~\cite{lghg2data}; the field oracle fails a mutant if, on
+any of four held-out cycles, the SoC RMSE grows by more than 0.005 or the maximum error by more than 0.02. \emph{S2}, a fuel-flow virtual sensor from OBD-II data of a 2012 passenger car with
 refuelling history~\cite{obd2data}, with deceleration fuel cut-off and a clamped integrator; the field oracle
 fails a mutant if the volume error of any of five held-out tanks worsens by more than 2 percentage points.
 \emph{S3}, a battery-rack thermal sensor with a derating latch, from BESS field
@@ -180,10 +184,12 @@ Factor A has four cumulative levels: A0 UNIT, A1 +MIL, A2 +SIL, A3 +PIL. For RQ1
 every stage, so each level's verdict is known for every mutant. For RQ2 no recorded commit history was
 available, so we replay a synthetic sprint: 10 commits, one every 2\,h, each defective with probability 0.3,
 the defect drawn from the live mutants with their measured per-stage verdicts and stage costs (medians of
-the real runs, including board PIL). Batches of $b\in\{1,5,10\}$ commits are verified together and a failing
+the real runs, including board PIL). A defect's verdict does not depend on the other commits in its batch:
+defects are assumed not to mask each other, so the replay cannot show cadence changing detection; it measures
+what cadence does to latency and compute. Batches of $b\in\{1,5,10\}$ commits are verified together and a failing
 batch is bisected; the trigger is automatic or a gated release that adds a fixed delay (8\,h; swept over
 1, 8 and 24\,h). Each configuration is replayed 2000 times with a fixed seed. Detection rates carry Wilson
-95\,\% intervals; paired comparisons between levels use the exact McNemar test; times are summarised by
+95\,\% intervals, which describe this mutant population rather than a sample of real defects; paired comparisons between levels use the exact McNemar test; times are summarised by
 medians, and effect sizes by Cliff's $\delta$. Protocols, mutation operators and analysis scripts were
 committed to version control before each run; analyses decided after seeing data are labelled
 exploratory. Host runs used an AMD Ryzen 5 5500 under WSL Ubuntu.
@@ -219,24 +225,28 @@ A3 +PIL & 68 & 95--100 & 1 & 34 & 90--100 & 1\\
 Table~\ref{tab:e1} gives the detection of field-relevant mutants. Unit tests alone caught 38\,\% (S1) and
 68\,\% (S2). MIL raised detection significantly in both subjects, because it is the first stage that sees
 model-level mutants; in S1, SIL added the 16 code-level mutants that unit tests missed. From A2 on, all
-field-relevant mutants were detected, and PIL added no field-relevant detection. No field-relevant mutant escaped from A2. Because
+field-relevant mutants were detected, and PIL added no field-relevant detection. Because
 a 100\,\% rate invites suspicion, we audited it: every field-relevant code mutant in S1 failed a
 requirement test at SIL, not only the back-to-back comparison, so the rate is not an artefact of comparing
-the code with itself. What is true by construction is that MIL cannot see code-level mutants and that the
-back-to-back check cannot see model-level ones.
+the code with itself. By construction, MIL cannot see code-level mutants and the back-to-back check cannot
+see model-level ones.
 
 The pre-registered hypothesis that each stage detects some defect class missed by the earlier ones holds
-only in part. In an exploratory analysis, SIL alone, running the requirement tests on the generated code,
-caught all 68 field-relevant mutants of S1, including every model-level one, at about one eighth of MIL's
-cost. With automatic code generation, MIL in this pipeline gives earlier feedback, before code exists,
-rather than extra detection. PIL was the only stage that flagged timing regressions (5 mutants in S1, 6 in
+only in part, and factor A changes the test suite together with the stage. An exploratory split by suite
+shows where the gain comes from. On the same host C code, the requirement tests caught all 68 (S1) and 34
+(S2) field-relevant mutants and the unit tests 26 and 23, although the unit tests executed 97 and 100\,\% of
+the lines (83 and 100\,\% of the branches, gcov). The unit tests caught no model-level mutant, because
+their expected values are generated from the mutated specification. MIL, running the requirement tests on
+the model, caught every model-level mutant, at about eight times SIL's cost. The detection gain therefore
+belongs to the requirement tests, which can run at any level; MIL adds feedback before code exists. PIL was
+the only stage that flagged timing regressions (5 mutants in S1, 6 in
 S2), which is expected since no other stage measures cycles; these mutants did not change the functional
-field result. Requirement tests also flagged 21 mutants of S1 that were not field-relevant, and 41 S1
-mutants were flagged by no stage. A screening added after the run (host build, requirement and field inputs
-plus a seeded stress set) found 18 of them bit-identical to the baseline and 23 different but within every
-oracle (S2: 11 and 4 of 15). One of the 18 deletes an initialisation and is caught by the board, so host
-equivalence does not imply target equivalence; on the stress set 4 S1 and 3 S2 mutants would break a
-requirement, so the requirement tests are not exhaustive.
+field result. Requirement tests also flagged 21 mutants of S1 that were not field-relevant. A screening
+added after the run (host build, requirement and field inputs plus a seeded stress set) of the 41 S1
+mutants that no stage flagged on QEMU found 18 bit-identical to the baseline and 23 different but within
+the requirement and field oracles (S2: 11 and 4 of 15). One of the 18 deletes an initialisation and is caught
+by the board, so host equivalence does not imply target equivalence; on the stress set 4 of the 23 S1 and
+3 of the 4 S2 mutants would break a requirement, so the requirement tests are not exhaustive.
 
 \subsection{The platform in the first experiment}
 Each mutant's PIL verdict was obtained twice, on QEMU and on the board. They agreed on 202 of 205 mutants
@@ -275,17 +285,17 @@ A3 & 10 & 9.0\,h & 565\,s & 9.3\,h & 222\,s\\
 Table~\ref{tab:e2} shows the replay. With one commit per run and an automatic trigger, a defect was
 reported within a minute; with ten commits per run, after about 9\,h, because the defect waits for the batch
 to close. A gated manual release added its delay to every cell. Batch size moved latency from seconds to hours
-while it changed compute little, since a failing batch is re-run during bisection (Cliff's
-$\delta$ for A3, batch 1 against 10: $-0.97$ for latency in S1; $+0.32$ and $+0.16$ for compute in S1 and S2). Cadence did not change what
-was detected: from A2 on, no defect escaped in any replay; at A1, S1 let at least one defect through in 642
-of 2000 sprints, and at A0 one per sprint (median).
+while it changed compute little, since a failing batch is re-run during bisection (Cliff's $\delta$ for
+compute, A3 batch 1 against 10: $+0.32$ in S1, $+0.16$ in S2). As the no-masking assumption implies, cadence did
+not change what was detected: from A2 on, no defect escaped in any replay; at A1, S1 let at least one defect
+through in 642 of 2000 sprints, and at A0 the median S1 sprint let one through.
 The stage cost mattered only through the board: adding board PIL to every commit multiplied compute per
 sprint by 18.7 in S1 and 6.1 in S2 and bought no functional detection. The latency values follow largely
 from the assumed commit spacing and gate delay; what the replay measures are the stage costs and verdicts,
 and the 9\,h figure should be read as a model output. A sensitivity sweep added after the run (commit spacing
 0.5, 2 and 8\,h; defect probability 0.1, 0.3 and 0.5) left the conclusions unchanged: per-commit latency stayed
-at the stage cost (57\,s in S1, 22\,s in S2) in every cell, ten-commit latency scaled with the spacing (2.3,
-9 and 36\,h), and board PIL multiplied compute by 18.7--20.6 in S1 and 6.1 in S2.
+at the stage cost (57\,s in S1, 22\,s in S2) in every cell, ten-commit latency scaled with the spacing (about
+2.3, 9 and 36--37\,h), and board PIL multiplied compute by 18.7--20.6 in S1 and 6.1 in S2.
 
 \subsection{RQ3: where a stage must run (confirmatory)}
 
@@ -345,7 +355,7 @@ already fail the requirement tests (plain SIL caught 22 of 26).
 \includegraphics[width=\columnwidth]{figs/fig_h4.pdf}
 \caption{Timing ladders: maximum step time of each mutant divided by the platform's own budget (twice its
 baseline); above 1 the timing oracle fails. Board values are cycles, QEMU values are ticks under
-\texttt{-icount}, an instruction count. Generated by \texttt{figs/fig\_h4.py} from the E5 results.}
+\texttt{-icount}, an instruction count. Data from the confirmatory experiment.}
 \label{fig:h4}
 \end{figure}
 
@@ -366,12 +376,14 @@ costs (UNIT 0.29\,s, MIL 2.49\,s, SIL 0.28\,s, QEMU PIL 0.86\,s, board PIL 30.0\
 (QEMU PIL per commit), A3b (board PIL per commit) and AT (host and QEMU per commit, board once per sprint).
 No control mutant was caught by the board alone, so all four placements had zero escapes. Compute per sprint
 was 36.7\,s for A2, 47.1\,s for A3q, 77.1\,s for AT and 396.7\,s for A3b (Cliff's $\delta$ AT against A3b
-$-1.0$); latency was 4\,s for AT and A3q and 33\,s for A3b. In this pool the per-sprint board run is pure
-cost; its value lies in the multi-cycle timing class of H4, which the control pool did not contain.
+$-1.0$); latency was 4\,s for AT and A3q and 33\,s for A3b. In this pool the per-sprint board run added
+cost and no detection; it is there for the multi-cycle timing class of H4, which the control pool did not
+contain, so the placement was not tested on the class it exists for.
 
-\textbf{Robustness (addendum).} After this experiment we designed a robustness addendum and pushed it to an
-external repository before running it. It changes three things a reviewer may ask about, so it is a replication,
-not part of the confirmatory set. \emph{Optimisation level:} at \texttt{-O0} and \texttt{-Os}, again with one ELF
+\textbf{Robustness (addendum).} After this experiment we designed an addendum and pushed it to an external
+repository before running it. It varies the optimisation level, repeats the board timing and adds a second
+board; being designed after the results, it counts as a replication outside the confirmatory set.
+\emph{Optimisation level:} at \texttt{-O0} and \texttt{-Os}, again with one ELF
 per level, no uninitialised-state mutant was caught by the board and missed by QEMU, nor the reverse (26
 observable mutants at each level). Valgrind caught all 26 at \texttt{-O0} but missed the same mutant at
 \texttt{-Os}, which fits the register explanation above; MemorySanitizer caught all 26 at both levels.
@@ -380,45 +392,47 @@ on each board, so measurement noise does not erode the $2\times$ budget. \emph{A
 (Cortex-M4F at 64\,MHz, flash cache off), compared with the emulator's records of the same source, agreed on 84
 of 84 control mutants (Wilson 95.6--100\,\%) and caught the same 26 of 28 uninitialised-state mutants as the
 first board, none of them missed by QEMU. Its timing verdicts did not match the first board's: with a slower
-baseline step (158--208 against 107--131 cycles) it flagged fewer ladder levels, e.g.\ the S3 divide ladder only
-at 3.0 against 1.1--3.0, while QEMU again flagged no divide level. Functional verdicts transferred across
-optimisation levels and boards; timing verdicts did not transfer even between two Cortex-M4F boards.
+baseline step (158--208 against 107--131 cycles) it flagged fewer levels on 4 of 6 ladders, e.g.\ the S3 divide ladder only
+at 3.0 against 1.1--3.0, while QEMU again flagged no divide level. Functional verdicts thus held across
+optimisation levels and boards, but timing verdicts differed even between two Cortex-M4F boards.
 
 % ---------------------------------------------------------------------------------------------------
 \section{Discussion}
 
-\emph{Answer to the title.} Within the scope measured here, MBD, Agile cadence and CI/CD are not alternatives
-because they act on different axes. The set of stages decided which defects were caught (Table~\ref{tab:e1});
-cadence and trigger decided how long they took to surface, by hours, without changing detection
-(Table~\ref{tab:e2}); and the platform decided where a stage had to run, with the board needed only for
-cycle-accurate timing (Table~\ref{tab:e5}), and only on the production board. A pipeline that drops any of the three loses something different:
-detection, timeliness, or timing evidence.
+\emph{Answer to the question.} Within the scope measured here, the three practices act on different axes,
+so the title's either-or does not arise. The MBD stages, through the requirement tests they run, decided
+which defects were caught (Table~\ref{tab:e1}); the increment size and trigger decided how long they took to
+surface, by hours, and under the no-masking assumption not what was detected (Table~\ref{tab:e2}); and the
+platform decided where a stage had to run, with the board needed only for cycle-accurate timing
+(Table~\ref{tab:e5}). A pipeline that drops any of the three loses detection, timeliness or timing evidence.
 
-\emph{Practical placement.} For generated control code on a Cortex-M4 class target, the data support running
-UNIT, SIL with a memory sanitiser, and emulated PIL on the same ELF on every commit, and keeping the board for
-a scheduled timing run. MIL remains useful for feedback before code exists, but in our subjects SIL with the
-requirement tests detected everything MIL detected. The timing run must use the production MCU and memory configuration, since our two Cortex-M4F boards
-disagreed on which regressions exceeded the budget. Two caveats limit this advice: an emulator that counts
+\emph{Practical placement.} For estimator code of this kind on a Cortex-M4F target, the data support running
+UNIT, SIL with a memory sanitiser, and emulated PIL on the same ELF on every commit for functional verdicts,
+and keeping the board for a scheduled timing run. Requirement tests matter more than the stage that runs
+them; MIL remains useful for feedback before code exists. The timing run has to use the production MCU and
+memory configuration, since our two Cortex-M4F boards disagreed on which regressions exceeded the budget. Two caveats limit this advice: an emulator that counts
 instructions is not a timing oracle in either direction, and a sanitiser's result depends on the tool, as the
 Valgrind miss shows.
 
 \subsection{Threats to validity}\label{sec:threats}
 \emph{Construct.} Mutants stand in for real defects~\cite{just2014}; we report per class and keep timing-only
-mutants apart. Agile is reduced to integration cadence; ceremonies, team size and collaboration are not
-measured. The field oracles are relative degradations against recorded data, and the requirement thresholds
+mutants apart. Model and code come from one specification, so translation and code-generator faults are
+absent, and one team wrote the operators, tests and oracles. Agile is reduced to increment size; ceremonies,
+team size and collaboration are not measured. The field oracles are relative degradations against recorded data, and the requirement thresholds
 are our own. In S2 the field oracle runs on the emulator build, so an initialisation defect that produced a
 large error only on the board counted as not field-relevant; field relevance of this class depends on the
 platform.
 \emph{Internal.} RQ3 was added after seeing the first experiment; its confirmation used new mutants and a new
 subject, but S1 and S2 contributed some mutant lines already seen. Detections of 100\,\% were audited. The
-cadence results come from a synthetic commit stream, not a recorded history, and the latency values depend on
-the assumed spacing and delay. The run scripts were changed once after the confirmatory freeze, to split build
+cadence results come from a synthetic commit stream, not a recorded history; the latency values depend on
+the assumed spacing and delay, and the replay assumes defects do not mask each other. The run scripts were changed once after the confirmatory freeze, to split build
 directories between host and board runs; the affected records were checked valid. The pre-registration commits of the
 first experiments are in a local repository whose external copy dates from after the runs; the robustness
 addendum was pushed before it ran. During the addendum, a host binary that aborted mid-write crashed the
 runner (truncated output was then treated as missing output) and one board calibration was repeated after a
 broken serial stream; both are reported in the artefact.
-\emph{External.} Two Cortex-M4F boards (STM32L4 at 16\,MHz and nRF52840 at 64\,MHz, both without cache), one
+\emph{External.} Two Cortex-M4F boards (STM32L4 at 16\,MHz with zero wait states, nRF52840 at 64\,MHz with its
+flash cache off), one
 emulator, one compiler at three optimisation levels, and three subjects of one
 kind (energy and powertrain estimators). Initial RAM contents depend on the board and its power history; we
 report two resets and two boards but cannot bound this. Results may differ for code with deep call trees, interrupts or
@@ -429,15 +443,22 @@ caches, and for perception software.
 
 We turned MBD stages, integration cadence and the CI/CD trigger into factors of one pipeline and measured
 them on 205 injected defects in two automotive estimators, with real-board PIL, and confirmed the platform
-result on a third subject. Stages up to SIL raised detection to every field-relevant defect and PIL added
-no field-relevant detection; per-commit integration cut feedback latency from hours to under a minute; and with the same binary an
-emulator reproduced every functional verdict of the board, leaving the board necessary for timing only, a result that held at two more optimisation levels and on a
-second board, whose timing verdicts in turn differed from the first. A
-tiered placement that runs the board once per sprint kept detection at about a fifth of the per-commit board
-compute. Future work: a recorded commit history instead of the replay, another compiler, cached cores, and
-the evidence that the pipeline produces for ISO~26262 work products.
+result on a third subject. Requirement tests caught every field-relevant defect on host C code, while unit
+tests with near-complete line coverage caught 38--68\,\%; the suite mattered more than the stage, and PIL
+added no field-relevant detection. Under the replay's no-masking assumption, the increment size changed only
+latency, which the assumed commit spacing largely sets. With the same binary, an emulator reproduced every
+functional verdict of the board, also at two more optimisation levels and on a second board, so the board is
+needed for timing, where the two boards disagreed with each other. A tiered placement that runs the board
+once per sprint used about a fifth of the per-commit total compute, but its pool held no board-only defect,
+so it was not tested on the timing class it exists for. Future work: a recorded history with multi-defect
+batches, timing regressions in the tiered replay, another compiler, cached cores, and ISO~26262 evidence.
 
-% Disclosure of AI assistance: required form depends on ISIE 2027 author instructions (check, t-0036).
+% AI-use disclosure per the IEEE submission policy (author center, read 2026-11-13): name the system, the
+% sections and the level of use, in the acknowledgments. Wording is PROPOSED (d-0016); the authors confirm it.
+\section*{Acknowledgment}
+The authors used Claude (Anthropic), through Claude Code, to draft the text of all sections from the
+authors' results and notes, to write the experiment and analysis scripts, and to check numbers and
+references against the data and bibliographic records.
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}

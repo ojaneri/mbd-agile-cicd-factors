@@ -145,6 +145,15 @@ definitions (sha256 per vector) in `testbed/{soc,fuel}/results/equiv_screen.json
 - Limits: equivalence is on the host build only. The target (Cortex-M4) can differ, as SDL-006 shows and as
   the FPP timing-only mutants show. Inputs with NaN/Inf were not fed.
 
+## Detection by test suite (exploratory, added 2026-11-13 after virtual review r1)
+`testbed/e1_decompose.py` re-reads the frozen records (no new run). Field-relevant mutants caught, S1 (n=68) /
+S2 (n=34): unit suite on host 26 / 23; requirement tests on the model (MIL) 26 / 11 (all model-level, no
+code-level); requirement tests on host C (SIL, without back-to-back) 68 / 34; back-to-back host vs model 43 /
+23; requirement tests on the board 68 / 34. The unit suite catches 0 model-level mutants by construction: its
+expected values are generated from the mutated spec. Unit-suite size 6 checks (S1), 4 (S2); gcov line coverage
+97.4 % / 100 %, branches taken 83.3 % / 100 % (`testbed/e1_unit_coverage.sh`). Factor A therefore confounds
+stage with suite; the gain is the requirement suite's.
+
 ## Metrics
 - Detection rate per configuration A0..A3 over field-relevant mutants (Wilson 95 % CI), exact McNemar
   between successive configurations, first-detecting stage per operator, stage-unique detections,

@@ -27,6 +27,11 @@ part of PIL's value is platform-dependent and must be stated as such.
 Subject 2 on QEMU: same pattern (MIL raises detection, no unique functional stage, 6 timing-only).
 Subject 2 real-target column: complete, same rates, same six timing-only mutants (see E1). Source: [[experiments/e1-defect-detection-by-stage]].
 
+Evidence 2026-11-13 (exploratory suite split, experiments/e1 "Detection by test suite"): the stage gain is the
+requirement suite's. On host C the requirement tests alone caught all field-relevant mutants (68/68, 34/34);
+the unit suite (97-100 % line coverage) caught 26 and 23 and no model-level mutant. Stage and suite are
+confounded in factor A; the paper now says so.
+
 Would falsify it: one stage (e.g., MIL) detects every mutant the later stages detect, within the CI;
 then the later stages add cost without detection, and the paper must say so.
 

@@ -4,7 +4,9 @@ Source: [[references/search-log-2026-11]]. Read 2026-11-11 by hand through CAFe 
 Scopus records) and OpenAlex, paced, no bulk download. **P1–P8 are in `manuscript/refs.bib`**, each fetched from Crossref by DOI on 2026-11-11 (titles, authors, pages
 matched). P9 (Artshop, no DOI seen) is not cited. Also in refs.bib, Crossref/DataCite-checked: FIT IoT-LAB
 (Adjih et al., WF-IoT 2015), Valgrind (PLDI 2007), MemorySanitizer (CGO 2015), Just et al. (FSE 2014), LG HG2 and
-BESS datasets; the Kaggle OBD-II entry is unverified (t-0049).
+BESS datasets; the Kaggle OBD-II entry was checked on the Kaggle API on 2026-11-13 (title OBD2_panel_opel_2012, creator
+Pedro, v1 2025-11-15, v10 2026-10-03; t-0049 done). Agile Manifesto (agilemanifesto.org, 2001) added for the
+Agile framing, read 2026-11-13.
 
 Reading depth: **F** = full text read (sections and conclusions), **A** = abstract only.
 

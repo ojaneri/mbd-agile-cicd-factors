@@ -1,0 +1,58 @@
+{
+ "soc": {
+  "all": {
+   "n": 68,
+   "unit_suite@host": 26,
+   "req@model (MIL)": 26,
+   "req@host (SIL)": 68,
+   "b2b host-vs-model": 43,
+   "req@board (PIL)": 68
+  },
+  "model": {
+   "n": 26,
+   "unit_suite@host": 0,
+   "req@model (MIL)": 26,
+   "req@host (SIL)": 26,
+   "b2b host-vs-model": 1,
+   "req@board (PIL)": 26
+  },
+  "code": {
+   "n": 42,
+   "unit_suite@host": 26,
+   "req@model (MIL)": 0,
+   "req@host (SIL)": 42,
+   "b2b host-vs-model": 42,
+   "req@board (PIL)": 42
+  },
+  "unit_missed_req_host_caught": 42,
+  "req_host_missed": 0
+ },
+ "fuel": {
+  "all": {
+   "n": 34,
+   "unit_suite@host": 23,
+   "req@model (MIL)": 11,
+   "req@host (SIL)": 34,
+   "b2b host-vs-model": 23,
+   "req@board (PIL)": 34
+  },
+  "model": {
+   "n": 11,
+   "unit_suite@host": 0,
+   "req@model (MIL)": 11,
+   "req@host (SIL)": 11,
+   "b2b host-vs-model": 0,
+   "req@board (PIL)": 11
+  },
+  "code": {
+   "n": 23,
+   "unit_suite@host": 23,
+   "req@model (MIL)": 0,
+   "req@host (SIL)": 23,
+   "b2b host-vs-model": 23,
+   "req@board (PIL)": 23
+  },
+  "unit_missed_req_host_caught": 11,
+  "req_host_missed": 0
+ }
+}
