@@ -13,4 +13,4 @@ Planned measurement: a table mapping each pipeline stage to the work products it
 Used in: [[sections/abstract]]. Venue: [[venue/isie-2027]].
 
 ## Todos
-- **[#t-0008]** status: open · author: osvaldo — Build the standards mapping table (stage to work product) from ISO 26262 and ISO 21434 text, not from memory. Mark each entry as unverified until checked against the standard.
+- **[#t-0008]** status: done · author: osvaldo — Closed 2026-11-15 as out of scope: the paper has no standards mapping table (one ISO 26262-8 sentence). Original: Build the standards mapping table (stage to work product) from ISO 26262 and ISO 21434 text, not from memory. Mark each entry as unverified until checked against the standard.

@@ -31,7 +31,10 @@ Evidence:
 Would falsify it: functional disagreement between emulator and board on further subjects or compilers; a
 defect class the board catches that neither painted QEMU nor a sanitiser catches.
 
-Caveats: two Cortex-M4F boards (STM32L4 16 MHz, nRF52840 64 MHz, both uncached) and one emulator; three subjects
+Caveats: two Cortex-M4F boards (STM32L4 16 MHz, 0 wait states, flash instruction and data caches on at their
+reset value; nRF52840 64 MHz, flash cache off) and one emulator; corrected 2026-11-15 (t-0057): RM0351 gives
+FLASH_ACR reset 0x0000 0600 (ICEN, DCEN set, LATENCY 0) and 0 WS valid up to 16 MHz in range 1, and the
+harness (testbed/*/harness/stm32l4/board.c) never writes FLASH_ACR, so "both uncached" was wrong; three subjects
 of the same kind (estimators); MSan as a secondary arm; the replay pool held no multi-cycle timing defect.
 
 Used in: [[sections/abstract]].

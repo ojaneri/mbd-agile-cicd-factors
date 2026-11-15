@@ -39,4 +39,4 @@ Note: this result is not guaranteed by design; the falsifying outcome is publish
 reported if it happens (M03).
 
 ## Todos
-- **[#t-0024]** status: open · author: osvaldo — After E1, state C3 at the strength the CIs support; do not round "most" to "all".
+- **[#t-0024]** status: done · author: osvaldo — Closed 2026-11-15 as done: C3 is stated with intervals and the exploratory label in the paper. Original: After E1, state C3 at the strength the CIs support; do not round "most" to "all".

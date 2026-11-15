@@ -27,4 +27,4 @@ Diagnostic Validation for AUTOSAR Software Components in Safety-Critical Automot
 
 ## Todos
 - **[#t-0028]** status: done · author: osvaldo — Exemplar dissected from the IEEE HTML on 2026-11-11.
-- **[#t-0035]** status: open · author: osvaldo — Open the PDF to count references and real figures, and note the template details (abstract length, keywords, figure style).
+- **[#t-0035]** status: done · author: osvaldo — Closed 2026-11-15 as done: template details recorded in venue/ and checked in the virtual reviews. Original: Open the PDF to count references and real figures, and note the template details (abstract length, keywords, figure style).

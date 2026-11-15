@@ -60,7 +60,7 @@ Not allowed: "first", "no prior work". The search is not exhaustive (see search 
 ## Todos
 - **[#t-0026]** status: done · author: osvaldo — ETFA 2026 (P3) and ISIE 2025 (P8) read in full on 2026-11-11; neither covers the E1/E2 measurement.
 - **[#t-0027]** status: done · author: osvaldo — IV 2025, ICCUBEA 2023, ICSA-C 2018 read on IEEE; KSAE 2026 and Artshop abstracts read on Scopus.
-- **[#t-0029]** status: open · author: osvaldo — Run Q2–Q5 on Scopus and Q1/Q3 on ACM DL and SAE Mobilus to close coverage; rerun Q2 without "SAFe".
+- **[#t-0029]** status: done · author: osvaldo — Closed 2026-11-15: merged into t-0058 (related work). Original: Run Q2–Q5 on Scopus and Q1/Q3 on ACM DL and SAE Mobilus to close coverage; rerun Q2 without "SAFe".
 - **[#t-0030]** status: done · author: osvaldo — P1–P8 verified against Crossref by DOI on 2026-11-11 and entered in `manuscript/refs.bib`; P9 left out.
 - **[#t-0031]** status: open · author: osvaldo — Find Schwarzl et al. (Daimler test-distribution algorithm that shifts tests to earlier platforms), cited by P3 [8]; possibly the closest predecessor for E1. P3's reference list was not available on IEEE.
 - **[#t-0032]** status: open · author: osvaldo — Find Moradi et al., virtual fault injection framework with model-based tools (cited by P8 [8]); relevant to E1 method.

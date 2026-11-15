@@ -84,6 +84,9 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
   Note 2026-11-14 (Overleaf history): the author-order change and the roadmap paragraph were made by Max
   Mauro Dias Santos (account maxmaurodias, 02:44–02:50 UTC). They were discarded by the owner's overwrite
   instruction; the owner should confirm the order with Max (t-0037).
+  Update 2026-11-15: Max changed the order again on Overleaf (00:25 UTC): Osvaldo, Rafael, Jeferson, Max. This
+  time it was kept and merged into main.tex (co-authors now work on Overleaf); the first author confirms
+  (t-0037). Max's edit was the only co-author change; it was merged before uploading the t-0057/t-0068 fixes.
 - **[#d-0016]** date: 2026-11-13 · status: proposed · author: osvaldo
   **AI-use acknowledgment: "The authors used Claude (Anthropic), through Claude Code, to draft the text of all
   sections from the authors' results and notes, to write the experiment and analysis scripts, and to check

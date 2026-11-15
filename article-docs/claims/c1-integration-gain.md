@@ -20,5 +20,5 @@ Used in: [[sections/abstract]]. Venue: [[venue/isie-2027]].
 
 ## Todos
 - **[#t-0043]** status: done · author: osvaldo — Sweep run 2026-11-11 (`testbed/e2_sweep.py`; see E2 Robustness): conclusions hold across spacing 0.5–8 h and defect probability 0.1–0.5. Original: Add a sensitivity sweep on DT_COMMIT and P_DEFECT to `e2.py`, labelled as added after run 1.
-- **[#t-0006]** status: open · author: osvaldo — Choose the case study (ECU/ADAS model, or a non-automotive proxy) and confirm it can be run in the time left.
-- **[#t-0007]** status: open · author: osvaldo — Define how lead time and defect escape are measured before any run.
+- **[#t-0006]** status: done · author: osvaldo — Closed 2026-11-15 as superseded: three estimator subjects built from public data (S1-S3). Original: Choose the case study (ECU/ADAS model, or a non-automotive proxy) and confirm it can be run in the time left.
+- **[#t-0007]** status: done · author: osvaldo — Closed 2026-11-15 as superseded: latency and escapes defined in the E2 protocol and replay. Original: Define how lead time and defect escape are measured before any run.

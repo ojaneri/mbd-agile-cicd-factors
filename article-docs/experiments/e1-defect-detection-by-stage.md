@@ -177,5 +177,5 @@ Plotted (2026-11-14, d-0022) as the paper's Fig. 2 by `manuscript/figs/fig_suite
 ## Todos
 - **[#t-0016]** status: done · author: osvaldo — Operators and counts fixed in `testbed/soc/mutate.py` and `protocol/mutants.json` (130 mutants).
 - **[#t-0017]** status: done · author: osvaldo — Tolerances fixed by rule from the baseline in `protocol/calibration.json` (1e-5 both).
-- **[#t-0018]** status: open · author: osvaldo — Subject 1 done (native MIL instead of FMU, d-0009). Subject 2 (fuel-flow sensor) still to model.
-- **[#t-0041]** status: open · author: osvaldo — Real-target PIL harness for NUCLEO-L476RG (register-level startup, UART, DWT cycles) and IoT-LAB st-iotnode; rerun the PIL column of E1 on it.
+- **[#t-0018]** status: done · author: osvaldo — Closed 2026-11-15 as done: S2 modelled and run in E1. Original: Subject 1 done (native MIL instead of FMU, d-0009). Subject 2 (fuel-flow sensor) still to model.
+- **[#t-0041]** status: done · author: osvaldo — Closed 2026-11-15 as done for the IoT-LAB st-iotnode (E1 real-board PIL); NUCLEO not used. Original: Real-target PIL harness for NUCLEO-L476RG (register-level startup, UART, DWT cycles) and IoT-LAB st-iotnode; rerun the PIL column of E1 on it.

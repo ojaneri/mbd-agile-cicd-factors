@@ -18,4 +18,4 @@ Status: **planned, optional.** Run only if E1–E3 are complete by week 4.
   be disclosed; results from that paper must not be reused here (V09).
 
 ## Todos
-- **[#t-0023]** status: open · author: osvaldo — Decide by 2026-12-01 whether E4 runs or is listed as future work.
+- **[#t-0023]** status: done · author: osvaldo — Closed 2026-11-15: E4 is not in the paper. Original: Decide by 2026-12-01 whether E4 runs or is listed as future work.

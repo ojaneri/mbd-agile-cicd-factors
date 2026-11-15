@@ -69,6 +69,6 @@ To check: in cell A0|b10|auto the reported median (8.67 h) lies outside its boot
   sweep over it instead of a single value.
 
 ## Todos
-- **[#t-0019]** status: open · author: osvaldo — Write the backlog of increments (at least 10 per subject) and the defect seeding plan; commit before runs.
+- **[#t-0019]** status: done · author: osvaldo — Closed 2026-11-15 as superseded: RQ2 uses a synthetic-sprint replay instead of a scripted backlog (stated in Threats). Original: Write the backlog of increments (at least 10 per subject) and the defect seeding plan; commit before runs.
 - **[#t-0042]** status: done · author: osvaldo — Done 2026-11-11 in `testbed/e2_sweep.py` (order-statistic CI). Original: Replace the percentile bootstrap of the median in `e2.py` for discrete outcomes (median fell outside its CI in A0|b10|auto); rerun E2 after subject 2 real PIL.
-- **[#t-0020]** status: open · author: osvaldo — Choose sprint batch size k and the manual-release delay range, with a reason recorded as a decision.
+- **[#t-0020]** status: done · author: osvaldo — Closed 2026-11-15 as superseded: batch sizes 1, 5, 10 and the 8 h gate are set in the E2 replay. Original: Choose sprint batch size k and the manual-release delay range, with a reason recorded as a decision.

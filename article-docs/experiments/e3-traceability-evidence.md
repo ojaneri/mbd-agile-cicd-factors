@@ -16,5 +16,5 @@ Status: **planned, not run.** Supports [[claims/c2-standards-traceability]].
 - Requirement-to-test trace coverage per release.
 
 ## Todos
-- **[#t-0021]** status: open · author: osvaldo — Get access to the ISO 26262 and ISO 21434 texts (UTFPR library or standards portal); without them E3 cannot cite clauses.
-- **[#t-0022]** status: open · author: osvaldo — Decide whether E3 stays a measured table or is cut to fit 6 pages.
+- **[#t-0021]** status: done · author: osvaldo — Closed 2026-11-15 as out of scope for this paper (no E3); ISO 26262-8 cited for tool confidence only. Original: Get access to the ISO 26262 and ISO 21434 texts (UTFPR library or standards portal); without them E3 cannot cite clauses.
+- **[#t-0022]** status: done · author: osvaldo — Closed 2026-11-15: E3 is not in the paper. Original: Decide whether E3 stays a measured table or is cut to fit 6 pages.

@@ -22,10 +22,11 @@
 % ISIE 2027 paper-submission page (read 2026-11-13): 6 pages "including title, authors, affiliations",
 % no anonymisation instruction (t-0036). Authors, order and affiliation given by the first author on
 % 2026-11-13 (d-0015): Osvaldo, Max, Rafael, Jeferson. The source block gave no affiliation mark for Rafael.
+% Order changed on Overleaf by Max Mauro Dias Santos (2026-11-14 02:44 and again 2026-11-15 00:25 UTC):
+% Osvaldo, Rafael, Jeferson, Max. Kept; to be confirmed by the first author (t-0037).
 \author{\IEEEauthorblockN{Osvaldo Janeri Filho\IEEEauthorrefmark{1}\,\orcidlink{0009-0000-5869-4947},
-Max Mauro Dias Santos\IEEEauthorrefmark{1}\,\orcidlink{0000-0001-7877-3554},
-Rafael Santos Dominguez\,\orcidlink{0009-0007-2827-618X} and
-Jeferson Jos\'e de Lima\IEEEauthorrefmark{1}\,\orcidlink{0000-0001-6342-6162}}
+Rafael Santos Dominguez\,\orcidlink{0009-0007-2827-618X},
+Jeferson Jos\'e de Lima\IEEEauthorrefmark{1}\,\orcidlink{0000-0001-6342-6162}, and Max Mauro Dias Santos\IEEEauthorrefmark{1}\,\orcidlink{0000-0001-7877-3554}}
 \IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electronics, Federal Technological University of
 Paran\'a -- Ponta Grossa\\Ponta Grossa, PR 84.017-220, Brazil}}
 
@@ -477,8 +478,8 @@ directories); the affected records were checked valid. The commits that froze th
 first experiments and the confirmatory experiment are in a local repository whose external copy dates from
 after the runs; the robustness addendum was pushed before it ran. Two incidents during the addendum (a
 runner crash and a repeated board calibration) are reported in the artefact.
-\emph{External.} Two general-purpose Cortex-M4F boards (STM32L4 at 16\,MHz with zero wait states, nRF52840 at 64\,MHz with its
-flash cache off), one
+\emph{External.} Two general-purpose Cortex-M4F boards (STM32L4 at 16\,MHz, zero wait states, flash caches
+at reset default; nRF52840 at 64\,MHz, flash cache off), one
 emulator, one cross-compiler at three optimisation levels, and three subjects of one
 kind (energy and powertrain estimators); S3 is stationary and S1's data are laboratory cell tests. Initial RAM contents depend on the board and its power history; we
 report two resets and two boards but cannot bound this. The board's compute multiplier includes this
