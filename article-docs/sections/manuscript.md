@@ -87,6 +87,10 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
   Update 2026-11-15: Max changed the order again on Overleaf (00:25 UTC): Osvaldo, Rafael, Jeferson, Max. This
   time it was kept and merged into main.tex (co-authors now work on Overleaf); the first author confirms
   (t-0037). Max's edit was the only co-author change; it was merged before uploading the t-0057/t-0068 fixes.
+  Update 2026-11-15: the first author confirmed this order as final ("a ordem vai ser a que o Max colocou") and
+  that João Francisco Justo is not an author of this paper. Rafael Santos Dominguez is also UTFPR-PG; with one
+  shared affiliation the \IEEEauthorrefmark marks were removed (adding Rafael's mark alone pushed the paper to
+  7 pages). Author block settled (t-0037, t-0066 done). Overleaf: 6 pages, 0 overfull, 0 undefined.
 - **[#d-0016]** date: 2026-11-13 · status: proposed · author: osvaldo
   **AI-use acknowledgment: "The authors used Claude (Anthropic), through Claude Code, to draft the text of all
   sections from the authors' results and notes, to write the experiment and analysis scripts, and to check
