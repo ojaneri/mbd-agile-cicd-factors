@@ -33,7 +33,7 @@ wording that was not taken as written:
   from one spec. Corrected.
 
 ## Decisions
-- **[#d-0024]** date: 2026-11-14 · status: proposed · author: osvaldo
+- **[#d-0024]** date: 2026-11-14 · status: accepted · author: osvaldo · promoted_by: osvaldo on 2026-11-15
   **Co-author review applied (presentation only, no new data).** Title → "A Mutation-Based Study of
   Automotive Embedded Estimator Software: MBD, Agile and CI/CD as Factors of One Pipeline" (supersedes d-0014's
   wording). Abstract opens with vehicle context, names the two estimators, "unit tests and model-, software-

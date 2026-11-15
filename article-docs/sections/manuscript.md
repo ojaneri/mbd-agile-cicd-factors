@@ -66,7 +66,8 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
 - Related work search did not cover ACM DL / SAE (t-0029); P1, P2 read at abstract level only (t-0034).
 
 ## Decisions
-- **[#d-0015]** date: 2026-11-13 · status: proposed · author: osvaldo
+- **[#d-0015]** date: 2026-11-13 · status: superseded · author: osvaldo · superseded_by: final author block, sections/manuscript.md updates of 2026-11-15 (t-0037, t-0066)
+ · promoted_by: osvaldo on 2026-11-15
   **Author block filled provisionally as "Osvaldo Janeri Filho and Max Mauro Dias Santos", UTFPR, no e-mails.**
   Why: the venue is not anonymous (t-0036) and a placeholder blocks submission. Order and corresponding
   author are still to be agreed with the co-author (t-0037); change the block if they differ.
@@ -91,7 +92,8 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
   that João Francisco Justo is not an author of this paper. Rafael Santos Dominguez is also UTFPR-PG; with one
   shared affiliation the \IEEEauthorrefmark marks were removed (adding Rafael's mark alone pushed the paper to
   7 pages). Author block settled (t-0037, t-0066 done). Overleaf: 6 pages, 0 overfull, 0 undefined.
-- **[#d-0016]** date: 2026-11-13 · status: proposed · author: osvaldo
+- **[#d-0016]** date: 2026-11-13 · status: accepted · author: osvaldo
+ · promoted_by: osvaldo on 2026-11-15
   **AI-use acknowledgment: "The authors used Claude (Anthropic), through Claude Code, to draft the text of all
   sections from the authors' results and notes, to write the experiment and analysis scripts, and to check
   numbers and references against the data and bibliographic records."** Why: IEEE requires naming the system,
@@ -107,13 +109,15 @@ placement); the conclusion's run-on sentence split; Fig. 2 caption no longer nam
   editing. The authors reviewed and edited all content and take full responsibility for it." Only change by
   the lead: "helped to wrote and ran" → "helped to write and run" (grammar). Names the system and the drafting,
   so it addresses VR4-E-01; still 6 pages.
-- **[#d-0012]** date: 2026-11-11 · status: proposed · author: osvaldo
+- **[#d-0012]** date: 2026-11-11 · status: accepted · author: osvaldo
+ · promoted_by: osvaldo on 2026-11-15
   **Manuscript source lives in `manuscript/` as IEEEtran LaTeX, built with latexmk in WSL.**
   Why: ISIE requires the IEEE two-column template and PDF; LaTeX keeps tables generated from the
   testbed numbers under version control next to the scripts. Rejected Word (no diffable source) and
   Overleaf as primary (no remote yet, t-0025; it can mirror the folder later). Cost: co-authors need
   TeX Live or Overleaf to build.
-- **[#d-0013]** date: 2026-11-11 · status: proposed · author: osvaldo
+- **[#d-0013]** date: 2026-11-11 · status: accepted · author: osvaldo
+ · promoted_by: osvaldo on 2026-11-15
   **Report the E2 replay as medians only (no CI) in Table II until t-0042 is fixed, and state in the text
   that latency is a model output.** Why: the percentile bootstrap gave a median outside its CI on discrete
   data. Rejected printing those CIs. Cost: Table II carries no uncertainty for now.

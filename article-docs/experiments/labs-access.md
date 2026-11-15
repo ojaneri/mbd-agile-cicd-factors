@@ -57,7 +57,8 @@ Copied read-only from janeri2 `/var/lib/article-docs/tenants/u1/`:
 - `tinyml-based-cyberattack-detection-using-power-c/article-docs/experiments/e-000{1,2,3}-*.md`
 
 ## Decisions
-- **[#d-0008]** date: 2026-11-11 · status: proposed · author: osvaldo
+- **[#d-0008]** date: 2026-11-11 · status: superseded · author: osvaldo · superseded_by: practice (boards used: FIT IoT-LAB st-iotnode and nRF52840; NUCLEO never used)
+ · promoted_by: osvaldo on 2026-11-15
   **PIL target: NUCLEO-L476RG (local) as primary, FIT IoT-LAB st-iotnode as replication; QEMU for development only.**
   Why: local board has no queue, same Cortex-M4F as automotive S32K14x-class MCUs (to verify), and a
   second STM32L4 board in a public testbed lets a reviewer reproduce cycles. Rejected QEMU as a result

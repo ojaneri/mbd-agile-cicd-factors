@@ -95,26 +95,31 @@ second subject not ready → one subject, scoped in title; nothing runnable by e
 submit a qualitative version as a regular paper; move to the WIP deadline (2027-04-01) or another venue.
 
 ## Decisions
-- **[#d-0003]** date: 2026-11-10 · status: proposed · author: osvaldo
+- **[#d-0003]** date: 2026-11-10 · status: accepted · author: osvaldo
+ · promoted_by: osvaldo on 2026-11-15
   **Operationalise "Agile" as integration cadence / change batch size, not as team practice.**
   Why: it is the only Agile property measurable without a human team in five weeks. Rejected a
   survey or team study (no time, ethics approval). Cost: a reviewer can say Agile is reduced to a
   parameter; the paper must state it (K06, M08).
-- **[#d-0004]** date: 2026-11-10 · status: proposed · author: osvaldo
+- **[#d-0004]** date: 2026-11-10 · status: superseded · author: osvaldo · superseded_by: d-0009 (FMI route abandoned; native OpenModelica)
+ · promoted_by: osvaldo on 2026-11-15
   **Open toolchain (OpenModelica + FMI + gcc + FIT IoT-LAB) instead of MATLAB/Simulink.**
   Why: reproducible by any reviewer (X domain), no licence. Rejected Simulink as primary because no
   licence is confirmed here. Cost: industrial reviewers may see it as less representative; mention
   that the same stages exist in Simulink/TargetLink flows.
-- **[#d-0005]** date: 2026-11-10 · status: proposed · author: osvaldo
+- **[#d-0005]** date: 2026-11-10 · status: accepted · author: osvaldo
+ · promoted_by: osvaldo on 2026-11-15
   **Ground truth by mutation injection, with classes and equivalent-mutant screening.**
   Why: without known defects, detection and escape cannot be measured. Rejected mining real defect
   histories (no access to industrial repositories). Cost: validity of mutants as real-defect proxy.
-- **[#d-0006]** date: 2026-11-10 · status: proposed · author: osvaldo
+- **[#d-0006]** date: 2026-11-10 · status: accepted · author: osvaldo
+ · promoted_by: osvaldo on 2026-11-15
   **The real-MCU stage is named PIL, never HIL; VIL is out of scope.**
   Why: no plant I/O or vehicle; calling it HIL is an S1 overclaim. Cost: the four-stage figure
   (MIL/SIL/HIL/VIL) from the infographics cannot be reproduced as is.
 
-- **[#d-0011]** date: 2026-11-11 · status: proposed · author: osvaldo
+- **[#d-0011]** date: 2026-11-11 · status: accepted · author: osvaldo
+ · promoted_by: osvaldo on 2026-11-15
   **Reframe the paper from "the integrated flow is better" to "the three methods control three
   different axes: stages decide what is caught, cadence and trigger decide when, the platform decides
   where a stage must run".** The title (d-0007) stays and is answered as "none alone, they are not

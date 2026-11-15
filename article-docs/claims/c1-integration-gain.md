@@ -15,7 +15,7 @@ Planned measurement: lead time per increment, feedback latency, localisation eff
 Used in: [[sections/abstract]]. Venue: [[venue/isie-2027]].
 
 ## Decisions
-- **[#d-0002]** date: 2026-11-10 · status: proposed · author: osvaldo
+- **[#d-0002]** date: 2026-11-10 · status: accepted · author: osvaldo · promoted_by: osvaldo on 2026-11-15
   **Frame C1 as a measured comparison, not a general claim.** Why: the sources are qualitative; a reviewer will ask for numbers. Rejected: stating the gain without measurement, because it is the first thing an ISIE reviewer would reject. Cost: a case study is needed in about 5 weeks.
 
 ## Todos

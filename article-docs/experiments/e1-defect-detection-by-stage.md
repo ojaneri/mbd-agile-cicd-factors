@@ -164,12 +164,14 @@ Plotted (2026-11-14, d-0022) as the paper's Fig. 2 by `manuscript/figs/fig_suite
   timing-only detections reported apart.
 
 ## Decisions
-- **[#d-0009]** date: 2026-11-11 · status: proposed · author: osvaldo
+- **[#d-0009]** date: 2026-11-11 · status: accepted · author: osvaldo
+ · promoted_by: osvaldo on 2026-11-15
   **MIL = native OpenModelica simulation of the generated model in a CombiTimeTable testbench.**
   Why: the FMU route failed (events not processed under FMPy ME; CS build failed). Native simulation is
   also the closer analogue of simulating a Simulink model. Cost: the build must target the longest test
   (stopTime override was ignored at run time).
-- **[#d-0010]** date: 2026-11-11 · status: proposed · author: osvaldo
+- **[#d-0010]** date: 2026-11-11 · status: superseded · author: osvaldo · superseded_by: practice (E1 board PIL on the st-iotnode; NUCLEO never used)
+ · promoted_by: osvaldo on 2026-11-15
   **Run E1 first with QEMU as the PIL target, then repeat PIL on NUCLEO-L476RG (and st-iotnode).**
   Why: the board is not connected yet; QEMU validates the whole pipeline and gives functional PIL
   verdicts. Only real-target PIL verdicts and costs go into the paper.
