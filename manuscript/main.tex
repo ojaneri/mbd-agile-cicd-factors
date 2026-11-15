@@ -107,8 +107,8 @@ QEMU emulator, and a real Cortex-M4 board on the FIT IoT-LAB remote testbed~\cit
 measurement of detection per stage and test suite on 205 mutants, and a replay, built from the measured stage
 costs and verdicts, of latency and compute per increment size and trigger; (iii) a
 confirmatory test showing that, with one binary and for computation-only code without peripherals or
-interrupts, an emulator reproduces the board's functional verdicts and the board is needed only for timing; and (iv) a preliminary tiered placement of the stages derived
-from (iii) and replayed on functional verdicts only. Scripts, protocols and raw results are available at
+interrupts, an emulator reproduces the board's functional verdicts and the board is needed only for timing; and (iv) a tiered placement of the stages derived
+from (iii), replayed on functional verdicts and, exploratorily, on timing regressions. Scripts, protocols and raw results are available at
 \url{https://github.com/ojaneri/mbd-agile-cicd-factors}.
 
 % ---------------------------------------------------------------------------------------------------
@@ -394,13 +394,10 @@ board and missed by QEMU, nor the reverse (Table~\ref{tab:e5}). Without painting
 26; the painted passes added the last one on both. With the same binary, the disagreement of the first
 experiment did not reappear, so it came from the harness and memory layout, not from a property of the
 board. \textbf{H3 was not supported} for Valgrind: it missed one mutant (a local left uninitialised in the
-OCV inverse of S1) and cost more than QEMU. At \texttt{-O2} the compiler kept that local in a register
-holding a defined zero, the original initial value, and memcheck tracks values, not variables; at
-\texttt{-O0} and \texttt{-O1} it reported the read, and \texttt{gcc -Wall} warned. MemorySanitizer, the
-secondary arm, caught all 26 at 0.34\,s per mutant, about 400 times faster than the board run. Our
-prediction that overwriting the state on the host would catch \texttt{init} deletions but not deleted
-local initialisations was also wrong: it caught 16 of 17 of the latter, because their garbage values
-already fail the requirement tests (plain SIL caught 22 of 26).
+OCV inverse of S1) and cost more than QEMU: at \texttt{-O2} the local sat in a register holding a defined
+zero, and memcheck tracks values, not variables. MemorySanitizer, the secondary arm, caught all 26 at
+0.34\,s per mutant, about 400 times faster than the board run. Overwriting the state on the host, predicted
+to catch only \texttt{init} deletions, also caught 16 of 17 deleted local initialisations.
 
 \begin{figure}[t]
 \centering
@@ -424,20 +421,20 @@ regression's cycles per instruction differ from the baseline's. Fig.~\ref{fig:h4
 reached 0.95 of its budget on the board and 1.22 on QEMU, while at the 3.0 divide level it reached 2.12 on
 the board and 0.69 on QEMU.
 
-\textbf{Tiered placement.} We replayed S3's control set under four placements, with S3's measured stage
-costs (UNIT 0.29\,s, MIL 2.49\,s, SIL 0.28\,s, QEMU PIL 0.86\,s, board PIL 30.0\,s per run): A2 (no PIL), A3q
+\textbf{Tiered placement.} We replayed S3's control set, with its measured stage costs, under A2 (no PIL), A3q
 (QEMU PIL per commit), A3b (board PIL per commit) and AT (host and QEMU per commit, board once per sprint).
 No control mutant was caught by the board alone, so all four placements had zero escapes. Compute per sprint
-was 36.7\,s for A2, 47.1\,s for A3q, 77.1\,s for AT and 396.7\,s for A3b (Cliff's $\delta$ AT against A3b
-$-1.0$); latency was 4\,s for AT and A3q and 33\,s for A3b. The per-sprint board run is there for the
-multi-cycle timing class of H4, which the control pool did not contain, so the placement was not tested on
-the class it exists for.
+was 36.7\,s for A2, 47.1\,s for A3q, 77.1\,s for AT and 396.7\,s for A3b; latency was 4\,s for AT and
+A3q and 33\,s for A3b. The control pool held no timing defect, the class the per-sprint board run is for. In an
+exploratory replay of the same model on each subject's 12 timing-ladder mutants, with the board's flags as
+ground truth, QEMU PIL per commit let 0.8--1.0 timing regressions per sprint through (in 56--66\,\% of
+sprints) and raised 0.24 false alarms; AT caught all of them, by design at sprint end, after a median 3.5--4.7\,h,
+at about half the compute of A3b (189--198 against 364--407\,s).
 
 \textbf{Robustness (addendum).} An addendum, designed after these results and pushed to an external
 repository before it ran, counts as a replication outside the confirmatory set. At \texttt{-O0} and
-\texttt{-Os}, again with one ELF per level, no uninitialised-state mutant separated board and QEMU; Valgrind
-caught all 26 at \texttt{-O0} but missed the same mutant at \texttt{-Os}, and MemorySanitizer caught all 26
-at both. A second board, an nRF52840-DK (Cortex-M4F at 64\,MHz, flash cache off), agreed with the
+\texttt{-Os}, again with one ELF per level, no uninitialised-state mutant separated board and QEMU, and Valgrind
+missed the same mutant at \texttt{-Os} only. A second board, an nRF52840-DK (Cortex-M4F at 64\,MHz, flash cache off), agreed with the
 emulator on 84 of 84 control mutants (Wilson 95.6--100\,\%) and caught the same 26 of 28 uninitialised-state
 mutants, but with a slower baseline step (158--208 against 107--131 cycles) it flagged fewer timing levels on
 4 of 6 ladders (S3 divide: only 3.0 against 1.1--3.0). Functional verdicts thus held across optimisation
@@ -496,8 +493,8 @@ battery-rack estimator.
 Unit tests with near-complete line coverage missed every model-level defect; in an exploratory split,
 requirement tests on host C code caught all field-relevant ones. Under the no-masking assumption, the
 increment size changed only latency. With the same binary, an emulator reproduced the board's functional
-verdicts on this computation-only code, so the board was needed only for timing, where two boards disagreed. A tiered placement used about a fifth
-of the compute of a board run on every commit, but was not tested on the timing class it exists for. Future
+verdicts on this computation-only code, so the board was needed only for timing, where two boards disagreed. A tiered placement caught, in an exploratory
+replay, the timing regressions that per-commit emulation missed, at half the compute of a board run per commit. Future
 work: a recorded history with multi-defect batches, timing regressions in the tiered replay, another
 compiler, cached cores, and ISO~26262 evidence.
 
@@ -505,8 +502,8 @@ compiler, cached cores, and ISO~26262 evidence.
 % first author on 2026-11-14 (d-0016; replaces the 2026-11-13 wording, VR4-E-01).
 \section*{Acknowledgment}
 The authors thank the Federal Technological University of Paran\'a -- Ponta Grossa campus (UTFPR-PG) for its
-support. Claude (Anthropic), used under the authors' direction, drafted the text from the authors' results
-and notes, helped to write and run the simulation and analysis code that produces the results, and was used
+support. Claude Opus 5.5 (Anthropic), used under the authors' direction, drafted the text of all sections
+from the authors' results and notes, helped to write and run the simulation and analysis code that produces the results, and was used
 for language editing. The authors reviewed and edited all content and take full responsibility for it.
 
 \bibliographystyle{IEEEtran}

@@ -65,6 +65,25 @@ results: a replication, not part of the confirmatory set.
   `calibration_fuel_Os_attempt1.json`, the board was recalibrated (clean, budget 328) and its 6 mutants run.
   As frozen (without the board for S2): 21 compared, 0 counterexamples; completed: 26, 0.
 
+## E5c — tiered placement on the timing class (exploratory; frozen 01f48eb 2026-11-15 before running)
+Re-analysis of existing E5/E5b records, designed after their results (protocol
+`testbed/e5/protocol/E5c-timing-tiered.md`, script `testbed/e5/e2_timing_tiered.py`, output
+`testbed/e5/results/e5c_timing_tiered.json`). Same replay model as `e2_tiered.py` (N 10, 2 h, p 0.3, R 2000,
+seed 20261111, automatic trigger) on each subject's 12 timing-ladder mutants; UNIT/MIL/SIL never flag timing
+(checked: host_sil `detected` false for all ladders); QEMU and board verdicts from H4; ground truth = the
+reference board's flag. Pool counts (st-iotnode reference): reference-flagged 6/7/6 of 12 (soc/fuel/bess),
+QEMU-flagged 4/4/4, board-only 3/4/3, QEMU-only 1/1/1 (the ALU 0.9 level).
+Results, st-iotnode reference (per sprint; medians over 2000 sprints):
+- A2: mean escapes 1.49/1.74/1.49; sprints with an escape 0.80/0.85/0.80; compute 30.2/36.3/30.6 s.
+- A3q: mean escapes 0.76/1.01/0.76; sprints with an escape 0.56/0.66/0.56; false alarms 0.24; compute
+  43.3/49.5/43.2 s.
+- A3b: 0 escapes; compute 382.4/407.0/364.0 s.
+- AT: 0 escapes (by construction: the sprint-end board run sees every persisting regression); false alarms
+  0.24; compute 198.0/197.3/189.4 s; median latency 3.52/4.70/3.52 h.
+nRF52840 reference (E5b flags): AT 0 escapes, compute 78.9/84.3/73.2 s; A3q mean escapes 0.49/0.49/0.25.
+Limits: pool is timing defects only (a stress case, not a realistic mix); AT's zero escapes holds by the model;
+board costs from the st-iotnode ladder runs for both references. Reported in the paper as exploratory (d-0026).
+
 ## Why
 The host/emulator/board disagreements in E1 came from data already seen, and E1's QEMU run used a different
 harness (mps2-an386, semihosting) than the board, so platform and harness were confounded. E5 repeats the
