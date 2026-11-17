@@ -128,7 +128,7 @@ and bisection strategies for general software builds, without an embedded target
 inject sensor faults into a Simulink model with AUTOSAR diagnostic blocks and assess test coverage at the
 MIL stage. Mutation of Simulink models is now piloted in industry, where equivalent mutants and requirement
 traceability remain open~\cite{kavak2026}. Line coverage is not strongly correlated with a suite's fault
-detection~\cite{inozemtseva2014}; our unit tests show this inside an MBD flow.
+detection~\cite{inozemtseva2014}; our unit tests are consistent with this and point to the oracle.
 
 A dated search of IEEE Xplore and Scopus (November 2026; ACM DL and SAE not covered) found no paired
 measurement of detection per stage (MIL, SIL, PIL) with integration cadence on known injected defects in an
@@ -160,7 +160,7 @@ embedded MBD pipeline, nor a test of whether an emulator can replace the board f
 \end{tikzpicture}
 \caption{The pipeline and its factors. A selects which stages run: A0 runs only the unit tests, A1 adds
 MIL, A2 adds SIL and A3 adds PIL. B is the number of commits verified together; C is the trigger; P is the
-platform on which PIL runs. The Modelica model is the estimator itself, without a plant.}
+platform on which PIL runs.}
 \label{fig:pipeline}
 \end{figure}
 
@@ -190,7 +190,7 @@ All three subjects are estimators identified on public recorded data (Table~\ref
 battery's state of charge (SoC) from current and terminal voltage with an equivalent-circuit observer and an
 open-circuit-voltage (OCV) table. S2 integrates fuel flow from engine signals read over the on-board
 diagnostics port (OBD-II) to estimate the fuel used per tank. S3 estimates the temperature of a rack in a
-stationary battery storage system, not a vehicle subsystem, and latches a power derating; it is used only in
+stationary battery storage system, not a vehicle subsystem, and latches a power derating; it is the subject of
 the confirmatory experiment. Held-out recorded data serve as the
 \emph{field oracle}: a mutant is \emph{field-relevant} if it makes the estimate measurably worse than the
 original code, by the root-mean-square error (RMSE) or volume thresholds of Table~\ref{tab:subj}. S3's
@@ -296,16 +296,15 @@ model-level mutant (S1, a numerical divergence above its $10^{-5}$ tolerance).
 The hypothesis, committed before the run, that each stage detects some defect class missed by the earlier
 ones holds only in part, and factor A changes the test suite together with the stage. An exploratory split by suite
 (Fig.~\ref{fig:suite}) shows where the gain comes from. On the same host C code, the requirement tests caught all 68 (S1) and 34
-(S2) field-relevant mutants and the unit tests caught 26 and 23, although they executed 97 and 100\,\% of
-the lines (gcov). The unit tests caught no model-level mutant, because
-their expected values come from the mutated specification, and caught 26 of 42 (S1) and 23 of 23 (S2)
-code-level ones. Of the 42 field-relevant S1 mutants the unit tests missed, 26 are model-level and 16
-code-level, so the gap between the two suites is mostly oracle independence, not coverage (all of it in S2).
+(S2) field-relevant mutants and the unit tests caught 26 and 23, although gcov showed them executing 97 and
+100\,\% of the lines. The unit tests caught no model-level mutant, because their expected values come from
+the mutated specification, but caught all 23 code-level ones in S2. The 42 S1 mutants they missed are 26 model-level and 16 code-level, so the gap between the suites is mostly oracle independence, not
+coverage (in S2, entirely).
 MIL, running the requirement tests on the model, caught every
 model-level mutant, at about nine times SIL's median cost (8.6 in S1, 9.0 in S2). The detection gain therefore
 belongs to the requirement tests, which can run at any level; MIL adds feedback before code exists. PIL was
 the only stage that flagged timing regressions (5 mutants in S1, 6 in
-S2), none of them functionally relevant. A post-run
+S2), none of them field-relevant. A post-run
 screening of the mutants no stage flagged on QEMU found 18 of 41 (S1) and 11 of 15 (S2) bit-identical to the
 baseline on the host build (one, an initialisation deletion, fails on the board); the other 27 stayed within
 the oracles, and on a seeded stress set 7 of them would break a requirement, so the requirement tests are not
@@ -353,8 +352,7 @@ PIL: 18.7--20.6 times the compute in S1, 6.1 in S2).
 
 \subsection{RQ3: where a stage must run (confirmatory)}
 
-The confirmatory experiment was frozen before it ran. It uses \emph{one ELF} for QEMU (machine
-b-l475e-iot01a) and the board, removing the harness confound. Targets run the test vectors five times: once
+The confirmatory experiment was frozen before it ran. It uses \emph{one ELF} for QEMU and the board, removing the harness confound. Targets run the test vectors five times: once
 as loaded, then four times with the stack below \texttt{main} painted with a different bit pattern; the board
 run is made twice, each after a reset. Host arms are SIL, SIL with the state structure overwritten by the same four
 patterns, Valgrind memcheck~\cite{nethercote2007} (primary) and MemorySanitizer~\cite{stepanov2015}
@@ -424,12 +422,11 @@ the board and 0.69 on QEMU.
 \textbf{Tiered placement.} We replayed S3's control set, with its measured stage costs, under A2 (no PIL), A3q
 (QEMU PIL per commit), A3b (board PIL per commit) and AT (host and QEMU per commit, board once per sprint).
 No control mutant was caught by the board alone, so all four placements had zero escapes. Compute per sprint
-was 36.7\,s for A2, 47.1\,s for A3q, 77.1\,s for AT and 396.7\,s for A3b; latency was 4\,s for AT and
-A3q and 33\,s for A3b. The control pool held no timing defect, the class the per-sprint board run is for. In an
-exploratory replay of the same model on each subject's 12 timing-ladder mutants, with the board's flags as
-ground truth, QEMU PIL per commit let 0.8--1.0 timing regressions per sprint through (in 56--66\,\% of
-sprints) and raised 0.24 false alarms; AT caught all of them, by design at sprint end, after a median 3.5--4.7\,h,
-at about half the compute of A3b (189--198 against 364--407\,s).
+was 36.7\,s for A2, 47.1\,s for A3q, 77.1\,s for AT and 396.7\,s for A3b. This pool held no timing defect. In an exploratory replay on each subject's 12
+timing-ladder mutants (a stress pool; STM32 flags as ground truth), QEMU PIL per commit let a mean
+0.8--1.0 timing regressions per sprint through (in 56--66\,\% of sprints), with 0.24 false alarms; AT, which
+also runs QEMU, catches them by construction at sprint end (median mean latency 3.5--4.7\,h) at about half
+the compute of A3b (189--198 against 364--407\,s).
 
 \textbf{Robustness (addendum).} An addendum, designed after these results and pushed to an external
 repository before it ran, counts as a replication outside the confirmatory set. At \texttt{-O0} and
@@ -445,7 +442,7 @@ levels and boards; timing verdicts differed even between two Cortex-M4F boards.
 
 \emph{The factors} acted on different axes: the requirement tests decided what was caught and MIL moved that
 verdict before code existed (Table~\ref{tab:e1}); increment size and trigger changed only when
-(Table~\ref{tab:e2}); the board mattered for timing (Fig.~\ref{fig:h4}), not function (Table~\ref{tab:e5}).
+defects surfaced (Table~\ref{tab:e2}); the board mattered for timing (Fig.~\ref{fig:h4}), not function (Table~\ref{tab:e5}).
 
 \emph{Practical placement.} For estimator code of this kind on a Cortex-M4F target, the data support running
 UNIT, SIL with a memory sanitiser, and emulated PIL on the same ELF on every commit for functional verdicts,
@@ -466,9 +463,9 @@ are our own. In S2 the field oracle runs on the emulator build, so an initialisa
 large error only on the board counted as not field-relevant; field relevance of this class depends on the
 platform.
 \emph{Internal.} RQ3 was added after seeing the first experiment; its confirmation used new mutants and a new
-subject, but S1 and S2 contributed some mutant lines already seen. Detections of 100\,\% were audited. The
+subject, but S1 and S2 contributed some mutant lines already seen. The
 increment-size and trigger results come from a synthetic commit stream, not a recorded history; the latency values depend on
-the assumed spacing and delay, and the replay assumes defects do not mask each other. The replay replaced the
+the assumed spacing and delay, and the replays assume defects neither mask nor add to each other. The replay replaced the
 scripted-backlog design in RQ2's protocol and was designed after S1's first results. Mutants cluster by line
 and operator, so they are not independent samples and the Wilson intervals are optimistic. The commits that froze the
 first experiments and the confirmatory experiment are in a local repository whose external copy dates from
@@ -491,10 +488,11 @@ battery-rack estimator.
 Unit tests with near-complete line coverage missed every model-level defect; in an exploratory split,
 requirement tests on host C code caught all field-relevant ones. Under the no-masking assumption, the
 increment size changed only latency. With the same binary, an emulator reproduced the board's functional
-verdicts on this computation-only code, so the board was needed only for timing, where two boards disagreed. A tiered placement caught, in an exploratory
-replay, the timing regressions that per-commit emulation missed, at half the compute of a board run per commit. Future
-work: a recorded history with multi-defect batches, timing regressions in the tiered replay, another
-compiler, cached cores, and ISO~26262 evidence.
+verdicts on this computation-only code, so the board was needed only for timing, where two boards disagreed. In an exploratory replay, per-commit
+emulation missed about one timing regression per sprint; a tiered placement, which by construction catches
+them at sprint end, cost half the compute of a board run per commit. Future work: a recorded history with
+multi-defect batches, a confirmatory tiered replay with mixed defects, another compiler, cached cores, and
+ISO~26262 evidence.
 
 % AI-use disclosure per the IEEE submission policy (author center, read 2026-11-13). Wording given by the
 % first author on 2026-11-14 (d-0016; replaces the 2026-11-13 wording, VR4-E-01).

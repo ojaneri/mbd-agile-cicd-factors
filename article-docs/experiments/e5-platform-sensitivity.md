@@ -83,6 +83,10 @@ Results, st-iotnode reference (per sprint; medians over 2000 sprints):
 nRF52840 reference (E5b flags): AT 0 escapes, compute 78.9/84.3/73.2 s; A3q mean escapes 0.49/0.49/0.25.
 Limits: pool is timing defects only (a stress case, not a realistic mix); AT's zero escapes holds by the model;
 board costs from the st-iotnode ladder runs for both references. Reported in the paper as exploratory (d-0026).
+Deviation (VR7-M-04): the protocol promised medians and bootstrap CIs per subject and pooled; the pooled summary
+was not computed, and integer per-sprint medians are degenerate, so the paper reports means and shares. `latency_h`
+is the per-sprint mean over all caught regressions (QEMU-caught ones within seconds, board-only ones at sprint
+end), summarised by its median over sprints.
 
 ## Why
 The host/emulator/board disagreements in E1 came from data already seen, and E1's QEMU run used a different
